@@ -1,8 +1,21 @@
 import Subheading from "./components/Subheading";
 import Subsection from "./components/Subsection";
 import "./animations.css";
+import { link } from "fs";
 
 export default function Home() {
+    const links = {
+        notion: "https://dhisonp.notion.site/Dhison-Padma-Software-Engineer-1e147536687b4186b4389e5fbb4b8298",
+        dhisvnco: "https://dhisvn.co",
+        ig_dhisvn: "https://instagram.com/dhisvn",
+        ig_dhisonp: "https://instagram.com/dhisonp",
+        youtube: "https://www.youtube.com/@dhisonpadma",
+        behance: "https://www.behance.net/dhisvn",
+        tiktok: "https://www.tiktok.com/@dhisonp",
+        github: "https://github.com/dhisonp",
+        linkedin: "https://www.linkedin.com/in/dhisonp/",
+    };
+
     return (
         <main className="min-h-screen flex flex-col items-center bg-zinc-900 xl:px-96 xl:py-24 lg:px-72 lg:py-16 p-4 text-base text-zinc-200">
             {/* <div className="fade-in">TEST ANIMATION</div>
@@ -22,7 +35,7 @@ export default function Home() {
                     Ridding the spaces between aesthetics, functionality and
                     merit.
                 </p>
-                <p>
+                <p className="fade-in" style={{ animationDelay: "0.2s" }}>
                     ✉️ <a className="italic text-zinc-500">dhisonp@gmail.com</a>
                 </p>
                 <Subsection
@@ -36,18 +49,42 @@ export default function Home() {
                         ideas, searching for functionalities as an answer to
                         problems.
                     </p>
-                    <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-4 gap-y-4">
+                    <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
                         <li className="link-item">
-                            <a href="">projects &#8640;</a>
+                            <a
+                                href={links.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                linkedin &#8640;
+                            </a>
                         </li>
                         <li className="link-item">
-                            <a href="">github &#8605;</a>
+                            <a
+                                href={links.notion}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                projects &#8640;
+                            </a>
                         </li>
                         <li className="link-item">
-                            <a href="">experience &#8640;</a>
+                            <a
+                                href={links.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                github &#8605;
+                            </a>
                         </li>
                         <li className="link-item">
-                            <a href="">specialties &#8640;</a>
+                            <a
+                                href={links.notion}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                experience &#8640;
+                            </a>
                         </li>
                     </ul>
                 </Subsection>
@@ -64,16 +101,40 @@ export default function Home() {
                     </p>
                     <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-4 gap-y-4">
                         <li className="link-item">
-                            <a href="">portfolio &#8605;</a>
+                            <a
+                                href={links.dhisvnco}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                portfolio &#8605;
+                            </a>
                         </li>
                         <li className="link-item">
-                            <a href="">prints &#8605;</a>
+                            <a
+                                href={links.dhisvnco + "/prints"}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                prints &#8605;
+                            </a>
                         </li>
                         <li className="link-item">
-                            <a href="">behance &#8605;</a>
+                            <a
+                                href={links.behance}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                behance &#8605;
+                            </a>
                         </li>
                         <li className="link-item">
-                            <a href="">instagram &#8605;</a>
+                            <a
+                                href={links.ig_dhisvn}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                instagram &#8605;
+                            </a>
                         </li>
                     </ul>
                 </Subsection>
@@ -85,18 +146,37 @@ export default function Home() {
                     <p className="mb-4">
                         Perhaps early in age. Going into music school as a child
                         wasn't the most exciting concept– although it might be
-                        time to put that into good use. Besides, it's my{" "}
+                        time to put that into good use. Besides, it's the
+                        closest thing I have to a{" "}
                         <span className="italic font-serif">passion</span>.
                     </p>
                     <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
                         <li className="link-item">
-                            <a href="">youtube &#8605;</a>
+                            <a
+                                href={links.youtube}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                youtube &#8605;
+                            </a>
                         </li>
                         <li className="link-item">
-                            <a href="">instagram &#8605;</a>
+                            <a
+                                href={links.ig_dhisonp}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                instagram &#8605;
+                            </a>
                         </li>
                         <li className="link-item">
-                            <a href="">tiktok &#8605;</a>
+                            <a
+                                href={links.tiktok}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                tiktok &#8605;
+                            </a>
                         </li>
                     </ul>
                 </Subsection>
@@ -123,14 +203,6 @@ export default function Home() {
                         swimming pool, and abusing the heavy bag. Checklist says
                         that I'm gonna learn to surf soon– probably the most
                         exciting thing I have in mind right now.
-                    </p>
-                    <p className="gapped-paragraph">
-                        Born in raised in Jakarta, Indonesia. I moved to the
-                        United States at the age of 22– March 2020 during the
-                        midst of the pandemic. I know, tragic. But here I am,
-                        and I'm loving every single second of it. For now, I
-                        reside in Tampa. But should be moving to New York City
-                        in no time.
                     </p>
                 </Subsection>
             </div>

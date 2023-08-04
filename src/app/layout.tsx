@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import {
     Barlow,
-    JetBrains_Mono,
+    // JetBrains_Mono,
     Source_Sans_3,
     Source_Serif_4,
 } from "next/font/google";
@@ -30,7 +30,7 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
     title: "Dhison Padma",
-    description: "Welcome to the domain.",
+    description: "Here you learn more about me and what I do.",
 };
 
 export default function RootLayout({
