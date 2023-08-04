@@ -145,9 +145,9 @@ export default function Home() {
                 >
                     <p className="mb-4">
                         Perhaps early in age. Going into music school as a child
-                        wasn't the most exciting concept– although it might be
-                        time to put that into good use. Besides, it's the
-                        closest thing I have to a{" "}
+                        wasn&apos;t the most exciting concept– although it might
+                        be time to put that into good use. Besides, it&apos;s
+                        the closest thing I have to a{" "}
                         <span className="italic font-serif">passion</span>.
                     </p>
                     <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
@@ -191,18 +191,18 @@ export default function Home() {
                     </p>
 
                     <p className="gapped-paragraph">
-                        Let's start talking{" "}
+                        Let&apos;s start talking{" "}
                         <a className="italic font-serif">casual</a>. I like to
-                        build stuff, essentially. To make stuff. Maybe it's a
-                        website, or music, or just a really sick looking fashion
-                        lookbook. I know, not necessarily similar things. But
-                        hey as long as I enjoy it?
+                        build stuff, essentially. To make stuff. Maybe it&apos;s
+                        a website, or music, or just a really sick looking
+                        fashion lookbook. I know, not necessarily similar
+                        things. But hey as long as I enjoy it?
                     </p>
                     <p className="gapped-paragraph">
                         Other than that, I spend way too much at the gym,
                         swimming pool, and abusing the heavy bag. Checklist says
-                        that I'm gonna learn to surf soon– probably the most
-                        exciting thing I have in mind right now.
+                        that I&apos;m gonna learn to surf soon– probably the
+                        most exciting thing I have in mind right now.
                     </p>
                 </Subsection>
             </div>
