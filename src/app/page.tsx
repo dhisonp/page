@@ -1,6 +1,7 @@
 import Subheading from "./components/Subheading";
 import Subsection from "./components/Subsection";
 import "./animations.css";
+import "./custom.css";
 import { link } from "fs";
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
     };
 
     return (
-        <main className="min-h-screen flex flex-col items-center bg-zinc-900 xl:px-96 xl:py-24 lg:px-72 lg:py-16 p-4 text-base text-zinc-200">
+        <main className="overflow-y-scroll touch min-h-screen flex flex-col items-center bg-zinc-900 xl:px-96 xl:py-24 lg:px-72 lg:py-16 p-4 text-base text-zinc-200">
             {/* <div className="fade-in">TEST ANIMATION</div>
             <div className="fade-in" style={{ animationDelay: "0.1s" }}>
                 TEST ANIMATION
