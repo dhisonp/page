@@ -18,6 +18,9 @@ module.exports = {
             italic: "italic",
         },
         extend: {
+            extend: {
+                overscrollBehavior: ["none"],
+            },
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
                 "gradient-conic":
