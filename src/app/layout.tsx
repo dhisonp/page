@@ -1,30 +1,23 @@
 import "./styles/globals.css";
 import type { Metadata } from "next";
-import { Barlow, Source_Sans_3, Source_Serif_4 } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 
-const barlow = Barlow({
+const ibmPlexSans = IBM_Plex_Sans({
   weight: "300",
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-barlow",
+  variable: "--font-ibm-plex-sans",
 });
 
-const sourceSans = Source_Sans_3({
+const ibmPlexSerif = IBM_Plex_Serif({
   weight: "300",
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-source-sans",
-});
-
-const sourceSerif = Source_Serif_4({
-  weight: "300",
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--font-source-serif",
+  variable: "--font-ibm-plex-serif",
 });
 
 export const metadata: Metadata = {
-  title: "Dhison Padma",
+  title: "Dhison P.",
   description: "Here you learn more about me and what I do.",
 };
 
@@ -36,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlow.variable} ${sourceSans.variable} ${sourceSerif.variable}`}
+      className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}
     >
       <body>{children}</body>
     </html>

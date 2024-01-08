@@ -4,7 +4,7 @@
 
 @layer components {
     .link-item {
-        @apply text-zinc-400 hover:text-zinc-300 transition duration-200 italic;
+        @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 italic;
     }
 
     .gapped-paragraph {
@@ -12,10 +12,10 @@
     }
 }
 
+/* Set custom properties for background colors */
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    --background-light: rgb(244 244 245); /* Light mode background color */
+    --background-dark: rgb(24 24 27); /* Dark mode background color */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +26,14 @@
     }
 }
 
+/* Default to light mode */
 body {
-    background-color: rgb(24 24 27);
+    background-color: var(--background-light);
+}
+
+/* Media query for dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-dark);
+    }
 }
