@@ -85,7 +85,7 @@ export function Home() {
             header="Music"
             emoji="🎸"
             className="fade-in"
-            style={{ animationDelay: "0.8s" }}
+            style={{ animationDelay: "0.6s" }}
           >
             <p className="mb-4">
               Might as well be the closest thing I have to a{" "}
@@ -127,7 +127,7 @@ export function Home() {
             header="Photography"
             emoji="📷"
             className="fade-in"
-            style={{ animationDelay: "0.6s" }}
+            style={{ animationDelay: "0.8s" }}
           >
             <p className="mb-4">
               Articulating finest imagery for every moment. Aiming to augment
