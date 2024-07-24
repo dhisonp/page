@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import Subheading from "./Subheading";
+import React, { FC } from 'react';
+import Subheading from './Subheading';
 
 interface Props {
   children?: React.ReactNode;
@@ -11,7 +11,7 @@ interface Props {
 
 const Subsection: FC<Props> = ({
   children,
-  className = "",
+  className = '',
   header,
   emoji,
   style,

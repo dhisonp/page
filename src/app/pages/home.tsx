@@ -1,6 +1,6 @@
-import Subheading from "@/app/components/Subheading";
-import Subsection from "@/app/components/Subsection";
-import links from "@/app/collections/links";
+import Subheading from '@/app/components/Subheading';
+import Subsection from '@/app/components/Subsection';
+import links from '@/app/collections/links';
 
 export function Home() {
   return (
@@ -16,14 +16,14 @@ export function Home() {
           </a>
         </Subheading>
         <div className="text-left gap-y-12 flex-col flex">
-          <p className="fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="fade-in" style={{ animationDelay: '0.2s' }}>
             <span className="text-black dark:text-white font-serif">
               Simple complexity
             </span>
             . The foundational concept ingrained in all fields of my work.
             Ridding the spaces between aesthetics and function.
           </p>
-          <p className="fade-in" style={{ animationDelay: "0.2s" }}>
+          <p className="fade-in" style={{ animationDelay: '0.2s' }}>
             ✉️
             <a className="italic text-zinc-600 dark:text-zinc-400 ml-2">
               dhisonp@gmail.com
@@ -33,7 +33,7 @@ export function Home() {
             header="Software"
             emoji="💻"
             className="fade-in"
-            style={{ animationDelay: "0.4s" }}
+            style={{ animationDelay: '0.4s' }}
           >
             <p className="mb-4">
               Building refined software and web experiences. Engineering optimal
@@ -85,10 +85,10 @@ export function Home() {
             header="Music"
             emoji="🎸"
             className="fade-in"
-            style={{ animationDelay: "0.6s" }}
+            style={{ animationDelay: '0.6s' }}
           >
             <p className="mb-4">
-              Might as well be the closest thing I have to a{" "}
+              Might as well be the closest thing I have to a{' '}
               <span className="font-serif">passion</span>. Creating, reimagining
               pieces that evokes feeling. Working on a debut release.
             </p>
@@ -127,7 +127,7 @@ export function Home() {
             header="Photography"
             emoji="📷"
             className="fade-in"
-            style={{ animationDelay: "0.8s" }}
+            style={{ animationDelay: '0.8s' }}
           >
             <p className="mb-4">
               Articulating finest imagery for every moment. Aiming to augment
@@ -146,7 +146,7 @@ export function Home() {
               </li>
               <li className="link-item">
                 <a
-                  href={links.dhisvnco + "/prints"}
+                  href={links.dhisvnco + '/prints'}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -178,7 +178,7 @@ export function Home() {
             header="About me"
             emoji="🏄‍♂️"
             className="fade-in"
-            style={{ animationDelay: "1s" }}
+            style={{ animationDelay: '1s' }}
           >
             <p className="gapped-paragraph">
               I enjoy creation. That&apos;s the gist of it.

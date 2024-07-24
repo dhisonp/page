@@ -3,37 +3,37 @@
 @tailwind utilities;
 
 @layer components {
-    .link-item {
-        @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 italic;
-    }
+  .link-item {
+    @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 italic;
+  }
 
-    .gapped-paragraph {
-        @apply mb-4;
-    }
+  .gapped-paragraph {
+    @apply mb-4;
+  }
 }
 
 /* Set custom properties for background colors */
 :root {
-    --background-light: rgb(244 244 245); /* Light mode background color */
-    --background-dark: rgb(24 24 27); /* Dark mode background color */
+  --background-light: rgb(244 244 245); /* Light mode background color */
+  --background-dark: rgb(24 24 27); /* Dark mode background color */
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
 /* Default to light mode */
 body {
-    background-color: var(--background-light);
+  background-color: var(--background-light);
 }
 
 /* Media query for dark mode */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--background-dark);
-    }
+  body {
+    background-color: var(--background-dark);
+  }
 }
