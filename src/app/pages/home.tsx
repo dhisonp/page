@@ -1,46 +1,76 @@
+'use client';
+
 import Subheading from '@/app/components/Subheading';
 import Subsection from '@/app/components/Subsection';
-import links from '@/app/collections/links';
 
-export function Home() {
+import { BioResponse } from '@/app/types/bio-response';
+import links from '@/app/collections/links';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+export function Home(): React.JSX.Element {
+  const [bio, setBio] = useState<BioResponse | null>(null);
+  const [bioHtml, setBioHtml] = useState<TrustedHTML>('');
+
+  useEffect(() => {
+    const fetchBio = () => {
+      axios
+        .get('/api/fetch-bio')
+        .then(res => {
+          const data: BioResponse = res.data;
+          setBio(data);
+        })
+        .catch(err => {
+          console.error(err);
+        });
+    };
+
+    fetchBio();
+  }, []);
+
+  useEffect(() => {
+    if (bio) {
+      setBioHtml(bio.html);
+    }
+  }, [bio]);
+
   return (
     <main className="overflow-y-scroll touch min-h-screen px-4 py-4 md:py-24 bg-zinc-100 dark:bg-zinc-900">
-      {/* main div */}
       <div className="container max-w-2xl mx-auto flex flex-col items-center text-base text-gray-700 dark:text-gray-300">
-        <Subheading className="mb-8 text-xl fade-in tracking-wide">
+        <Subheading className="flex mb-8 text-xl fade-in tracking-wide">
           <a className="text-gray-700 dark:text-gray-300 font-medium">
             Dhison P.
           </a>
-          <a className="text-gray-400 dark:text-gray-500 ml-2 font-regular">
-            Software Engineer, Musician, Photographer. New York, NY.
-          </a>
+          <p className="text-gray-400 dark:text-gray-500 ml-2 font-regular">
+            Software Engineer, Musician. New York, NY.
+          </p>
         </Subheading>
         <div className="text-left gap-y-12 flex-col flex">
-          <p className="fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="fade-in" style={{ animationDelay: '0.2s' }}>
             <span className="text-black dark:text-white font-serif">
               Simple complexity
             </span>
             . The foundational concept ingrained in all fields of my work.
             Ridding the spaces between aesthetics and function.
-          </p>
-          <p className="fade-in" style={{ animationDelay: '0.2s' }}>
+          </div>
+          <div className="fade-in" style={{ animationDelay: '0.2s' }}>
             ✉️
             <a className="italic text-zinc-600 dark:text-zinc-400 ml-2">
               dhisonp@gmail.com
             </a>
-          </p>
+          </div>
           <Subsection
             header="Software"
             emoji="💻"
             className="fade-in"
             style={{ animationDelay: '0.4s' }}
           >
-            <p className="mb-4">
+            <div className="mb-4">
               Building refined software and web experiences. Engineering optimal
               solutions. Interest in fusing finance, media and technology.
               Experimenting with novel ideas, searching for functionalities as
               an answer to problems.
-            </p>
+            </div>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
               <li className="link-item">
                 <a
@@ -87,11 +117,11 @@ export function Home() {
             className="fade-in"
             style={{ animationDelay: '0.6s' }}
           >
-            <p className="mb-4">
+            <div className="mb-4">
               Might as well be the closest thing I have to a{' '}
               <span className="font-serif">passion</span>. Creating, reimagining
               pieces that evokes feeling. Working on a debut release.
-            </p>
+            </div>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
               <li className="link-item">
                 <a
@@ -180,28 +210,10 @@ export function Home() {
             className="fade-in"
             style={{ animationDelay: '1s' }}
           >
-            <p className="gapped-paragraph">
-              I enjoy creation. That&apos;s the gist of it.
-            </p>
-            <p className="gapped-paragraph">
-              I have worked as a professional photographer, I grew up with music
-              and its performative arts, I design and engineer modern
-              applications, among the few.
-            </p>
-            <p className="gapped-paragraph">
-              What do I enjoy the most? Frankly, creating good music, or
-              performing, has always been my main form of escapism, all the
-              while it has shifted througout the years and inevitably springed
-              back to it. The beauty isn&apos;t in the process alone, though,
-              but rather the collective of creative minds that is required to
-              create the liveliest forms of art.
-            </p>
-            <p className="gapped-paragraph">
-              I spend way too much at the gym, boxing my thoughts out and
-              abusing the heavy bag. Sometimes I go for Yoga when that gets out
-              of hand, but surfing and swimming becomes a priority whenever I am
-              in Los Angeles.
-            </p>
+            <div
+              dangerouslySetInnerHTML={{ __html: bioHtml }}
+              className="space-y-3"
+            />
           </Subsection>
         </div>
       </div>
