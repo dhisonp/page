@@ -6,16 +6,17 @@ interface Props {
   className?: string;
   style?: any;
   header: string;
-  emoji: string;
+  emoji?: string;
 }
 
 const Subsection: FC<Props> = ({ children, className = '', header, emoji, style }) => {
   return (
-    <div className={`gap-y-4 ${className}`} style={style}>
+    <div className={`${className}`} style={style}>
       <Subheading className="mb-4">
-        <a className="mr-2">{emoji}</a> {header}
+        {emoji && emoji?.length > 0 && <a className="mr-2">{emoji} </a>}
+        {header}
       </Subheading>
-      {children}
+      <div className="space-y-2">{children}</div>
     </div>
   );
 };
