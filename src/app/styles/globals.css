@@ -7,8 +7,16 @@
     @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 italic;
   }
 
+  .custom-ul {
+    @apply grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4
+  }
+
   .gapped-paragraph {
     @apply mb-4;
+  }
+
+  .top-link {
+    @apply hover:text-gray-500 transition duration-200
   }
 }
 
