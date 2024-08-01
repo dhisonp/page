@@ -6,13 +6,7 @@ interface Props {
 }
 
 const Subheading: FC<Props> = ({ children, className = '' }) => {
-  return (
-    <div
-      className={`text-base text-zinc-600 dark:text-zinc-400 self-start ${className}`}
-    >
-      {children}
-    </div>
-  );
+  return <div className={`text-base text-zinc-600 dark:text-zinc-400 self-start ${className}`}>{children}</div>;
 };
 
 export default Subheading;

@@ -9,13 +9,7 @@ interface Props {
   emoji: string;
 }
 
-const Subsection: FC<Props> = ({
-  children,
-  className = '',
-  header,
-  emoji,
-  style,
-}) => {
+const Subsection: FC<Props> = ({ children, className = '', header, emoji, style }) => {
   return (
     <div className={`gap-y-4 ${className}`} style={style}>
       <Subheading className="mb-4">

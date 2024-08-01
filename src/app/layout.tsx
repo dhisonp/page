@@ -21,16 +21,9 @@ export const metadata: Metadata = {
   description: 'Here you learn more about me and what I do.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}
-    >
+    <html lang="en" className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}>
       <body>{children}</body>
     </html>
   );
