@@ -8,10 +8,12 @@ import Subsection from '@/app/components/Subsection';
 
 import { BioResponse } from '@/app/types/bio-response';
 import { SectionResponse, Section } from '@/app/types/section-response';
+import Alert from '@/app/components/elements/Alert';
 
 export function Home(): React.JSX.Element {
   const [bioHtml, setBioHtml] = useState<TrustedHTML>('');
   const [sections, setSections] = useState<Section[]>([]);
+  const [errorMessage, setErrorMessage] = useState<string | undefined>();
   // const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -68,6 +70,8 @@ export function Home(): React.JSX.Element {
         </div>
       </div>
 
+      <Alert message="Whoops! Something wrong on the backend. Kindly let me know when sh*t goes down and I'll get you coffee:) ☕️" />
+
       <div className="container max-w-2xl mx-auto flex flex-col items-center text-base text-gray-700 dark:text-gray-300">
         <Subheading className="flex flex-col sm:flex-row mb-8 text-xl fade-in tracking-wide">
           <a className="text-gray-700 dark:text-gray-300 font-medium">Dhison P.</a>
@@ -117,9 +121,11 @@ export function Home(): React.JSX.Element {
             })}
 
           {/* Bio Subsection */}
-          <Subsection header="About me" emoji="🏄‍♂️" className="fade-in" style={{ animationDelay: bioFadeInDelay() }}>
-            <div dangerouslySetInnerHTML={{ __html: bioHtml }} className="space-y-3" />
-          </Subsection>
+          {bioHtml && (
+            <Subsection header="About me" emoji="🏄‍♂️" className="fade-in" style={{ animationDelay: bioFadeInDelay() }}>
+              <div dangerouslySetInnerHTML={{ __html: bioHtml }} className="space-y-3" />
+            </Subsection>
+          )}
         </div>
       </div>
     </main>
