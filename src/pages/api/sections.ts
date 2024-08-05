@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { HttpMethods } from '@/types/http-methods-enum';
-import plAxios from '@/pages/services/axios';
+import plAxios from '@/services/axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === HttpMethods.GET) {
