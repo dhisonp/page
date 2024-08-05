@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { HttpMethods } from '@/pages/types/http-methods-enum';
+import { HttpMethods } from '@/types/http-methods-enum';
 import plAxios from '@/pages/services/axios';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

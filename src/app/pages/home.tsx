@@ -6,8 +6,8 @@ import React, { useEffect, useState } from 'react';
 import Subheading from '@/app/components/Subheading';
 import Subsection from '@/app/components/Subsection';
 
-import { BioResponse } from '@/app/types/bio-response';
-import { SectionResponse, Section } from '@/app/types/section-response';
+import { BioResponse } from '@/types/bio-response';
+import { SectionResponse, Section } from '@/types/section-response';
 import Alert from '@/app/components/elements/Alert';
 
 export function Home(): React.JSX.Element {
@@ -17,6 +17,10 @@ export function Home(): React.JSX.Element {
   // const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
+    // TODO: Handle errors better when you get rid of the double fetch
+    const errorMessageTemplate =
+      "Whoops! Something wrong on the backend. Kindly let me know when sh*t goes down and I'll get you coffee:) ☕️";
+
     // TODO: Avoid double fetching– adjust the backend
     const fetchBio = () => {
       axios
@@ -26,6 +30,7 @@ export function Home(): React.JSX.Element {
           setBioHtml(data.html);
         })
         .catch(err => {
+          setErrorMessage(errorMessageTemplate);
           console.error(err);
         });
     };
@@ -38,6 +43,7 @@ export function Home(): React.JSX.Element {
           setSections(data.docs);
         })
         .catch(err => {
+          setErrorMessage(errorMessageTemplate);
           console.error(err);
         });
     };
@@ -70,7 +76,11 @@ export function Home(): React.JSX.Element {
         </div>
       </div>
 
-      <Alert message="Whoops! Something wrong on the backend. Kindly let me know when sh*t goes down and I'll get you coffee:) ☕️" />
+      {errorMessage && (
+        <div className="fade-in" style={{ animationDelay: '0s' }}>
+          <Alert message={errorMessage} />
+        </div>
+      )}
 
       <div className="container max-w-2xl mx-auto flex flex-col items-center text-base text-gray-700 dark:text-gray-300">
         <Subheading className="flex flex-col sm:flex-row mb-8 text-xl fade-in tracking-wide">

@@ -1,4 +1,4 @@
-import { Links } from '@/app/types/links';
+import { Links } from '@/types/links';
 
 const links: Links = {
   notion: 'https://dhisonp.notion.site/Dhison-Padma-Software-Engineer-1e147536687b4186b4389e5fbb4b8298',
