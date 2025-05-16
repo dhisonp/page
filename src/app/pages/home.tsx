@@ -15,7 +15,7 @@ export function Home() {
         </Subheading>
         <div className="text-left gap-y-12 flex-col flex">
           <p className="fade-in" style={{ animationDelay: '0.2s' }}>
-            <span className="text-black dark:text-white font-serif">Simple complexity</span>. The foundational concept
+            <span className="text-black dark:text-white font-mono">Simple complexity</span>. The foundational concept
             ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
           </p>
           <p className="fade-in" style={{ animationDelay: '0.2s' }}>
@@ -54,7 +54,7 @@ export function Home() {
 
           <Subsection header="Music" emoji="🎸" className="fade-in" style={{ animationDelay: '0.6s' }}>
             <p className="mb-4">
-              Might as well be the closest thing I have to a <span className="font-serif">passion</span>. Creating,
+              Might as well be the closest thing I have to a <span className="font-mono">passion</span>. Creating,
               reimagining pieces that evokes feeling. Working on a debut release.
             </p>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
