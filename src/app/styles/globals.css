@@ -30,26 +30,26 @@
 
 /* Set custom properties for background colors */
 :root {
-    --background-light: rgb(244 244 245); /* Light mode background color */
-    --background-dark: rgb(24 24 27); /* Dark mode background color */
+  --background-light: rgb(244 244 245); /* Light mode background color */
+  --background-dark: rgb(24 24 27); /* Dark mode background color */
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
 /* Default to light mode */
 body {
-    background-color: var(--background-light);
+  background-color: var(--background-light);
 }
 
 /* Media query for dark mode */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--background-dark);
-    }
+  body {
+    background-color: var(--background-dark);
+  }
 }
