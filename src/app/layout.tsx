@@ -18,7 +18,7 @@ const ibmPlexSerif = IBM_Plex_Serif({
 
 export const metadata: Metadata = {
   title: 'Dhison P.',
-  description: 'Here you learn more about me and what I do.',
+  description: 'Here you learn more about me and what I do.'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
