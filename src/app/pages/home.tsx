@@ -23,20 +23,11 @@ export function Home() {
             <a className="italic text-zinc-600 dark:text-zinc-400 ml-2">dhisonp@gmail.com</a>
           </p>
           <Subsection header="Software" emoji="💻" className="fade-in" style={{ animationDelay: '0.4s' }}>
-            <p className="mb-4">
-              Building refined software and web experiences. Engineering optimal solutions. Interest in fusing finance,
-              media and technology. Experimenting with novel ideas, searching for functionalities as an answer to
-              problems.
-            </p>
+            <p className="mb-4">Engineering beauty within solutions.</p>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
               <li className="link-item">
                 <a href={links.linkedin} target="_blank" rel="noopener noreferrer">
                   linkedin &#8640;
-                </a>
-              </li>
-              <li className="link-item">
-                <a href={links.notion} target="_blank" rel="noopener noreferrer">
-                  projects &#8640;
                 </a>
               </li>
               <li className="link-item">
@@ -45,42 +36,31 @@ export function Home() {
                 </a>
               </li>
               <li className="link-item">
-                <a href={links.notion} target="_blank" rel="noopener noreferrer">
-                  experience &#8640;
+                <a href={links.twitter} target="_blank" rel="noopener noreferrer">
+                  twitter / x &#8605;
                 </a>
               </li>
             </ul>
           </Subsection>
 
           <Subsection header="Music" emoji="🎸" className="fade-in" style={{ animationDelay: '0.6s' }}>
-            <p className="mb-4">
-              Might as well be the closest thing I have to a <span className="font-mono">passion</span>. Creating,
-              reimagining pieces that evokes feeling. Working on a debut release.
-            </p>
+            <p className="mb-4">A sound connection.</p>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
-              <li className="link-item">
-                <a href={links.tiktok} target="_blank" rel="noopener noreferrer">
-                  tiktok &#8605;
-                </a>
-              </li>
               <li className="link-item">
                 <a href={links.youtube} target="_blank" rel="noopener noreferrer">
                   youtube &#8605;
                 </a>
               </li>
               <li className="link-item">
-                <a href={links.ig_dhisonp} target="_blank" rel="noopener noreferrer">
-                  instagram &#8605;
+                <a href={links.tiktok} target="_blank" rel="noopener noreferrer">
+                  tiktok &#8605;
                 </a>
               </li>
             </ul>
           </Subsection>
 
           <Subsection header="Photography" emoji="📷" className="fade-in" style={{ animationDelay: '0.8s' }}>
-            <p className="mb-4">
-              Articulating finest imagery for every moment. Aiming to augment the ardent reality into permanance. Holds
-              moments in time, showcasing the beauty in art and people.
-            </p>
+            <p className="mb-4">Articulating finest imagery for every moment. </p>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-4 gap-y-4">
               <li className="link-item">
                 <a href={links.dhisvnco} target="_blank" rel="noopener noreferrer">
