@@ -10,7 +10,7 @@ export function Home() {
         <Subheading className="mb-8 text-xl fade-in tracking-wide">
           <a className="text-gray-700 dark:text-gray-300 font-medium">Dhison P.</a>
           <a className="text-gray-400 dark:text-gray-500 ml-2 font-regular">
-            Software Engineer, Musician, Photographer. New York, NY.
+            Software Engineer, and more. New York, NY.
           </a>
         </Subheading>
         <div className="text-left gap-y-12 flex-col flex">
@@ -85,21 +85,30 @@ export function Home() {
             </ul>
           </Subsection>
 
-          <Subsection header="About me" emoji="🏄‍♂️" className="fade-in" style={{ animationDelay: '1s' }}>
-            <p className="gapped-paragraph">I enjoy creation. That&apos;s the gist of it.</p>
+          {/* TODO: Replace `'` with `&apos;`, or find a workaround. */}
+          {/* TODO: Make this a pretty dropdown! */}
+          <Subsection header="Extras" emoji="🏄‍♂️" className="fade-in" style={{ animationDelay: '1s' }}>
+            <p className="gapped-paragraph">I enjoy the process of creation.</p>
             <p className="gapped-paragraph">
-              I have worked as a professional photographer, I grew up with music and its performative arts, I design and
-              engineer modern applications, among the few.
+              If you're here, you're probably curious about my work as a SWE. That should all entailed above. If you
+              scrolled this far, well thank you! Here are some bits about me as a human person.
             </p>
             <p className="gapped-paragraph">
-              What do I enjoy the most? Frankly, creating good music, or performing, has always been my main form of
-              escapism, all the while it has shifted througout the years and inevitably springed back to it. The beauty
-              isn&apos;t in the process alone, though, but rather the collective of creative minds that is required to
-              create the liveliest forms of art.
+              I'd say my biggest motivator in moving around this world is surfing. I try to go to at least one or two
+              surf trips per year– this gives me the minimum dose of bliss in my life. Snowboarding comes
+              second– nothing comes close to making winter as exciting as it is right now. I run a generous amount, lift
+              weights to achieve the physique I'll be satisfied with.
             </p>
             <p className="gapped-paragraph">
-              I spend way too much at the gym, boxing my thoughts out and abusing the heavy bag. Sometimes I go for Yoga
-              when that gets out of hand, but surfing and swimming becomes a priority whenever I am in Los Angeles.
+              I grew up sorrounded by music. Being a SWE gives me a massive outlet on my logical sound, and sports for my
+              twitching-high metabolism and thrill-seeking nature. Music gives me all the real estate to express in both
+              the creative and emotional realm. Like software, I try my best to create something that someone will
+              appreciate to the highest degree. Excellence is nothing short of minimum, and I'd not dare to sell nor
+              brag about anything that is short of such.
+            </p>
+            <p className="gapped-paragraph">
+              And yes, I used to be a photographer. Frankly speaking, I barely do it lately. But how are you not tempted
+              to create art when you're presented by a deserving scenery?
             </p>
           </Subsection>
         </div>
