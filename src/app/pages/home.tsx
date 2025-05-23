@@ -7,16 +7,14 @@ export function Home() {
     <main className="overflow-y-scroll touch min-h-screen px-4 py-4 md:py-24 bg-zinc-100 dark:bg-zinc-900">
       {/* main div */}
       <div className="container max-w-2xl mx-auto flex flex-col items-center text-base text-gray-700 dark:text-gray-300">
-        <Subheading className="mb-8 text-xl fade-in tracking-wide">
-          <a className="text-gray-700 dark:text-gray-300 font-medium">Dhison P.</a>
-          <a className="text-gray-400 dark:text-gray-500 ml-2 font-regular">
-            Software Engineer, and more. New York, NY.
-          </a>
+        <Subheading className="mb-8 fade-in tracking-wide">
+          <a className="text-gray-700 text-2xl dark:text-gray-300 font-medium font-mono">Dhison P.</a>
+          <a className="text-gray-500 text-lg ml-2 font-regular">Software Engineer, and more. New York, NY.</a>
         </Subheading>
         <div className="text-left gap-y-12 flex-col flex">
           <p className="fade-in" style={{ animationDelay: '0.2s' }}>
-            <span className="text-black dark:text-white font-mono">Simple complexity</span>. The foundational concept
-            ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
+            <span className="text-black dark:text-white font-mono italic">Simple complexity</span>. The foundational
+            concept ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
           </p>
           <p className="fade-in" style={{ animationDelay: '0.2s' }}>
             ✉️
@@ -87,28 +85,14 @@ export function Home() {
 
           {/* TODO: Replace `'` with `&apos;`, or find a workaround. */}
           {/* TODO: Make this a pretty dropdown! */}
-          <Subsection header="Extras" emoji="🏄‍♂️" className="fade-in" style={{ animationDelay: '1s' }}>
+          <Subsection header="About" emoji="🏄‍♂️" className="fade-in" style={{ animationDelay: '1s' }}>
             <p className="gapped-paragraph">I enjoy the process of creation.</p>
+            <p className="gapped-paragraph">Surfing, snowboarding, running, and lifting. Permanent activities.</p>
             <p className="gapped-paragraph">
-              If you're here, you're probably curious about my work as a SWE. That should all entailed above. If you
-              scrolled this far, well thank you! Here are some bits about me as a human person.
+              Music gave me the start to creation, refinement and performance. Creative.
             </p>
             <p className="gapped-paragraph">
-              I'd say my biggest motivator in moving around this world is surfing. I try to go to at least one or two
-              surf trips per year– this gives me the minimum dose of bliss in my life. Snowboarding comes
-              second– nothing comes close to making winter as exciting as it is right now. I run a generous amount, lift
-              weights to achieve the physique I'll be satisfied with.
-            </p>
-            <p className="gapped-paragraph">
-              I grew up sorrounded by music. Being a SWE gives me a massive outlet on my logical sound, and sports for my
-              twitching-high metabolism and thrill-seeking nature. Music gives me all the real estate to express in both
-              the creative and emotional realm. Like software, I try my best to create something that someone will
-              appreciate to the highest degree. Excellence is nothing short of minimum, and I'd not dare to sell nor
-              brag about anything that is short of such.
-            </p>
-            <p className="gapped-paragraph">
-              And yes, I used to be a photographer. Frankly speaking, I barely do it lately. But how are you not tempted
-              to create art when you're presented by a deserving scenery?
+              From Jakarta. Then to Guangzhou, then to Tampa. Now and perhaps forever, based in New York, NY.
             </p>
           </Subsection>
         </div>
