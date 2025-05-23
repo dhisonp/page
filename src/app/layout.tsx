@@ -1,36 +1,25 @@
-import "./styles/globals.css";
-import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
+import './styles/globals.css';
+import type { Metadata } from 'next';
+import { Source_Sans_3, Source_Code_Pro } from 'next/font/google';
 
-const ibmPlexSans = IBM_Plex_Sans({
-  weight: "300",
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--font-ibm-plex-sans",
+const sans = Source_Sans_3({
+  variable: '--font-source-sans-3',
+  subsets: ['latin'],
 });
 
-const ibmPlexSerif = IBM_Plex_Serif({
-  weight: "300",
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--font-ibm-plex-serif",
+const mono = Source_Code_Pro({
+  variable: '--font-source-code-pro',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Dhison P.",
-  description: "Here you learn more about me and what I do.",
+  title: 'Dhison P.',
+  description: 'Excellence in tandem.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable}`}
-    >
+    <html lang="en" className={`${sans.variable} ${mono.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );
