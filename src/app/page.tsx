@@ -1,6 +1,4 @@
-import './animations/animations.css';
-import './animations/custom.css';
-import { Home } from '@/app/pages/home';
+import { Home } from '@/app/home';
 
 export default function Main() {
   return <Home />;
