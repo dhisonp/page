@@ -82,14 +82,10 @@ export function Home() {
             </ul>
           </Subsection>
 
-          <Subsection header="About" emoji="🏄‍♂️" className="fade-in delay-1000">
-            <p className="gapped-paragraph">I enjoy the process of creation.</p>
-            <p className="gapped-paragraph">Surfing, snowboarding, running, and lifting. Permanent activities.</p>
+          <Subsection header="About Me" emoji="🏄‍♂️" className="fade-in delay-1000">
             <p className="gapped-paragraph">
-              Music gave me the start to creation, refinement and performance. Creative.
-            </p>
-            <p className="gapped-paragraph">
-              From Jakarta. Then to Guangzhou, then to Tampa. Now and perhaps forever, based in New York, NY.
+              I enjoy the process of creation, however form it may be. And surfing. And snowboarding. And too many other
+              things, to be honest.
             </p>
           </Subsection>
         </div>
