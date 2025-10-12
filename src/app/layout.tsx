@@ -1,10 +1,51 @@
 import './styles/globals.css';
 import type { Metadata } from 'next';
-import { Victor_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const primaryFont = Victor_Mono({
+const primaryFont = localFont({
+  src: [
+    {
+      path: '../../public/fonts/IosevkaFira-Light.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/IosevkaFira-LightItalic.ttf',
+      weight: '300',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/IosevkaFira-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/IosevkaFira-Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/IosevkaFira-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/IosevkaFira-MediumItalic.ttf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: '../../public/fonts/IosevkaFira-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/IosevkaFira-BoldItalic.ttf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
   variable: '--font-primary',
-  subsets: ['latin'],
   display: 'swap',
 });
 
