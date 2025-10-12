@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 @theme inline {
-  --font-sans: var(--font-source-sans-3);
-  --font-mono: var(--font-source-code-pro);
+  --font-sans: var(--font-victor-mono);
+  --font-mono: var(--font-victor-mono);
 }
 
 @layer base {

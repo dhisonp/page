@@ -1,14 +1,14 @@
 import './styles/globals.css';
 import type { Metadata } from 'next';
-import { Source_Sans_3, Source_Code_Pro } from 'next/font/google';
+import { Victor_Mono } from 'next/font/google';
 
-const sans = Source_Sans_3({
-  variable: '--font-source-sans-3',
+const sans = Victor_Mono({
+  variable: '--font-victor-mono',
   subsets: ['latin'],
 });
 
-const mono = Source_Code_Pro({
-  variable: '--font-source-code-pro',
+const mono = Victor_Mono({
+  variable: '--font-victor-mono',
   subsets: ['latin'],
 });
 

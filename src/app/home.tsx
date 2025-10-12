@@ -7,13 +7,13 @@ export function Home() {
     <main className="overflow-y-scroll min-h-screen px-4 py-4 md:py-24 bg-zinc-100 dark:bg-zinc-900">
       <div className="container max-w-2xl mx-auto flex flex-col items-center text-base text-gray-700 dark:text-gray-300">
         <Subheading className="mb-8 fade-in tracking-wide">
-          <span className="text-gray-700 text-2xl dark:text-gray-300 font-medium font-mono">Dhison P.</span>
-          <span className="text-gray-500 text-lg ml-2 font-regular">Software Engineer, and more. New York, NY.</span>
+          <span className="text-gray-700 text-2xl dark:text-gray-300 font-medium">Dhison P.</span>
+          <span className="text-gray-500 text-lg ml-2 font-regular">Engineering, and more. New York, NY.</span>
         </Subheading>
         <div className="text-left gap-y-12 flex-col flex">
           <p className="fade-in delay-200">
-            <span className="text-black dark:text-white font-mono italic">Simple complexity</span>. The foundational
-            concept ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
+            <span className="text-black dark:text-white italic">Simple complexity</span>. The foundational concept
+            ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
           </p>
           <p className="fade-in delay-200">
             ✉️
