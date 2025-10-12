@@ -1,26 +1,25 @@
-import Subheading from '@/app/components/Subheading';
-import Subsection from '@/app/components/Subsection';
+import { Subheading } from '@/app/components/Subheading';
+import { Subsection } from '@/app/components/Subsection';
 import links from '@/app/collections/links';
 
 export function Home() {
   return (
-    <main className="overflow-y-scroll touch min-h-screen px-4 py-4 md:py-24 bg-zinc-100 dark:bg-zinc-900">
-      {/* main div */}
+    <main className="overflow-y-scroll min-h-screen px-4 py-4 md:py-24 bg-zinc-100 dark:bg-zinc-900">
       <div className="container max-w-2xl mx-auto flex flex-col items-center text-base text-gray-700 dark:text-gray-300">
         <Subheading className="mb-8 fade-in tracking-wide">
-          <a className="text-gray-700 text-2xl dark:text-gray-300 font-medium font-mono">Dhison P.</a>
-          <a className="text-gray-500 text-lg ml-2 font-regular">Software Engineer, and more. New York, NY.</a>
+          <span className="text-gray-700 text-2xl dark:text-gray-300 font-medium font-mono">Dhison P.</span>
+          <span className="text-gray-500 text-lg ml-2 font-regular">Software Engineer, and more. New York, NY.</span>
         </Subheading>
         <div className="text-left gap-y-12 flex-col flex">
-          <p className="fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="fade-in delay-200">
             <span className="text-black dark:text-white font-mono italic">Simple complexity</span>. The foundational
             concept ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
           </p>
-          <p className="fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="fade-in delay-200">
             ✉️
-            <a className="italic text-zinc-600 dark:text-zinc-400 ml-2">dhisonp@gmail.com</a>
+            <span className="italic text-zinc-600 dark:text-zinc-400 ml-2">dhisonp@gmail.com</span>
           </p>
-          <Subsection header="Software" emoji="💻" className="fade-in" style={{ animationDelay: '0.4s' }}>
+          <Subsection header="Software" emoji="💻" className="fade-in delay-400">
             <p className="mb-4">Engineering beauty within solutions.</p>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
               <li className="link-item">
@@ -41,7 +40,7 @@ export function Home() {
             </ul>
           </Subsection>
 
-          <Subsection header="Music" emoji="🎸" className="fade-in" style={{ animationDelay: '0.6s' }}>
+          <Subsection header="Music" emoji="🎸" className="fade-in delay-600">
             <p className="mb-4">A sound connection.</p>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
               <li className="link-item">
@@ -57,7 +56,7 @@ export function Home() {
             </ul>
           </Subsection>
 
-          <Subsection header="Photography" emoji="📷" className="fade-in" style={{ animationDelay: '0.8s' }}>
+          <Subsection header="Photography" emoji="📷" className="fade-in delay-800">
             <p className="mb-4">Articulating finest imagery for every moment. </p>
             <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-4 gap-y-4">
               <li className="link-item">
@@ -83,9 +82,7 @@ export function Home() {
             </ul>
           </Subsection>
 
-          {/* TODO: Replace `'` with `&apos;`, or find a workaround. */}
-          {/* TODO: Make this a pretty dropdown! */}
-          <Subsection header="About" emoji="🏄‍♂️" className="fade-in" style={{ animationDelay: '1s' }}>
+          <Subsection header="About" emoji="🏄‍♂️" className="fade-in delay-1000">
             <p className="gapped-paragraph">I enjoy the process of creation.</p>
             <p className="gapped-paragraph">Surfing, snowboarding, running, and lifting. Permanent activities.</p>
             <p className="gapped-paragraph">

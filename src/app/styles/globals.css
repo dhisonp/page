@@ -1,19 +1,10 @@
 @import 'tailwindcss';
 
 @theme inline {
-    /* TODO: Add background color(s) here instead. */
-    --font-sans: var(--font-source-sans-3);
-    --font-mono: var(--font-source-code-pro);
+  --font-sans: var(--font-source-sans-3);
+  --font-mono: var(--font-source-code-pro);
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
@@ -22,11 +13,47 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+
+  body {
+    background-color: rgb(244 244 245);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: rgb(24 24 27);
+    }
+  }
 }
 
 @layer components {
   .link-item {
     @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 italic;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeInAnimation 0.6s ease-in forwards;
+  }
+
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  .delay-800 {
+    animation-delay: 0.8s;
+  }
+
+  .delay-1000 {
+    animation-delay: 1s;
   }
 }
 
@@ -34,28 +61,9 @@
   @apply mb-4;
 }
 
-/* Set custom properties for background colors */
-:root {
-  --background-light: rgb(244 244 245); /* Light mode background color */
-  --background-dark: rgb(24 24 27); /* Dark mode background color */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-/* Default to light mode */
-body {
-  background-color: var(--background-light);
-}
-
-/* Media query for dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--background-dark);
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
