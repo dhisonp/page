@@ -59,6 +59,13 @@ src/app/
 - Dark mode support using Tailwind's `dark:` variants
 - Responsive design using Tailwind's `md:` breakpoints
 
+**Font Configuration**:
+
+- Centralized in `layout.tsx` using Next.js font optimization
+- Uses generic CSS variable `--font-primary` mapped to both `--font-sans` and `--font-mono`
+- To change fonts: Only modify the font import and loader in `layout.tsx`
+- CSS references remain unchanged using `var(--font-primary)`
+
 **Data Management**: External links centralized in `collections/links.ts` for easy maintenance.
 
 ## Code Style

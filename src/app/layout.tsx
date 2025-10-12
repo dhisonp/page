@@ -2,14 +2,10 @@ import './styles/globals.css';
 import type { Metadata } from 'next';
 import { Victor_Mono } from 'next/font/google';
 
-const sans = Victor_Mono({
-  variable: '--font-victor-mono',
+const primaryFont = Victor_Mono({
+  variable: '--font-primary',
   subsets: ['latin'],
-});
-
-const mono = Victor_Mono({
-  variable: '--font-victor-mono',
-  subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -19,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable} antialiased`}>
+    <html lang="en" className={`${primaryFont.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );
