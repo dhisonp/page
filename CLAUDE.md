@@ -4,25 +4,29 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal portfolio website built with Next.js 15.3 (App Router), React 19, TypeScript, and Tailwind CSS v4. It's a single-page application showcasing software engineering, music, and photography work. The site uses Yarn for package management and runs with Turbopack in development.
+This is a personal portfolio website built with Next.js 15.5 (App Router), React 19.2, TypeScript 5.9, and Tailwind CSS v4. It's a single-page application showcasing software engineering, music, and photography work. The site uses npm for package management and runs with Turbopack in development.
 
 ## Development Commands
 
 ```bash
 # Start development server with Turbopack
-yarn dev
+npm run dev
 
 # Build for production
-yarn build
+npm run build
 
 # Start production server
-yarn start
+npm start
 
 # Run ESLint
-yarn lint
+npm run lint
 ```
 
 Development server runs on http://localhost:3000
+
+## Future Considerations
+
+- **ESLint Migration**: Next.js 15.5 deprecates `next lint` in favor of direct ESLint CLI usage. Consider migrating the lint script before Next.js 16. The project already uses modern ESLint flat config (`eslint.config.mjs`), making migration straightforward.
 
 ## Architecture
 
