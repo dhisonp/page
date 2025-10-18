@@ -4,7 +4,7 @@ import links from '@/app/collections/links';
 
 export function Home() {
   return (
-    <main className="overflow-y-scroll min-h-screen px-4 py-4 pt-12 sm:pt-16 bg-zinc-100 dark:bg-zinc-900">
+    <main className="overflow-y-scroll min-h-screen px-4 py-6 sm:pt-9 lg:pt-12  bg-zinc-100 dark:bg-zinc-900">
       <div className="container max-w-2xl mx-auto flex flex-col items-center text-base text-gray-700 dark:text-gray-300">
         <Subheading className="mb-8 fade-in tracking-wide">
           <span className="text-gray-700 text-2xl dark:text-gray-300 font-medium">Dhison P.</span>
