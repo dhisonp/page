@@ -6,7 +6,6 @@ interface BlogListProps {
 }
 
 export function BlogList({ posts }: BlogListProps) {
-
   return (
     <section id="writings" className="max-w-xl" aria-label="Blog posts">
       <h3 className="mb-4">Writings</h3>
