@@ -51,6 +51,11 @@ export default async function BlogPost({ params }: PageProps) {
         >
           &#8637; Back
         </Link>
+        <div className="mb-6 flex gap-2 text-sm text-gray-500">
+          <span>{post.category}</span>
+          <span>-</span>
+          <time dateTime={post.date}>{post.date}</time>
+        </div>
         <article className="prose">
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </article>
