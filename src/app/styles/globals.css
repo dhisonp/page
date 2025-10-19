@@ -26,8 +26,12 @@
 }
 
 @layer base {
+  h3 {
+    @apply text-lg text-gray-600 dark:text-gray-400;
+  }
+
   p {
-    @apply text-base text-gray-700 dark:text-gray-300
+    @apply text-base text-gray-700 dark:text-gray-300;
   }
 }
 
