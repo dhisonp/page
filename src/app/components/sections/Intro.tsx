@@ -4,7 +4,7 @@ import { Subsection } from '../Subsection';
 
 export function Intro() {
   return (
-    <div className="container max-w-2xl mx-auto flex flex-col items-center text-base text-gray-700 dark:text-gray-300">
+    <div className="max-w-2xl flex flex-col items-center">
       <Subheading className="mb-8 fade-in tracking-wide">
         <span className="text-gray-700 text-2xl dark:text-gray-300 font-medium">Dhison P.</span>
         <span className="text-gray-500 text-lg ml-2 font-regular">Engineering, and more. New York, NY.</span>
