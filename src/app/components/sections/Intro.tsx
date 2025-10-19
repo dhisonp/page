@@ -18,6 +18,9 @@ export function Intro() {
           ✉️
           <span className="italic text-zinc-600 dark:text-zinc-400 ml-2">dhisonp@gmail.com</span>
         </p>
+        <a href="#writings" className="cursor-pointer text-gray-600 dark:text-gray-400 italic">
+          My own writings &#8595;
+        </a>
         <Subsection header="Software" emoji="💻" className="fade-in delay-400">
           <p className="mb-4">Engineering beauty within solutions.</p>
           <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">

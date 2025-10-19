@@ -8,7 +8,7 @@ interface BlogListProps {
 export function BlogList({ posts }: BlogListProps) {
 
   return (
-    <section className="h-full max-w-xl overflow-y-auto scrollbar-none" aria-label="Blog posts">
+    <section id="writings" className="h-full max-w-xl overflow-y-auto scrollbar-none" aria-label="Blog posts">
       <h3 className="mb-4">Writings</h3>
 
       <ul className="space-y-4">
