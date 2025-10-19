@@ -1,22 +1,36 @@
 ---
-title: "Modern Music Production Techniques"
-date: "2025-01-10"
-category: "Music"
-slug: "music-production-techniques"
+title: 'Improving Engineering Skills'
+date: '2025-10-18'
+category: 'Engineering'
+slug: 'improving-engineering-skills'
 ---
 
-# Modern Music Production Techniques
+# Improving Engineering Skills
 
-Music production has evolved dramatically with digital technology. Here are some techniques I've been exploring in my recent work.
+Here are some pointers to start polishiing your engineering knowledge base and skills. It has to come from real-world experience and intricate literature reading.
 
-## Layering and Texture
+**1. Start contributing on well-known open source projects**
 
-Creating depth in a mix comes from thoughtful layering. Each element should occupy its own space in the frequency spectrum.
+Find a CLI-based Rust project to learn about open-source dynamics and best practices in engineering and project management, including code reviews, issues, CI/CD, etc. Zed is an excellent choice due to its growth, activity, and community, a language that you learn, and is a very high quality software that you use for living.
 
-## Digital vs. Analog
+**2. Learn a new language**
 
-While digital tools offer incredible precision, there's still something special about analog warmth. I often blend both approaches.
+Naturally, you’ll have to do this if you have a good choice of an open-source project. Zed and Yaak are in Rust, as are many other CLI projects. Learning a new language engages your learning cortex and gives you a fresh perspective and unique software development practices to apply to your current skillset.
 
-## Final Thoughts
+**3. Increase velocity on churning literature**
 
-The best production serves the song. Technology is just a tool to bring your creative vision to life.
+Finish the language books, Pragmatic and Philosophy on Software Design, efficiently. Don’t waste time, use proper reading techniques, and apply them to your current work.
+
+**4. Algorithms!**
+
+Make daily algorithm practice a habit. It improves coding efficiency, fosters focus, and enhances problem-solving. It’s also the most direct way to secure a higher-paying job.
+
+**5. Engage with the community**
+
+This keeps you engaged and _involved_ in the industry. It can land you jobs, create connections, and help you stay updated with the latest tech practices. Platforms like X, Blind, and others are great examples. Treat it like scrolling through TikTok, but with purpose—accessible and beneficial!
+
+**X. Efficient use of time**
+
+In order efficiency: hands-on projects, algorithms and reading. Projects will give you the most efficient output, as it teaches you applicable practical skills and forces you to expand your knowledge in the pursuit of writing a high-quality code. Algorithms will engage your brain and problem-solving abilities and directly benefits you as someone looking for better opportunities. Read tech-heavy books sparringly, as in not as a traditional bottom-top book, but as a mix of foundational learning and as a reference to assist you engineer better products.
+
+_Refer to [[The Pragmatic Programmer]] for a more in-depth outline on how to grow as a software engineer._
