@@ -41,15 +41,15 @@
   }
 
   .prose h1 {
-    @apply text-3xl font-medium text-gray-800 dark:text-gray-200 mb-6 mt-8 first:mt-0;
+    @apply text-3xl font-medium text-gray-800 dark:text-gray-200 mb-6 mt-12 first:mt-0;
   }
 
   .prose h2 {
-    @apply text-2xl font-medium text-gray-700 dark:text-gray-300 mb-4 mt-6;
+    @apply text-2xl font-medium text-gray-700 dark:text-gray-300 mb-4 mt-10;
   }
 
   .prose h3 {
-    @apply text-xl font-medium text-gray-700 dark:text-gray-300 mb-3 mt-5;
+    @apply text-xl font-medium text-gray-700 dark:text-gray-300 mb-3 mt-8;
   }
 
   .prose p {
@@ -74,19 +74,19 @@
   }
 
   .prose li {
-    @apply mb-2;
+    @apply mb-2 text-gray-700 dark:text-gray-300;
   }
 
   .prose code {
-    @apply text-sm bg-zinc-200 dark:bg-zinc-800 px-1 py-0.5 rounded;
+    @apply text-sm bg-zinc-200 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 px-1 py-0.5 rounded;
   }
 
   .prose pre {
-    @apply bg-zinc-200 dark:bg-zinc-800 p-4 rounded mb-4 overflow-x-auto;
+    @apply bg-zinc-200 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 p-4 rounded mb-4 overflow-x-auto;
   }
 
   .prose pre code {
-    @apply bg-transparent p-0;
+    @apply bg-transparent p-0 text-gray-700 dark:text-gray-300;
   }
 
   .prose blockquote {
