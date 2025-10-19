@@ -43,15 +43,15 @@ export default async function BlogPost({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen px-4 pb-6">
-      <div className="sticky top-0 pt-4 pb-2 blog-back-row">
-        <div className="mx-auto max-w-2xl">
+    <main className="min-h-screen pb-6">
+      <div className="sticky top-0 py-2 blog-back-row">
+        <div className="mx-auto max-w-2xl px-4">
           <Link href="/" className="inline-block link-item">
             &#8637; Back
           </Link>
         </div>
       </div>
-      <div className="mx-auto max-w-2xl">
+      <div className="mx-auto max-w-2xl px-4">
         <div className="mb-6 flex gap-2 text-sm blog-meta">
           <span>{post.category}</span>
           <span>-</span>
