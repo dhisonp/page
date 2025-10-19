@@ -52,6 +52,10 @@ const primaryFont = localFont({
 export const metadata: Metadata = {
   title: 'Dhison P.',
   description: 'Excellence in tandem.',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f4f2e8' },
+    { media: '(prefers-color-scheme: dark)', color: '#1f1f28' },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -8,7 +8,7 @@ export function Home() {
 
   return (
     <main
-      className={`min-h-screen bg-zinc-100 px-4 py-6 sm:pt-9 lg:pt-12 dark:bg-zinc-900 ${
+      className={`min-h-screen px-4 py-6 sm:pt-9 lg:pt-12 ${
         hasPosts ? '' : 'flex items-center justify-center'
       }`}
     >

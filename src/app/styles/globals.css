@@ -5,55 +5,128 @@
   --font-mono: var(--font-primary);
 }
 
+:root {
+  /* Kanagawa Lotus (Light Mode) Colors */
+  --color-lotus-bg: #f4f2e8;
+  --color-lotus-bg-dim: #e8e5d8;
+  --color-lotus-bg-p1: #ebe8dc;
+  --color-lotus-bg-p2: #efecd0;
+  --color-lotus-fg: #545464;
+  --color-lotus-fg-dim: #43436c;
+  --color-lotus-gray: #8a8980;
+  --color-lotus-gray-2: #716e61;
+  --color-lotus-violet: #a09cac;
+  --color-lotus-violet-2: #766b90;
+  --color-lotus-blue: #4d699b;
+  --color-lotus-green: #6f894e;
+  --color-lotus-orange: #cc6d00;
+  --color-lotus-pink: #b35b79;
+  --color-lotus-yellow: #836f4a;
+  --color-lotus-aqua: #597b75;
+
+  /* Kanagawa Wave (Dark Mode) Colors */
+  --color-wave-bg: #1f1f28;
+  --color-wave-bg-dim: #181820;
+  --color-wave-bg-p1: #2a2a37;
+  --color-wave-bg-p2: #363646;
+  --color-wave-fg: #dcd7ba;
+  --color-wave-fg-dim: #c8c093;
+  --color-wave-gray: #727169;
+  --color-wave-violet: #957fb8;
+  --color-wave-blue: #7e9cd8;
+  --color-wave-green: #98bb6c;
+  --color-wave-orange: #ffa066;
+  --color-wave-pink: #d27e99;
+  --color-wave-yellow: #c0a36e;
+  --color-wave-aqua: #7aa89f;
+}
+
 @layer base {
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-lotus-gray, currentcolor);
   }
 
   body {
-    background-color: rgb(244 244 245);
+    background-color: var(--color-lotus-bg);
+    color: var(--color-lotus-fg);
   }
 
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: rgb(24 24 27);
-    }
-  }
-}
-
-@layer base {
   h3 {
-    @apply text-lg text-gray-600 dark:text-gray-400;
+    @apply text-lg;
+    color: var(--color-lotus-fg-dim);
   }
 
   p {
-    @apply text-base text-gray-700 dark:text-gray-300;
+    @apply text-base;
+    color: var(--color-lotus-fg);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+      border-color: var(--color-wave-gray, currentcolor);
+    }
+
+    body {
+      background-color: var(--color-wave-bg);
+      color: var(--color-wave-fg);
+    }
+
+    h3 {
+      color: var(--color-wave-fg-dim);
+    }
+
+    p {
+      color: var(--color-wave-fg);
+    }
   }
 }
 
 @layer components {
   .link-item {
-    @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 italic;
+    @apply transition duration-200 italic;
+    color: var(--color-lotus-blue);
+  }
+
+  .link-item:hover {
+    color: var(--color-lotus-violet-2);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .link-item {
+      color: var(--color-wave-blue);
+    }
+
+    .link-item:hover {
+      color: var(--color-wave-violet);
+    }
   }
 
   .prose h1 {
-    @apply text-3xl font-medium text-gray-600 dark:text-gray-400 mb-6 mt-12 first:mt-0;
+    @apply text-3xl font-medium mb-6 mt-12 first:mt-0;
+    color: var(--color-lotus-fg-dim);
   }
 
   .prose h2 {
-    @apply text-2xl font-medium text-gray-600 dark:text-gray-400 mb-4 mt-10;
+    @apply text-2xl font-medium mb-4 mt-10;
+    color: var(--color-lotus-fg-dim);
   }
 
   .prose h3 {
-    @apply text-xl font-medium text-gray-600 dark:text-gray-400 mb-3 mt-8;
+    @apply text-xl font-medium mb-3 mt-8;
+    color: var(--color-lotus-fg-dim);
   }
 
   .prose h4 {
-    @apply text-lg font-medium text-gray-600 dark:text-gray-400 mb-3 mt-8;
+    @apply text-lg font-medium mb-3 mt-8;
+    color: var(--color-lotus-fg-dim);
   }
 
   .prose p {
@@ -61,7 +134,12 @@
   }
 
   .prose a {
-    @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 underline;
+    @apply transition duration-200 underline;
+    color: var(--color-lotus-blue);
+  }
+
+  .prose a:hover {
+    color: var(--color-lotus-violet-2);
   }
 
   .prose ul,
@@ -78,23 +156,101 @@
   }
 
   .prose li {
-    @apply mb-1 text-gray-700 dark:text-gray-300;
+    @apply mb-1;
+    color: var(--color-lotus-fg);
   }
 
   .prose code {
-    @apply text-sm bg-zinc-200 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 px-1 py-0.5 rounded;
+    @apply text-sm px-1 py-0.5 rounded;
+    background-color: var(--color-lotus-bg-dim);
+    color: var(--color-lotus-pink);
   }
 
   .prose pre {
-    @apply bg-zinc-200 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 p-4 rounded mb-4 overflow-x-auto;
+    @apply p-4 rounded mb-4 overflow-x-auto;
+    background-color: var(--color-lotus-bg-dim);
+    color: var(--color-lotus-fg);
   }
 
   .prose pre code {
-    @apply bg-transparent p-0 text-gray-700 dark:text-gray-300;
+    @apply bg-transparent p-0;
+    color: var(--color-lotus-fg);
   }
 
   .prose blockquote {
-    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-600 dark:text-gray-400 mb-4;
+    @apply border-l-4 pl-4 italic mb-4;
+    border-color: var(--color-lotus-violet);
+    color: var(--color-lotus-fg-dim);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .prose h1,
+    .prose h2,
+    .prose h3,
+    .prose h4 {
+      color: var(--color-wave-fg-dim);
+    }
+
+    .prose a {
+      color: var(--color-wave-blue);
+    }
+
+    .prose a:hover {
+      color: var(--color-wave-violet);
+    }
+
+    .prose li {
+      color: var(--color-wave-fg);
+    }
+
+    .prose code {
+      background-color: var(--color-wave-bg-p1);
+      color: var(--color-wave-pink);
+    }
+
+    .prose pre {
+      background-color: var(--color-wave-bg-p1);
+      color: var(--color-wave-fg);
+    }
+
+    .prose pre code {
+      color: var(--color-wave-fg);
+    }
+
+    .prose blockquote {
+      border-color: var(--color-wave-violet);
+      color: var(--color-wave-fg-dim);
+    }
+  }
+
+  .blog-meta {
+    color: var(--color-lotus-gray);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .blog-meta {
+      color: var(--color-wave-gray);
+    }
+  }
+
+  .scroll-to-top {
+    background-color: var(--color-lotus-bg-dim);
+    color: var(--color-lotus-fg);
+  }
+
+  .scroll-to-top:hover {
+    background-color: var(--color-lotus-violet);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .scroll-to-top {
+      background-color: var(--color-wave-bg-p1);
+      color: var(--color-wave-fg);
+    }
+
+    .scroll-to-top:hover {
+      background-color: var(--color-wave-violet);
+    }
   }
 
   .fade-in {

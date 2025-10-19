@@ -43,15 +43,12 @@ export default async function BlogPost({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-zinc-100 px-4 py-6 sm:pt-9 lg:pt-12 dark:bg-zinc-900">
+    <main className="min-h-screen px-4 py-6 sm:pt-9 lg:pt-12">
       <div className="mx-auto max-w-2xl">
-        <Link
-          href="/"
-          className="inline-block mb-6 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition duration-200"
-        >
+        <Link href="/" className="inline-block mb-6 link-item">
           &#8637; Back
         </Link>
-        <div className="mb-6 flex gap-2 text-sm text-gray-500">
+        <div className="mb-6 flex gap-2 text-sm blog-meta">
           <span>{post.category}</span>
           <span>-</span>
           <time dateTime={post.date}>{post.date}</time>
