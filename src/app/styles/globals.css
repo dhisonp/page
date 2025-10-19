@@ -41,15 +41,15 @@
   }
 
   .prose h1 {
-    @apply text-3xl font-medium text-gray-800 dark:text-gray-200 mb-6 mt-12 first:mt-0;
+    @apply text-3xl font-medium text-gray-600 dark:text-gray-400 mb-6 mt-12 first:mt-0;
   }
 
   .prose h2 {
-    @apply text-2xl font-medium text-gray-700 dark:text-gray-300 mb-4 mt-10;
+    @apply text-2xl font-medium text-gray-600 dark:text-gray-400 mb-4 mt-10;
   }
 
   .prose h3 {
-    @apply text-xl font-medium text-gray-700 dark:text-gray-300 mb-3 mt-8;
+    @apply text-xl font-medium text-gray-600 dark:text-gray-400 mb-3 mt-8;
   }
 
   .prose p {
@@ -74,7 +74,7 @@
   }
 
   .prose li {
-    @apply mb-2 text-gray-700 dark:text-gray-300;
+    @apply mb-1 text-gray-700 dark:text-gray-300;
   }
 
   .prose code {
