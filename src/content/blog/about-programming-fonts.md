@@ -27,6 +27,26 @@ programming fonts, in order, prioritizing these as the deciding factors:
 2. Design
 3. Practicality
 
+## General Tips
+
+For whatever font you are using, I advise using _at least_ 14px of size with
+~1.0-1.25x line height. To clarify, when I say 'line height', as I am not a
+designer myself, I refer to the ratio between a full-height character and the
+gap between the next/previous line. For example, in the following code block,
+the space between each number on the individual lines should at least be
+~1.0-1.25x the size of the numbers. I usually use `3` or `8` and see they at
+least have that amount of spacing.
+
+```
+123458888
+123458888
+```
+
+Your eyes will thank this, and of course, it will make the editor prettier.
+Basic accessbility and UX stuff!
+
+Now, let's get on to the list.
+
 ## 7. Source Code Pro
 
 ![Source Code Pro](/images/about-programming-fonts/source.png)
@@ -191,3 +211,13 @@ and the rest.
 
 U.S. Graphics Company did an outstanding job on this font and I am stoked to see
 them working on a new font, which I'll certainly try on day one!
+
+---
+
+If you find my setup pretty, and I hope you do, here are what I use in the
+screenshots:
+
+- Editor: [Zed](https://zed.dev/)
+- Color: [Kanagawa Wave](https://github.com/rebelot/kanagawa.nvim)
+- Font size: 14px
+- Line height: Comfortable
