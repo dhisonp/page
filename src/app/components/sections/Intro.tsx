@@ -7,12 +7,15 @@ export function Intro() {
     <div className="max-w-2xl flex flex-col items-center">
       <Subheading className="mb-8 fade-in tracking-wide">
         <span className="text-gray-700 text-2xl dark:text-gray-300 font-medium">Dhison P.</span>
-        <span className="text-gray-500 text-lg ml-2 font-regular">Engineering, and more. New York, NY.</span>
+        <span className="text-gray-500 text-lg ml-2 font-regular">
+          Engineering, and more. New York, NY.
+        </span>
       </Subheading>
       <div className="text-left gap-y-12 flex-col flex">
         <p className="fade-in delay-200">
-          <span className="text-black dark:text-white italic">Simple complexity</span>. The foundational concept
-          ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
+          <span className="text-black dark:text-white italic">Simple complexity</span>. The
+          foundational concept ingrained in all fields of my work. Ridding the spaces between
+          aesthetics and function.
         </p>
         <p className="fade-in delay-200">
           ✉️
@@ -83,8 +86,8 @@ export function Intro() {
 
         <Subsection header="About Me" emoji="🏄‍♂️" className="fade-in delay-1000">
           <p className="gapped-paragraph">
-            I enjoy the process of creation, however form it may be. And surfing. And snowboarding. And too many other
-            things, to be honest.
+            I enjoy the process of creation, however form it may be. And surfing. And snowboarding.
+            And too many other things, to be honest.
           </p>
         </Subsection>
       </div>

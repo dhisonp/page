@@ -1,5 +1,6 @@
 const links = {
-  notion: 'https://dhisonp.notion.site/Dhison-Padma-Software-Engineer-1e147536687b4186b4389e5fbb4b8298',
+  notion:
+    'https://dhisonp.notion.site/Dhison-Padma-Software-Engineer-1e147536687b4186b4389e5fbb4b8298',
   dhisvnco: 'https://dhisvn.co',
   ig_dhisvn: 'https://instagram.com/dhisvn',
   ig_dhisonp: 'https://instagram.com/dhisonp',
