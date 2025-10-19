@@ -2,7 +2,7 @@ import { BlogList } from '../components/sections/BlogList';
 import { Intro } from '../components/sections/Intro';
 import { getAllPosts } from '../lib/blog';
 
-export async function Home() {
+export function Home() {
   const posts = getAllPosts();
   const hasPosts = posts.length > 0;
 

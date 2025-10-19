@@ -11,8 +11,8 @@ interface PageProps {
   }>;
 }
 
-export async function generateStaticParams() {
-  const posts = await getAllPosts();
+export function generateStaticParams() {
+  const posts = getAllPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPostBySlug(slug);
+  const post = getPostBySlug(slug);
 
   if (!post) {
     return {
