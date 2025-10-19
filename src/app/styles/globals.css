@@ -223,6 +223,16 @@
     }
   }
 
+  .blog-back-row {
+    background-color: #f4f2e8;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .blog-back-row {
+      background-color: #1f1f28;
+    }
+  }
+
   .blog-meta {
     color: var(--color-lotus-gray);
   }
