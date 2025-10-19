@@ -1,8 +1,11 @@
 import Link from 'next/link';
-import { getAllPosts } from '@/app/lib/blog';
+import { Post } from '@/app/lib/blog';
 
-export async function BlogList() {
-  const posts = getAllPosts();
+interface BlogListProps {
+  posts: Post[];
+}
+
+export function BlogList({ posts }: BlogListProps) {
 
   return (
     <section className="h-full max-w-xl overflow-y-auto scrollbar-none" aria-label="Blog posts">
