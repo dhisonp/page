@@ -8,17 +8,21 @@ export function Home() {
 
   return (
     <main
-      className={`flex min-h-screen overflow-y-scroll bg-zinc-100 px-4 py-6 sm:pt-9 lg:pt-12 dark:bg-zinc-900 ${
-        hasPosts ? 'flex-col md:flex-row items-start justify-center gap-7' : 'items-center justify-center'
+      className={`min-h-screen bg-zinc-100 px-4 py-6 sm:pt-9 lg:pt-12 dark:bg-zinc-900 ${
+        hasPosts ? '' : 'flex items-center justify-center'
       }`}
     >
-      <div className={hasPosts ? 'w-full md:w-[600px]' : ''}>
-        <Intro />
-      </div>
-      {hasPosts && (
-        <div className="w-full md:w-[300px]">
-          <BlogList posts={posts} />
+      {hasPosts ? (
+        <div className="flex flex-col md:flex-row items-start justify-center gap-7 mx-auto max-w-[950px]">
+          <div className="w-full md:w-[600px]">
+            <Intro />
+          </div>
+          <div className="w-full md:w-[300px] md:sticky md:top-9 lg:top-12 md:self-start">
+            <BlogList posts={posts} />
+          </div>
         </div>
+      ) : (
+        <Intro />
       )}
     </main>
   );
