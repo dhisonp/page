@@ -25,9 +25,72 @@
   }
 }
 
+@layer base {
+  h3 {
+    @apply text-lg text-gray-600 dark:text-gray-400;
+  }
+
+  p {
+    @apply text-base text-gray-700 dark:text-gray-300;
+  }
+}
+
 @layer components {
   .link-item {
     @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 italic;
+  }
+
+  .prose h1 {
+    @apply text-3xl font-medium text-gray-600 dark:text-gray-400 mb-6 mt-12 first:mt-0;
+  }
+
+  .prose h2 {
+    @apply text-2xl font-medium text-gray-600 dark:text-gray-400 mb-4 mt-10;
+  }
+
+  .prose h3 {
+    @apply text-xl font-medium text-gray-600 dark:text-gray-400 mb-3 mt-8;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose a {
+    @apply text-zinc-600 dark:text-zinc-400 hover:text-zinc-400 dark:hover:text-zinc-300 transition duration-200 underline;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply mb-4 ml-6;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose li {
+    @apply mb-1 text-gray-700 dark:text-gray-300;
+  }
+
+  .prose code {
+    @apply text-sm bg-zinc-200 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 px-1 py-0.5 rounded;
+  }
+
+  .prose pre {
+    @apply bg-zinc-200 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 p-4 rounded mb-4 overflow-x-auto;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0 text-gray-700 dark:text-gray-300;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-600 dark:text-gray-400 mb-4;
   }
 
   .fade-in {
