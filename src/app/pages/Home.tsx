@@ -13,7 +13,7 @@ export function Home() {
       }`}
     >
       {hasPosts ? (
-        <div className="flex flex-col md:flex-row items-start justify-center gap-7 mx-auto max-w-[950px]">
+        <div className="flex flex-col-reverse md:flex-row items-start justify-center gap-7 mx-auto max-w-[950px]">
           <div className="w-full md:w-[600px]">
             <Intro />
           </div>
