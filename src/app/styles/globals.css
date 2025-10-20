@@ -185,6 +185,12 @@
     color: var(--color-lotus-fg-dim);
   }
 
+  .prose hr {
+    @apply my-8 border-0;
+    height: 1px;
+    background-color: var(--color-lotus-gray);
+  }
+
   @media (prefers-color-scheme: dark) {
     .prose h1,
     .prose h2,
@@ -222,6 +228,10 @@
     .prose blockquote {
       border-color: var(--color-wave-violet);
       color: var(--color-wave-fg-dim);
+    }
+
+    .prose hr {
+      background-color: var(--color-wave-gray);
     }
   }
 
