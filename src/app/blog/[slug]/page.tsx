@@ -51,7 +51,7 @@ export default async function BlogPost({ params }: PageProps) {
           </Link>
         </div>
       </div>
-      <div className="mx-auto max-w-2xl px-4 pb-12">
+      <div className="mx-auto max-w-3xl px-4 pb-12">
         <div className="mb-6 flex gap-2 text-sm blog-meta">
           <span>{post.category}</span>
           <span>-</span>
