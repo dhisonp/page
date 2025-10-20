@@ -106,7 +106,7 @@ on this list, putting this on a solid #5.
 [https://github.com/source-foundry/Hack](https://github.com/source-foundry/Hack)
 
 - Readability: 5/5
-- Design: 4/5
+- Design: 3.5/5
 - Practicality: 5/5
 
 Cookie-cutter, standard, boring Menlo of the MacOS before SF Mono became their
