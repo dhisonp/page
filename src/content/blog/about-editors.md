@@ -8,8 +8,9 @@ slug: 'about-editors'
 # About Editors
 
 I'm a fan of concise content, so let this one be it. You know what editors are–
-no need for explanation. Below is a list of tools engineers use to edit code,
-from lean, simple editors to full-scale IDEs.
+there's no need for me to explain it and make an intro like a CNET article. This
+list will include all the tools engineers use to edit code, be it lean, simple
+editors or a full-scale IDE.
 
 ## Visual Studio Code
 
@@ -18,21 +19,21 @@ reliable and stable, and the UI is intuitive. Most people will be familiar with
 the layout and keymaps. The plugin ecosystem is great. However, you can easily
 go too crazy on plugins. A lot of people make the mistake of trying to make the
 most out of it by installing big, slow, and hyper-productive plugins, some of
-them are paid. But at that point, you may as well, and you should, commit to an
-_actual_ IDE.
+them are paid. But at that point, you may as well, and you should, commit into
+an _actual_ IDE.
 
-Overall, there's nothing wrong with choosing VSCode. Just know there are better
-options.
+Overall, there is nothing wrong with going with VSCode as your primary war
+weapon. Just know there are better options.
 
 ## Zed
 
-My favorite and my main. It's built on Rust with native integration with macOS
-(not sure about Windows), making it extremely, stupidly fast. You can code for
-an entire day without lag and still have 20% battery remaining.
+My favorite and my main. It's built on Rust with native integration with MacOS
+(not sure about Windows), making it extremely, stupid fast. You can code for an
+entire day, without lag, and still have 20% remaining.
 
 First of all, it's a marvelous piece of software. Second, it also inherits the
-"it just works" factor of VSCode. Third, it encourages minimalism as a side
-effect of there being not as many plugins available and just how the overall
+"it just works" factor of VSCode. Third, it encourages minimalism, as a side
+effect on there being not as many plugins available, and just how the overall
 software was designed. You can tell that the developers intended this editor to
 be unbloated, packed with essential features that will allow anyone to create
 anything.
@@ -44,83 +45,94 @@ Favorite. Best at the moment.
 
 ## JetBrains IDEs (WebStorm, PHPStorm, PyCharm, etc.)
 
-They're a full-featured IDE that works well, assuming you have the resources to
-pay for it. The tradeoff is configuration overhead–you need to maintain proper
-setups to understand your working environment. It's also easy to overlook what's
-happening under the hood: packages, dependencies, binaries, and so on. That
-said, this is more of an IDE versus text editor debate, so let's not dwell on
-it.
+They're good. They're a full-blown, full-featured IDE. Let's assume you _have_
+the resources to pay for it, otherwise the comparison wouldn't be really fair.
+They also work, but they come with the overhead of maintaining proper
+configurations to make sure you know what environment you're working on. A
+downside of IDE is that it's easy for you to overlook what is going on in your
+working environment– from packages, dependencies, binaries, etc. That's more of
+an IDE vs text editor argument, so let's not get to deep into that.
 
-As IDEs, they come with a lot of features that VSCode and Zed lack, at least
+As IDEs, they come in with a lot of features that VSCode and Zed lack, at least
 with reasonable plugin density. Given proper indexing, you can refactor and
 search through files very efficiently and intuitively. Especially for
 established frameworks with a lot of 'magic', like Laravel, IDEs can be handy as
-changing a lot of these magic points can be a pain with more 'manual' text
-editors. Back to the IDE versus editor point, though, it can be beneficial to
-not rely too much on IDE-specific features as a developer.
+changing a lot of these magic points can be a pain in the ass with the more
+'manual' text editors. Back to the IDE vs editor point, though, it can be
+beneficial to not rely too much on IDE-specific features as a developer.
 
 Cons? They're heavy. They're paid. You can easily rely too much on them. And no
-matter how well you set it up or let it index your project, in no way will it be
+matter how well you set it up or let it index your project, in no way it will be
 close to the blazingly fast Zed or Helix, which will come up next.
 
 ## Helix
 
 NeoVim on steroids, with a slightly more opinionated keymap. It has a pretty
-steep learning curve, very similar to Vim. Once you master it, though, you
-really can't overstate the speed difference between one that has it versus one
-that doesn't.
+steep learning curve, very alike vim. Once you master it, though, you really
+can't overstate the speed difference when you compare one that has it versus one
+that don't.
 
-For example, my buddy and I were working on the same bug and found a potential
-solution. We both knew what needed to be done, so we sat down at identical
-MacBooks to implement it. I updated 3-4 lines of code across ~20 lines in about
-4 seconds. He took more than 12 seconds. He immediately asked, "how did you do
-it so fast?", and I said, "use Helix". He's been more of a Helix convert ever
-since.
+For one example, there was a time where me and my buddy was working on a same
+bug on a project of ours. We decide to tackle it together, and we finally come
+across a potential solution. We both got the solution off-screen, and now it's
+time to put it into code. We were sitting next to each other on our identical
+MacBooks, and I updated maybe 3-4 lines of code spread between ~20 lines under
+maybe 4 seconds. It took him more than 12 seconds. He immedeately said to me,
+"you wanker, how did you do it so fast?", to which I said, "use Helix mf'er",
+and to which he said and I admit defeat, "you nerd ass". Safe to say, he's more
+of a Helix geek than I am today.
 
-Anecdotes aside, Helix makes you faster by nature anddesign. You eliminate hand
-movement between mouse and keyboard, and more features are accessible directly
-from your keyboard through muscle memory. If you play an instrument, you know
-the feeling: someone calls out a chord and your fingers just do it without
-thinking. That's the same principle here.
+Anecdotes aside, it does and will make you faster, by nature and design. There
+are less physical movements to be made by omitting the need to move your hands
+between your mouse and keyboard. There are more features and tools accessible
+first-hand and natively within your keyboard surface, without any mouse-clicks,
+without any scrolling, all from muscle memory. If you play any musical
+instrument, you'll know what it means to be able to create a sound without
+thinking. Someone tells you to play Cmaj7, you do it without mathematizing the
+four notes that make up for it.
 
-It can, however, get a little tedious. It's technically an IDE, but it doesn't
-come with a lot of the handholding features that IDEs usually sell to you.
-Personally, I like it. I like it being minimalistic and having the speed of a
-sun demon. It's not for everyone, but do try it.
+It can however get a little chorey. It's technically an IDE, but it doesn't come
+with a lot of the handholding features that IDEs usually sell to you.
+Personally, I like it. I like it being minimalistic, and have the speed of a sun
+demon. It's not for everyone, but do try it.
 
 Edit: When I say it's hyper-performant, I am not kidding. There is _absolutely
-zero delay_ when opening any file, no matter how big, no matter how heavy. It's
-hard to convince you through writing. Do try it yourself. Makes VSCode feel like
+zero delay_ from opening any file, no matter how big, no matter how heavy. It's
+hard to convince you from writing. Do try it yourself. Makes VSCode feels like
 Adobe Flash Player from 1998 on an Intel Pentium.
 
 ## NeoVim
 
-Much of what applies to Helix applies here–it comes down to preference. Helix is
-closer to Zed: a high-performance, lightweight editor with essential features
-like grep, LSP integration, and buffer management.
+Most of the points written in Helix holds here. I think at this point it's a
+matter of preference. Helix is an IDE, but is closer to Zed, as it's a
+high-performance, hyper-lightweight, efficient text editor with some essential
+features, such as grep, LSP integration and buffer management.
 
-The main difference is setup overhead. Helix comes mostly pre-configured; any
-tweaks are quick and painless. NeoVim requires significant setup, and like
-VSCode, you can easily plugin-creep it into a pseudo-IDE. That said, this
-flexibility is exactly why many prefer NeoVim–it can do things full IDEs can't,
-thanks to its massive plugin ecosystem and community.
+The biggest difference between Helix and NeoVim is setup overhead. Helix comes
+in with everything (mostly) setup. If there is any you need to do on your own,
+it's quick and non-bothersome. NeoVim on the otherhand requires so much setup to
+the point that it's annoying. And like VSCode, you can plugin-creep it to the
+point you may as well use an actual IDE. I may get flamed for it, but I do think
+so. This amount of customization however is the main reason many uses NeoVim as
+their main editor, and it can do things that even full IDEs can't, just due to
+the sheer amount of plugins available and the massive community it upholds.
 
 ## Conclusion
 
 In the end, these are just tools. I still use each one of them, except VSCode,
-because Zed is a direct improvement over it, in my opinion. The other items are
-unique in their own way. For example:
+because Zed is a direct improvement over it, IMO. The other individual items are
+unique in its own way. For example,
 
 - For huge, enterprise Laravel projects, I stick with PHPStorm. Sometimes, you
   just want the best features handed to you on a silver platter without
   thinking. You just want to get it done.
-- For long writing sessions (as opposed to refactoring), I prefer Zed. It's
+- For long writing session (as opposed to refactoring), I prefer Zed. It's
   lightweight and fast, and I don't need the complex refactoring features that
-  IDEs provide. Less detail and clutter here is actually a huge reason why I
+  IDEs provide. Less details and clutter here is actually a huge reason why I
   pick Zed most of the time.
-- For quick, fast refactoring and some writing sessions, I use Helix. Its
-  built-in editing features are just that good. You can change so much code in
-  so little time, in style too. It just _feels_ good to use once you are pretty
+- For quick, fast refactoring and some writing session, I use Helix. It's built
+  in editing features are just that good. You can change so much code in so
+  little time, in style too. It just _feels_ good to use it once you are pretty
   good at it.
 - For small edits or file views, I use NeoVim. Lightweight, works without
   commitment. In and out.
