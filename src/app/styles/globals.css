@@ -7,14 +7,14 @@
 
 :root {
   /* Retro Monochrome Palette (High Contrast) */
-  --bg-light: #fffaf0; /* Floral White */
-  --fg-light: #050505; /* Sharp Black */
-  --fg-dim-light: #404040; /* Dark Gray */
-  --border-light: #111111; /* Near Black */
+  --bg-light: #ffffff; /* Pure White */
+  --fg-light: #000000; /* Pure Black */
+  --fg-dim-light: #555555; /* Dark Gray */
+  --border-light: #000000; /* Pure Black */
 
-  --bg-dark: #050505; /* Deep Black */
-  --fg-dark: #fffaf0; /* Floral White */
-  --fg-dim-dark: #aaaaaa; /* Medium Gray */
+  --bg-dark: #000000; /* Pure Black */
+  --fg-dark: #ffffff; /* Pure White */
+  --fg-dim-dark: #b0b0b0; /* Light Gray */
   --border-dark: #333333; /* Dark Gray */
 }
 

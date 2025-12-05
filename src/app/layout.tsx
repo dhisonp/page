@@ -5,22 +5,22 @@ import localFont from 'next/font/local';
 const primaryFont = localFont({
   src: [
     {
-      path: '../../public/fonts/IosevkaJet-Regular.ttf',
+      path: './fonts/IosevkaJet-Regular.ttf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/IosevkaJet-Italic.ttf',
+      path: './fonts/IosevkaJet-Italic.ttf',
       weight: '400',
       style: 'italic',
     },
     {
-      path: '../../public/fonts/IosevkaJet-Bold.ttf',
+      path: './fonts/IosevkaJet-Bold.ttf',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/IosevkaJet-BoldItalic.ttf',
+      path: './fonts/IosevkaJet-BoldItalic.ttf',
       weight: '700',
       style: 'italic',
     },
