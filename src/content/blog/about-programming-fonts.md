@@ -150,7 +150,7 @@ huge PRs and feature updates require me to have multiple windows at once... on
 this screen. So I said screw it, let's do a condensed font. What started as a
 pragmatic and reluctant choice ended up being an aesthetic one.
 
-This website _only_ uses Iosevka (condensed, Fira Mono variant). People would
+This website _only_ uses Iosevka (condensed, JetBrains Mono variant). People would
 say customizability is the leading aspect of why this font is good, along with
 it being open-source, but man, let's be honest, we don't really care too much
 about that. These are nice, but ultimately it is for the same reason the others
