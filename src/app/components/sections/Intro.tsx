@@ -7,7 +7,7 @@ export function Intro() {
     <div className="max-w-2xl flex flex-col items-center">
       <Subheading className="mb-8 fade-in tracking-wide">
         <span className="text-gray-700 text-2xl dark:text-gray-300 font-bold">Dhison P.</span>
-        <span className="text-gray-500 text-lg ml-2 font-regular">
+        <span className="text-gray-500 text-lg ml-2 font-normal">
           Engineering, and more. New York, NY.
         </span>
       </Subheading>
