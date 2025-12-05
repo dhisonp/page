@@ -5,42 +5,22 @@ import localFont from 'next/font/local';
 const primaryFont = localFont({
   src: [
     {
-      path: '../../public/fonts/IosevkaFira-Light.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/IosevkaFira-LightItalic.ttf',
-      weight: '300',
-      style: 'italic',
-    },
-    {
-      path: '../../public/fonts/IosevkaFira-Regular.ttf',
+      path: '../../public/fonts/IosevkaJet-Regular.ttf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/IosevkaFira-Italic.ttf',
+      path: '../../public/fonts/IosevkaJet-Italic.ttf',
       weight: '400',
       style: 'italic',
     },
     {
-      path: '../../public/fonts/IosevkaFira-Medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../../public/fonts/IosevkaFira-MediumItalic.ttf',
-      weight: '500',
-      style: 'italic',
-    },
-    {
-      path: '../../public/fonts/IosevkaFira-Bold.ttf',
+      path: '../../public/fonts/IosevkaJet-Bold.ttf',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../../public/fonts/IosevkaFira-BoldItalic.ttf',
+      path: '../../public/fonts/IosevkaJet-BoldItalic.ttf',
       weight: '700',
       style: 'italic',
     },
