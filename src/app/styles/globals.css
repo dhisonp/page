@@ -6,39 +6,16 @@
 }
 
 :root {
-  /* Kanagawa Lotus (Light Mode) Colors */
-  --color-lotus-bg: #f4f2e8;
-  --color-lotus-bg-dim: #e8e5d8;
-  --color-lotus-bg-p1: #ebe8dc;
-  --color-lotus-bg-p2: #efecd0;
-  --color-lotus-fg: #545464;
-  --color-lotus-fg-dim: #43436c;
-  --color-lotus-gray: #8a8980;
-  --color-lotus-gray-2: #716e61;
-  --color-lotus-violet: #a09cac;
-  --color-lotus-violet-2: #766b90;
-  --color-lotus-blue: #4d699b;
-  --color-lotus-green: #6f894e;
-  --color-lotus-orange: #cc6d00;
-  --color-lotus-pink: #b35b79;
-  --color-lotus-yellow: #836f4a;
-  --color-lotus-aqua: #597b75;
-
-  /* Kanagawa Wave (Dark Mode) Colors */
-  --color-wave-bg: #1f1f28;
-  --color-wave-bg-dim: #181820;
-  --color-wave-bg-p1: #2a2a37;
-  --color-wave-bg-p2: #363646;
-  --color-wave-fg: #dcd7ba;
-  --color-wave-fg-dim: #c8c093;
-  --color-wave-gray: #727169;
-  --color-wave-violet: #957fb8;
-  --color-wave-blue: #7e9cd8;
-  --color-wave-green: #98bb6c;
-  --color-wave-orange: #ffa066;
-  --color-wave-pink: #d27e99;
-  --color-wave-yellow: #c0a36e;
-  --color-wave-aqua: #7aa89f;
+  /* Retro Monochrome Palette (High Contrast) */
+  --bg-light: #FFFAF0; /* Floral White */
+  --fg-light: #050505; /* Sharp Black */
+  --fg-dim-light: #404040; /* Dark Gray */
+  --border-light: #111111; /* Near Black */
+  
+  --bg-dark: #050505; /* Deep Black */
+  --fg-dark: #FFFAF0; /* Floral White */
+  --fg-dim-dark: #AAAAAA; /* Medium Gray */
+  --border-dark: #333333; /* Dark Gray */
 }
 
 @layer base {
@@ -47,22 +24,22 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-lotus-gray, currentcolor);
+    border-color: var(--border-light, currentcolor);
   }
 
   body {
-    background-color: var(--color-lotus-bg);
-    color: var(--color-lotus-fg);
+    background-color: var(--bg-light);
+    color: var(--fg-light);
   }
 
   h3 {
     @apply text-lg;
-    color: var(--color-lotus-fg-dim);
+    color: var(--fg-dim-light);
   }
 
   p {
     @apply text-base;
-    color: var(--color-lotus-fg);
+    color: var(--fg-light);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -71,62 +48,67 @@
     ::before,
     ::backdrop,
     ::file-selector-button {
-      border-color: var(--color-wave-gray, currentcolor);
+      border-color: var(--border-dark, currentcolor);
     }
 
     body {
-      background-color: var(--color-wave-bg);
-      color: var(--color-wave-fg);
+      background-color: var(--bg-dark);
+      color: var(--fg-dark);
     }
 
     h3 {
-      color: var(--color-wave-fg-dim);
+      color: var(--fg-dim-dark);
     }
 
     p {
-      color: var(--color-wave-fg);
+      color: var(--fg-dark);
     }
   }
 }
 
 @layer components {
   .link-item {
-    @apply transition duration-200 italic;
-    color: var(--color-lotus-blue);
+    @apply transition duration-200 italic underline decoration-1 underline-offset-4;
+    color: var(--fg-light);
+    text-decoration-color: var(--fg-dim-light);
   }
 
   .link-item:hover {
-    color: var(--color-lotus-violet-2);
+    @apply decoration-2;
+    color: var(--fg-light);
+    text-decoration-color: var(--fg-light);
   }
 
   @media (prefers-color-scheme: dark) {
     .link-item {
-      color: var(--color-wave-blue);
+      color: var(--fg-dark);
+      text-decoration-color: var(--fg-dim-dark);
     }
 
     .link-item:hover {
-      color: var(--color-wave-violet);
+      color: var(--fg-dark);
+      text-decoration-color: var(--fg-dark);
     }
   }
 
   .prose h1 {
     @apply text-3xl font-medium mb-6 mt-12 first:mt-0;
-    color: var(--color-lotus-fg-dim);
+    color: var(--fg-light);
   }
 
   .prose h2 {
     @apply text-2xl font-medium mb-4 mt-10;
-    color: var(--color-lotus-fg-dim);
+    color: var(--fg-light);
   }
 
   .prose h3 {
     @apply text-xl font-medium mb-3 mt-8;
-    color: var(--color-lotus-fg-dim);
+    color: var(--fg-dim-light);
   }
 
   .prose h4 {
     @apply text-lg font-medium mb-3 mt-8;
-    color: var(--color-lotus-fg-dim);
+    color: var(--fg-dim-light);
   }
 
   .prose p {
@@ -134,12 +116,15 @@
   }
 
   .prose a {
-    @apply transition duration-200 underline;
-    color: var(--color-lotus-blue);
+    @apply transition duration-200 underline decoration-1 underline-offset-4;
+    color: var(--fg-light);
+    text-decoration-color: var(--fg-dim-light);
   }
 
   .prose a:hover {
-    color: var(--color-lotus-violet-2);
+    @apply decoration-2;
+    color: var(--fg-light);
+    text-decoration-color: var(--fg-light);
   }
 
   .prose ul,
@@ -159,36 +144,38 @@
 
   .prose li {
     @apply mb-1;
-    color: var(--color-lotus-fg);
+    color: var(--fg-light);
   }
 
   .prose code {
-    @apply text-sm px-1 py-0.5 rounded;
-    background-color: var(--color-lotus-bg-dim);
-    color: var(--color-lotus-pink);
+    @apply text-sm px-1 py-0.5 rounded font-bold;
+    background-color: transparent;
+    color: var(--fg-light);
+    border: 1px solid var(--border-light);
   }
 
   .prose pre {
     @apply p-4 rounded mb-4 overflow-x-auto;
-    background-color: var(--color-lotus-bg-dim);
-    color: var(--color-lotus-fg);
+    background-color: transparent;
+    color: var(--fg-light);
+    border: 1px solid var(--border-light);
   }
 
   .prose pre code {
-    @apply bg-transparent p-0;
-    color: var(--color-lotus-fg);
+    @apply bg-transparent p-0 border-0;
+    color: var(--fg-light);
   }
 
   .prose blockquote {
     @apply border-l-4 pl-4 italic mb-4;
-    border-color: var(--color-lotus-violet);
-    color: var(--color-lotus-fg-dim);
+    border-color: var(--fg-dim-light);
+    color: var(--fg-dim-light);
   }
 
   .prose hr {
     @apply my-8 border-0;
     height: 1px;
-    background-color: var(--color-lotus-gray);
+    background-color: var(--border-light);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -196,82 +183,95 @@
     .prose h2,
     .prose h3,
     .prose h4 {
-      color: var(--color-wave-fg-dim);
+      color: var(--fg-dark);
+    }
+    
+    .prose h3,
+    .prose h4 {
+      color: var(--fg-dim-dark);
     }
 
     .prose a {
-      color: var(--color-wave-blue);
+      color: var(--fg-dark);
+      text-decoration-color: var(--fg-dim-dark);
     }
 
     .prose a:hover {
-      color: var(--color-wave-violet);
+      color: var(--fg-dark);
+      text-decoration-color: var(--fg-dark);
     }
 
     .prose li {
-      color: var(--color-wave-fg);
+      color: var(--fg-dark);
     }
 
     .prose code {
-      background-color: var(--color-wave-bg-p1);
-      color: var(--color-wave-pink);
+      background-color: transparent;
+      color: var(--fg-dark);
+      border-color: var(--border-dark);
     }
 
     .prose pre {
-      background-color: var(--color-wave-bg-p1);
-      color: var(--color-wave-fg);
+      background-color: transparent;
+      color: var(--fg-dark);
+      border-color: var(--border-dark);
     }
 
     .prose pre code {
-      color: var(--color-wave-fg);
+      color: var(--fg-dark);
     }
 
     .prose blockquote {
-      border-color: var(--color-wave-violet);
-      color: var(--color-wave-fg-dim);
+      border-color: var(--fg-dim-dark);
+      color: var(--fg-dim-dark);
     }
 
     .prose hr {
-      background-color: var(--color-wave-gray);
+      background-color: var(--border-dark);
     }
   }
 
   .blog-back-row {
-    background-color: #f4f2e8;
+    background-color: var(--bg-light);
   }
 
   @media (prefers-color-scheme: dark) {
     .blog-back-row {
-      background-color: #1f1f28;
+      background-color: var(--bg-dark);
     }
   }
 
   .blog-meta {
-    color: var(--color-lotus-gray);
+    color: var(--fg-dim-light);
   }
 
   @media (prefers-color-scheme: dark) {
     .blog-meta {
-      color: var(--color-wave-gray);
+      color: var(--fg-dim-dark);
     }
   }
 
   .scroll-to-top {
-    background-color: var(--color-lotus-bg-dim);
-    color: var(--color-lotus-fg);
+    background-color: transparent;
+    color: var(--fg-light);
+    border: 1px solid var(--border-light);
   }
 
   .scroll-to-top:hover {
-    background-color: var(--color-lotus-violet);
+    background-color: var(--fg-light);
+    color: var(--bg-light);
   }
 
   @media (prefers-color-scheme: dark) {
     .scroll-to-top {
-      background-color: var(--color-wave-bg-p1);
-      color: var(--color-wave-fg);
+      background-color: transparent;
+      color: var(--fg-dark);
+      border-color: var(--border-dark);
     }
 
     .scroll-to-top:hover {
-      background-color: var(--color-wave-violet);
+      background-color: var(--fg-dark);
+      color: var(--bg-dark);
     }
   }
 
