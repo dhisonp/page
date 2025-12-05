@@ -61,7 +61,7 @@
   }
 
   p {
-    @apply text-base leading-relaxed;
+    @apply text-base;
     color: var(--color-lotus-fg);
   }
 
