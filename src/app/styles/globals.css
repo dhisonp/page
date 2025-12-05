@@ -7,14 +7,14 @@
 
 :root {
   /* Retro Monochrome Palette (High Contrast) */
-  --bg-light: #FFFAF0; /* Floral White */
+  --bg-light: #fffaf0; /* Floral White */
   --fg-light: #050505; /* Sharp Black */
   --fg-dim-light: #404040; /* Dark Gray */
   --border-light: #111111; /* Near Black */
-  
+
   --bg-dark: #050505; /* Deep Black */
-  --fg-dark: #FFFAF0; /* Floral White */
-  --fg-dim-dark: #AAAAAA; /* Medium Gray */
+  --fg-dark: #fffaf0; /* Floral White */
+  --fg-dim-dark: #aaaaaa; /* Medium Gray */
   --border-dark: #333333; /* Dark Gray */
 }
 
@@ -92,22 +92,22 @@
   }
 
   .prose h1 {
-    @apply text-3xl font-medium mb-6 mt-12 first:mt-0;
+    @apply text-3xl font-bold mb-6 mt-12 first:mt-0;
     color: var(--fg-light);
   }
 
   .prose h2 {
-    @apply text-2xl font-medium mb-4 mt-10;
+    @apply text-2xl font-bold mb-4 mt-10;
     color: var(--fg-light);
   }
 
   .prose h3 {
-    @apply text-xl font-medium mb-3 mt-8;
+    @apply text-xl font-bold mb-3 mt-8;
     color: var(--fg-dim-light);
   }
 
   .prose h4 {
-    @apply text-lg font-medium mb-3 mt-8;
+    @apply text-lg font-bold mb-3 mt-8;
     color: var(--fg-dim-light);
   }
 
@@ -185,7 +185,7 @@
     .prose h4 {
       color: var(--fg-dark);
     }
-    
+
     .prose h3,
     .prose h4 {
       color: var(--fg-dim-dark);
