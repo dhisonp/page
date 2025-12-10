@@ -7,7 +7,7 @@ export function Intro() {
     <div className="max-w-2xl flex flex-col items-center">
       <Subheading className="mb-[var(--space-6)] fade-in tracking-wide">
         <span
-          className="text-black dark:text-white font-bold"
+          className="text-black dark:text-white font-semibold"
           style={{ fontSize: 'var(--text-2xl)' }}
         >
           Dhison P.

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { IBM_Plex_Mono } from 'next/font/google';
 
 const primaryFont = IBM_Plex_Mono({
-  weight: ['400', '500', '700'],
+  weight: ['400', '500', '600'],
   subsets: ['latin'],
   variable: '--font-primary',
   display: 'swap',
