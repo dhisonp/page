@@ -1,11 +1,18 @@
 import './styles/globals.css';
 import type { Metadata } from 'next';
-import { IBM_Plex_Mono } from 'next/font/google';
+import { Domine, IBM_Plex_Mono } from 'next/font/google';
 
-const primaryFont = IBM_Plex_Mono({
+const serifFont = Domine({
   weight: ['400', '500', '600'],
   subsets: ['latin'],
-  variable: '--font-primary',
+  variable: '--font-serif',
+  display: 'swap',
+});
+
+const monoFont = IBM_Plex_Mono({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+  variable: '--font-mono',
   display: 'swap',
 });
 
@@ -20,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${primaryFont.variable} antialiased`}>
+    <html lang="en" className={`${serifFont.variable} ${monoFont.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );
