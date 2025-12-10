@@ -9,8 +9,13 @@ interface SubsectionProps {
 
 export function Subsection({ children, className = '', header, style }: SubsectionProps) {
   return (
-    <div className={`gap-y-4 ${className}`} style={style}>
-      <Subheading className="mb-4">{header}</Subheading>
+    <div
+      className={`section-border p-[var(--space-3)] gap-y-4 ${className}`}
+      style={style}
+    >
+      <Subheading className="mb-[var(--space-2)] section-border-bottom pb-[var(--space-2)]">
+        {header}
+      </Subheading>
       {children}
     </div>
   );

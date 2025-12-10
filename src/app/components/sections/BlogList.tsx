@@ -8,14 +8,31 @@ interface BlogListProps {
 export function BlogList({ posts }: BlogListProps) {
   return (
     <section id="writings" className="max-w-xl" aria-label="Blog posts">
-      <h3 className="mb-4">Writings</h3>
+      <h3 className="mb-[var(--space-3)]" style={{ fontSize: 'var(--text-lg)' }}>
+        Writings
+      </h3>
 
-      <ul className="space-y-4">
+      <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
         {posts.map((post) => (
-          <li key={post.slug} className="space-y-1">
-            <Link href={`/blog/${post.slug}`} className="block hover:opacity-80 transition-opacity">
-              <p className="text-black dark:text-white">{post.title}</p>
-              <div className="flex gap-2 text-sm text-black dark:text-white opacity-80 w-44">
+          <li key={post.slug} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-1)' }}>
+            <Link
+              href={`/blog/${post.slug}`}
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <p
+                className="text-black dark:text-white"
+                style={{ fontSize: 'var(--text-base)', lineHeight: 1.4 }}
+              >
+                {post.title}
+              </p>
+              <div
+                className="flex gap-2 text-black dark:text-white opacity-80"
+                style={{
+                  fontSize: 'var(--text-xs)',
+                  lineHeight: 1.4,
+                  fontVariantNumeric: 'tabular-nums',
+                }}
+              >
                 <span>{post.category}</span>
                 <span>-</span>
                 <time dateTime={post.date}>{post.date}</time>

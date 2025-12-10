@@ -16,6 +16,22 @@
   --fg-dark: #ffffff; /* Pure White */
   --fg-dim-dark: #ffffff; /* Pure White (hierarchy via size/weight) */
   --border-dark: #ffffff; /* Pure White */
+
+  /* Functional Typography Scale */
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 17px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+
+  /* Tight Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
 }
 
 @layer base {
@@ -36,6 +52,8 @@
     @apply font-medium;
     background-color: var(--bg-light);
     color: var(--fg-light);
+    line-height: 1.5;
+    font-size: var(--text-base);
   }
 
   h3 {
@@ -332,6 +350,33 @@
 
   .delay-1000 {
     animation-delay: 0.5s;
+  }
+
+  /* Border Utilities for Section Separation */
+  .section-border {
+    border: 1px solid var(--border-light);
+  }
+
+  .section-border-bottom {
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .section-border-top {
+    border-top: 1px solid var(--border-light);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .section-border {
+      border-color: var(--border-dark);
+    }
+
+    .section-border-bottom {
+      border-bottom-color: var(--border-dark);
+    }
+
+    .section-border-top {
+      border-top-color: var(--border-dark);
+    }
   }
 }
 
