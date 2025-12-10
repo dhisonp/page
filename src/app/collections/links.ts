@@ -10,6 +10,7 @@ const links = {
   github: 'https://github.com/dhisonp',
   linkedin: 'https://www.linkedin.com/in/dhisonp/',
   twitter: 'https://x.com/DhisonPadma',
+  snowbunnies: 'https://snow-bunnies.vercel.app',
 };
 
 export default links;

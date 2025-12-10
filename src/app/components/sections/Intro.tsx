@@ -39,6 +39,13 @@ export function Intro() {
               </a>
             </li>
           </ul>
+          <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-1 gap-y-4 mt-4">
+            <li className="link-item">
+              <a href={links.snowbunnies} target="_blank" rel="noopener noreferrer">
+                snowbunnies &#8605;
+              </a>
+            </li>
+          </ul>
         </Subsection>
 
         <Subsection header="Music" className="fade-in delay-600">
