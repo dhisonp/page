@@ -1,13 +1,9 @@
 ---
-title:
-  'How I made a brutalist, simplistic ski trip planner under 5 hours with
-  Antigravity'
+title: 'Brutalist, AI Ski Trip Planner Under 5 Hours'
 date: '2025/12/10'
 category: 'Engineering'
 slug: 'snow-bunnies'
 ---
-
-# How I made a brutalist, simplistic ski trip planner under 5 hours with Antigravity
 
 ![Source Code Pro](/images/snow-bunnies/screencap.png)
 [https://snow-bunnies.vercel.app](https://snow-bunnies.vercel.app)
