@@ -44,10 +44,7 @@ export default async function BlogPost({ params }: PageProps) {
 
   return (
     <main className="min-h-screen pb-6">
-      <div
-        className="sticky top-0 py-2 blog-back-row"
-        style={{ borderBottom: '1px solid var(--border-light)' }}
-      >
+      <div className="sticky top-0 py-2 blog-back-row section-border-bottom">
         <div className="mx-auto max-w-3xl px-4">
           <Link href="/" className="inline-block link-item">
             &#8637; Back
@@ -55,39 +52,17 @@ export default async function BlogPost({ params }: PageProps) {
         </div>
       </div>
       <div className="mx-auto max-w-3xl px-4 pb-12" style={{ paddingTop: 'var(--space-6)' }}>
-        <h1
-          style={{
-            fontSize: 'var(--text-2xl)',
-            fontWeight: 600,
-            marginBottom: 'var(--space-4)',
-            lineHeight: 1.3,
-            letterSpacing: '-0.01em',
-            color: 'var(--fg-light)',
-          }}
-        >
+        <h1 className="text-2xl font-semibold mb-4 leading-[1.3] tracking-[-0.01em] text-black dark:text-white">
           {post.title}
         </h1>
-        <div className="blog-post-meta" style={{ marginBottom: 'var(--space-6)' }}>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              padding: 'var(--space-2) var(--space-3)',
-              borderBottom: '1px solid var(--border-light)',
-            }}
-          >
+        <div className="blog-post-meta mb-6">
+          <div className="flex justify-between px-3 py-2 section-border-bottom">
             <span>Category</span>
-            <span style={{ fontWeight: 500 }}>{post.category}</span>
+            <span className="font-medium">{post.category}</span>
           </div>
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              padding: 'var(--space-2) var(--space-3)',
-            }}
-          >
+          <div className="flex justify-between px-3 py-2">
             <span>Date</span>
-            <time dateTime={post.date} style={{ fontWeight: 500 }}>
+            <time dateTime={post.date} className="font-medium">
               {post.date}
             </time>
           </div>
