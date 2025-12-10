@@ -67,16 +67,7 @@ export default async function BlogPost({ params }: PageProps) {
         >
           {post.title}
         </h1>
-        <div
-          className="blog-post-meta"
-          style={{
-            border: '1px solid var(--border-light)',
-            marginBottom: 'var(--space-6)',
-            fontSize: 'var(--text-sm)',
-            fontFamily: 'var(--font-mono)',
-            fontVariantNumeric: 'tabular-nums',
-          }}
-        >
+        <div className="blog-post-meta" style={{ marginBottom: 'var(--space-6)' }}>
           <div
             style={{
               display: 'flex',
@@ -85,8 +76,8 @@ export default async function BlogPost({ params }: PageProps) {
               borderBottom: '1px solid var(--border-light)',
             }}
           >
-            <span style={{ color: 'var(--fg-light)', opacity: 0.8 }}>Category</span>
-            <span style={{ color: 'var(--fg-light)', fontWeight: 500 }}>{post.category}</span>
+            <span>Category</span>
+            <span style={{ fontWeight: 500 }}>{post.category}</span>
           </div>
           <div
             style={{
@@ -95,8 +86,8 @@ export default async function BlogPost({ params }: PageProps) {
               padding: 'var(--space-2) var(--space-3)',
             }}
           >
-            <span style={{ color: 'var(--fg-light)', opacity: 0.8 }}>Date</span>
-            <time dateTime={post.date} style={{ color: 'var(--fg-light)', fontWeight: 500 }}>
+            <span>Date</span>
+            <time dateTime={post.date} style={{ fontWeight: 500 }}>
               {post.date}
             </time>
           </div>

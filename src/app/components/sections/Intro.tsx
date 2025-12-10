@@ -5,7 +5,7 @@ import { Subsection } from '../Subsection';
 export function Intro() {
   return (
     <div className="max-w-2xl flex flex-col items-center">
-      <Subheading className="mb-[var(--space-6)] fade-in tracking-wide">
+      <Subheading className="mb-[var(--space-6)] tracking-wide">
         <span
           className="text-black dark:text-white font-semibold"
           style={{ fontSize: 'var(--text-2xl)' }}
@@ -23,22 +23,16 @@ export function Intro() {
         className="text-left flex-col flex"
         style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}
       >
-        <p className="fade-in delay-200" style={{ fontSize: 'var(--text-base)', lineHeight: 1.5 }}>
+        <p>
           <span className="text-black dark:text-white italic">Simple complexity</span>. The
           foundational concept ingrained in all fields of my work. Ridding the spaces between
           aesthetics and function.
         </p>
-        <p className="fade-in delay-200" style={{ fontSize: 'var(--text-base)', lineHeight: 1.5 }}>
+        <p>
           <span className="text-black dark:text-white opacity-80">dhisonp@gmail.com</span>
         </p>
-        <Subsection header="Software" className="fade-in delay-400">
-          <p
-            style={{
-              marginBottom: 'var(--space-3)',
-              fontSize: 'var(--text-base)',
-              lineHeight: 1.5,
-            }}
-          >
+        <Subsection header="Software">
+          <p style={{ marginBottom: 'var(--space-3)' }}>
             Engineering beauty within solutions.
           </p>
           <ul
@@ -73,14 +67,8 @@ export function Intro() {
           </ul>
         </Subsection>
 
-        <Subsection header="Music" className="fade-in delay-600">
-          <p
-            style={{
-              marginBottom: 'var(--space-3)',
-              fontSize: 'var(--text-base)',
-              lineHeight: 1.5,
-            }}
-          >
+        <Subsection header="Music">
+          <p style={{ marginBottom: 'var(--space-3)' }}>
             A sound connection.
           </p>
           <ul
@@ -100,15 +88,9 @@ export function Intro() {
           </ul>
         </Subsection>
 
-        <Subsection header="Photography" className="fade-in delay-800">
-          <p
-            style={{
-              marginBottom: 'var(--space-3)',
-              fontSize: 'var(--text-base)',
-              lineHeight: 1.5,
-            }}
-          >
-            Articulating finest imagery for every moment.{' '}
+        <Subsection header="Photography">
+          <p style={{ marginBottom: 'var(--space-3)' }}>
+            Articulating finest imagery for every moment.
           </p>
           <ul
             className="grid md:grid-cols-4 md:grid-rows-none grid-rows-4"
@@ -137,14 +119,8 @@ export function Intro() {
           </ul>
         </Subsection>
 
-        <Subsection header="About Me" className="fade-in delay-1000">
-          <p
-            style={{
-              marginBottom: 'var(--space-4)',
-              fontSize: 'var(--text-base)',
-              lineHeight: 1.5,
-            }}
-          >
+        <Subsection header="About Me">
+          <p style={{ marginBottom: 'var(--space-4)' }}>
             I enjoy the process of creation, however form it may be. And surfing. And snowboarding.
             And too many other things, to be honest.
           </p>

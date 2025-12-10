@@ -28,15 +28,10 @@ export function ScrollToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 scroll-to-top flex flex-col justify-center items-center h-12 w-12 transition-all duration-200 z-50 ${
+      className={`fixed bottom-8 right-8 scroll-to-top flex items-center justify-center h-12 w-12 transition-all duration-200 z-50 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
       aria-label="Scroll to top"
-      style={{
-        fontFamily: 'var(--font-mono)',
-        fontSize: 'var(--text-xs)',
-        fontWeight: 600,
-      }}
     >
       TOP
     </button>
