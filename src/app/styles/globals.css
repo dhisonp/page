@@ -191,26 +191,27 @@
   }
 
   .prose code {
-    @apply text-sm px-1 py-0.5 font-semibold;
-    background-color: transparent;
+    @apply text-sm px-1.5 py-0.5 rounded-sm;
+    font-family: var(--font-mono);
+    background-color: #f5f5f5; /* var(--gray-100) */
     color: var(--fg-light);
-    border: 1px solid var(--border-light);
-    box-shadow: 2px 2px 0 var(--border-light);
+    border: none;
+    box-shadow: none;
   }
 
   .prose pre {
-    @apply p-4 mb-4;
-    background-color: transparent;
+    @apply p-4 mb-4 rounded;
+    font-family: var(--font-mono);
+    background-color: #f5f5f5; /* var(--gray-100) */
     color: var(--fg-light);
-    border: 1px solid var(--border-light);
-    box-shadow: 2px 2px 0 var(--border-light);
+    border: none;
+    box-shadow: none;
     overflow-x: auto;
-    overflow-y: visible;
   }
 
   .prose pre code {
     @apply bg-transparent p-0 border-0;
-    color: var(--fg-light);
+    color: inherit;
     box-shadow: none;
   }
 
@@ -235,11 +236,6 @@
       color: var(--fg-dark);
     }
 
-    .prose h3,
-    .prose h4 {
-      color: var(--fg-dark);
-    }
-
     .prose a {
       color: var(--fg-dark);
       text-decoration-color: var(--fg-dark);
@@ -256,25 +252,6 @@
       color: var(--fg-dark);
     }
 
-    .prose code {
-      background-color: transparent;
-      color: var(--fg-dark);
-      border-color: var(--border-dark);
-      box-shadow: 2px 2px 0 var(--border-dark);
-    }
-
-    .prose pre {
-      background-color: transparent;
-      color: var(--fg-dark);
-      border-color: var(--border-dark);
-      box-shadow: 2px 2px 0 var(--border-dark);
-    }
-
-    .prose pre code {
-      color: var(--fg-dark);
-      box-shadow: none;
-    }
-
     .prose blockquote {
       border-color: var(--fg-dark);
       color: var(--fg-dark);
@@ -282,6 +259,17 @@
 
     .prose hr {
       background-color: var(--fg-dark);
+    }
+
+    /* Code overrides */
+    .prose code {
+      background-color: #262626; /* var(--gray-800) */
+      color: var(--fg-dark);
+    }
+
+    .prose pre {
+      background-color: #171717; /* var(--gray-900) */
+      color: #f5f5f5;
     }
   }
 
