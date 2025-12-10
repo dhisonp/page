@@ -35,7 +35,7 @@ export function Intro() {
           className="fade-in delay-200"
           style={{ fontSize: 'var(--text-base)', lineHeight: 1.5 }}
         >
-          <span className="italic text-black dark:text-white opacity-80">dhisonp@gmail.com</span>
+          <span className="text-black dark:text-white opacity-80">dhisonp@gmail.com</span>
         </p>
         <Subsection header="Software" className="fade-in delay-400">
           <p style={{ marginBottom: 'var(--space-3)', fontSize: 'var(--text-base)', lineHeight: 1.5 }}>
