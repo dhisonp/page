@@ -5,15 +5,12 @@ interface SubsectionProps {
   className?: string;
   style?: React.CSSProperties;
   header: string;
-  emoji: string;
 }
 
-export function Subsection({ children, className = '', header, emoji, style }: SubsectionProps) {
+export function Subsection({ children, className = '', header, style }: SubsectionProps) {
   return (
     <div className={`gap-y-4 ${className}`} style={style}>
-      <Subheading className="mb-4">
-        <span className="mr-2">{emoji}</span> {header}
-      </Subheading>
+      <Subheading className="mb-4">{header}</Subheading>
       {children}
     </div>
   );

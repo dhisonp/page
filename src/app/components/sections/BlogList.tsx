@@ -14,8 +14,8 @@ export function BlogList({ posts }: BlogListProps) {
         {posts.map((post) => (
           <li key={post.slug} className="space-y-1">
             <Link href={`/blog/${post.slug}`} className="block hover:opacity-80 transition-opacity">
-              <p className="text-gray-700 dark:text-gray-300">{post.title}</p>
-              <div className="flex gap-2 text-sm text-gray-500 w-44">
+              <p className="text-black dark:text-white">{post.title}</p>
+              <div className="flex gap-2 text-sm text-black dark:text-white opacity-80 w-44">
                 <span>{post.category}</span>
                 <span>-</span>
                 <time dateTime={post.date}>{post.date}</time>

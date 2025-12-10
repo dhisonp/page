@@ -6,16 +6,16 @@
 }
 
 :root {
-  /* Retro Monochrome Palette (High Contrast) */
+  /* Brutalist Monochrome Palette (Harsh Black/White) */
   --bg-light: #ffffff; /* Pure White */
   --fg-light: #000000; /* Pure Black */
-  --fg-dim-light: #555555; /* Dark Gray */
+  --fg-dim-light: #000000; /* Pure Black (hierarchy via size/weight) */
   --border-light: #000000; /* Pure Black */
 
   --bg-dark: #000000; /* Pure Black */
   --fg-dark: #ffffff; /* Pure White */
-  --fg-dim-dark: #b0b0b0; /* Light Gray */
-  --border-dark: #333333; /* Dark Gray */
+  --fg-dim-dark: #ffffff; /* Pure White (hierarchy via size/weight) */
+  --border-dark: #ffffff; /* Pure White */
 }
 
 @layer base {
@@ -27,14 +27,20 @@
     border-color: var(--border-light, currentcolor);
   }
 
+  ::selection {
+    background-color: var(--fg-light);
+    color: var(--bg-light);
+  }
+
   body {
+    @apply font-medium;
     background-color: var(--bg-light);
     color: var(--fg-light);
   }
 
   h3 {
     @apply text-lg;
-    color: var(--fg-dim-light);
+    color: var(--fg-light);
   }
 
   p {
@@ -51,13 +57,18 @@
       border-color: var(--border-dark, currentcolor);
     }
 
+    ::selection {
+      background-color: var(--fg-dark);
+      color: var(--bg-dark);
+    }
+
     body {
       background-color: var(--bg-dark);
       color: var(--fg-dark);
     }
 
     h3 {
-      color: var(--fg-dim-dark);
+      color: var(--fg-dark);
     }
 
     p {
@@ -70,24 +81,28 @@
   .link-item {
     @apply transition duration-200 italic underline decoration-1 underline-offset-4;
     color: var(--fg-light);
-    text-decoration-color: var(--fg-dim-light);
+    text-decoration-color: var(--fg-light);
+    opacity: 0.8;
   }
 
   .link-item:hover {
     @apply decoration-2;
     color: var(--fg-light);
     text-decoration-color: var(--fg-light);
+    opacity: 1;
   }
 
   @media (prefers-color-scheme: dark) {
     .link-item {
       color: var(--fg-dark);
-      text-decoration-color: var(--fg-dim-dark);
+      text-decoration-color: var(--fg-dark);
+      opacity: 0.8;
     }
 
     .link-item:hover {
       color: var(--fg-dark);
       text-decoration-color: var(--fg-dark);
+      opacity: 1;
     }
   }
 
@@ -103,12 +118,12 @@
 
   .prose h3 {
     @apply text-xl font-bold mb-3 mt-8;
-    color: var(--fg-dim-light);
+    color: var(--fg-light);
   }
 
   .prose h4 {
     @apply text-lg font-bold mb-3 mt-8;
-    color: var(--fg-dim-light);
+    color: var(--fg-light);
   }
 
   .prose p {
@@ -118,13 +133,15 @@
   .prose a {
     @apply transition duration-200 underline decoration-1 underline-offset-4;
     color: var(--fg-light);
-    text-decoration-color: var(--fg-dim-light);
+    text-decoration-color: var(--fg-light);
+    opacity: 0.8;
   }
 
   .prose a:hover {
     @apply decoration-2;
     color: var(--fg-light);
     text-decoration-color: var(--fg-light);
+    opacity: 1;
   }
 
   .prose ul,
@@ -148,34 +165,40 @@
   }
 
   .prose code {
-    @apply text-sm px-1 py-0.5 rounded font-bold;
+    @apply text-sm px-1 py-0.5 font-bold;
     background-color: transparent;
     color: var(--fg-light);
     border: 1px solid var(--border-light);
+    box-shadow: 2px 2px 0 var(--border-light);
   }
 
   .prose pre {
-    @apply p-4 rounded mb-4 overflow-x-auto;
+    @apply p-4 mb-4;
     background-color: transparent;
     color: var(--fg-light);
     border: 1px solid var(--border-light);
+    box-shadow: 2px 2px 0 var(--border-light);
+    overflow-x: auto;
+    overflow-y: visible;
   }
 
   .prose pre code {
     @apply bg-transparent p-0 border-0;
     color: var(--fg-light);
+    box-shadow: none;
   }
 
   .prose blockquote {
-    @apply border-l-4 pl-4 italic mb-4;
-    border-color: var(--fg-dim-light);
-    color: var(--fg-dim-light);
+    @apply border-l-8 pl-4 mb-4;
+    border-color: var(--fg-light);
+    color: var(--fg-light);
+    font-style: normal;
   }
 
   .prose hr {
     @apply my-8 border-0;
-    height: 1px;
-    background-color: var(--border-light);
+    height: 3px;
+    background-color: var(--fg-light);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -188,17 +211,19 @@
 
     .prose h3,
     .prose h4 {
-      color: var(--fg-dim-dark);
+      color: var(--fg-dark);
     }
 
     .prose a {
       color: var(--fg-dark);
-      text-decoration-color: var(--fg-dim-dark);
+      text-decoration-color: var(--fg-dark);
+      opacity: 0.8;
     }
 
     .prose a:hover {
       color: var(--fg-dark);
       text-decoration-color: var(--fg-dark);
+      opacity: 1;
     }
 
     .prose li {
@@ -209,25 +234,28 @@
       background-color: transparent;
       color: var(--fg-dark);
       border-color: var(--border-dark);
+      box-shadow: 2px 2px 0 var(--border-dark);
     }
 
     .prose pre {
       background-color: transparent;
       color: var(--fg-dark);
       border-color: var(--border-dark);
+      box-shadow: 2px 2px 0 var(--border-dark);
     }
 
     .prose pre code {
       color: var(--fg-dark);
+      box-shadow: none;
     }
 
     .prose blockquote {
-      border-color: var(--fg-dim-dark);
-      color: var(--fg-dim-dark);
+      border-color: var(--fg-dark);
+      color: var(--fg-dark);
     }
 
     .prose hr {
-      background-color: var(--border-dark);
+      background-color: var(--fg-dark);
     }
   }
 
@@ -242,24 +270,28 @@
   }
 
   .blog-meta {
-    color: var(--fg-dim-light);
+    color: var(--fg-light);
+    opacity: 0.8;
   }
 
   @media (prefers-color-scheme: dark) {
     .blog-meta {
-      color: var(--fg-dim-dark);
+      color: var(--fg-dark);
+      opacity: 0.8;
     }
   }
 
   .scroll-to-top {
     background-color: transparent;
     color: var(--fg-light);
-    border: 1px solid var(--border-light);
+    border: 2px solid var(--border-light);
+    box-shadow: 3px 3px 0 var(--border-light);
+    transition: all 0.1s ease;
   }
 
   .scroll-to-top:hover {
-    background-color: var(--fg-light);
-    color: var(--bg-light);
+    box-shadow: 1px 1px 0 var(--border-light);
+    transform: translate(2px, 2px);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -267,11 +299,12 @@
       background-color: transparent;
       color: var(--fg-dark);
       border-color: var(--border-dark);
+      box-shadow: 3px 3px 0 var(--border-dark);
     }
 
     .scroll-to-top:hover {
-      background-color: var(--fg-dark);
-      color: var(--bg-dark);
+      box-shadow: 1px 1px 0 var(--border-dark);
+      transform: translate(2px, 2px);
     }
   }
 

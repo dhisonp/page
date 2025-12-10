@@ -5,7 +5,7 @@ interface SubheadingProps {
 
 export function Subheading({ children, className = '' }: SubheadingProps) {
   return (
-    <div className={`text-base text-zinc-600 dark:text-zinc-400 self-start ${className}`}>
+    <div className={`text-base text-black dark:text-white opacity-80 self-start ${className}`}>
       {children}
     </div>
   );
