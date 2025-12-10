@@ -6,8 +6,8 @@ export function Intro() {
   return (
     <div className="max-w-2xl flex flex-col items-center">
       <Subheading className="mb-8 fade-in tracking-wide">
-        <span className="text-gray-700 text-2xl dark:text-gray-300 font-bold">Dhison P.</span>
-        <span className="text-gray-500 text-lg ml-2 font-normal">
+        <span className="text-black dark:text-white text-2xl font-bold">Dhison P.</span>
+        <span className="text-black dark:text-white text-lg ml-2 font-medium opacity-80">
           Engineering, and more. New York, NY.
         </span>
       </Subheading>
@@ -18,10 +18,9 @@ export function Intro() {
           aesthetics and function.
         </p>
         <p className="fade-in delay-200">
-          ✉️
-          <span className="italic text-zinc-600 dark:text-zinc-400 ml-2">dhisonp@gmail.com</span>
+          <span className="italic text-black dark:text-white opacity-80">dhisonp@gmail.com</span>
         </p>
-        <Subsection header="Software" emoji="💻" className="fade-in delay-400">
+        <Subsection header="Software" className="fade-in delay-400">
           <p className="mb-4">Engineering beauty within solutions.</p>
           <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
             <li className="link-item">
@@ -42,7 +41,7 @@ export function Intro() {
           </ul>
         </Subsection>
 
-        <Subsection header="Music" emoji="🎸" className="fade-in delay-600">
+        <Subsection header="Music" className="fade-in delay-600">
           <p className="mb-4">A sound connection.</p>
           <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-3 gap-y-4">
             <li className="link-item">
@@ -58,7 +57,7 @@ export function Intro() {
           </ul>
         </Subsection>
 
-        <Subsection header="Photography" emoji="📷" className="fade-in delay-800">
+        <Subsection header="Photography" className="fade-in delay-800">
           <p className="mb-4">Articulating finest imagery for every moment. </p>
           <ul className="grid md:grid-cols-4 md:grid-rows-none grid-rows-4 gap-y-4">
             <li className="link-item">
@@ -84,7 +83,7 @@ export function Intro() {
           </ul>
         </Subsection>
 
-        <Subsection header="About Me" emoji="🏄‍♂️" className="fade-in delay-1000">
+        <Subsection header="About Me" className="fade-in delay-1000">
           <p className="gapped-paragraph">
             I enjoy the process of creation, however form it may be. And surfing. And snowboarding.
             And too many other things, to be honest.

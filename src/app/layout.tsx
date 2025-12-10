@@ -1,30 +1,10 @@
 import './styles/globals.css';
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { IBM_Plex_Mono } from 'next/font/google';
 
-const primaryFont = localFont({
-  src: [
-    {
-      path: './fonts/IosevkaJet-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/IosevkaJet-Italic.ttf',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: './fonts/IosevkaJet-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './fonts/IosevkaJet-BoldItalic.ttf',
-      weight: '700',
-      style: 'italic',
-    },
-  ],
+const primaryFont = IBM_Plex_Mono({
+  weight: ['500', '700'],
+  subsets: ['latin'],
   variable: '--font-primary',
   display: 'swap',
 });
