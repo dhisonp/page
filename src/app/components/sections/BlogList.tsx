@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Subsection } from '../Subsection';
 import { Post } from '@/app/lib/blog';
 
 interface BlogListProps {
@@ -7,29 +8,41 @@ interface BlogListProps {
 
 export function BlogList({ posts }: BlogListProps) {
   return (
-    <section id="writings" className="max-w-xl" aria-label="Blog posts">
-      <h3 className="mb-[var(--space-3)]" style={{ fontSize: 'var(--text-lg)' }}>
-        Writings
-      </h3>
-
-      <ul style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
-        {posts.map((post) => (
-          <li key={post.slug} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-1)' }}>
+    <Subsection header="Writings" className="max-w-xl" aria-label="Blog posts">
+      <ul style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+        {posts.map((post, index) => (
+          <li
+            key={post.slug}
+            className={`blog-list-item ${
+              index !== posts.length - 1 ? 'section-border-bottom' : ''
+            }`}
+          >
             <Link
               href={`/blog/${post.slug}`}
-              className="block hover:opacity-80 transition-opacity"
+              className="blog-list-link block transition-colors duration-150"
+              style={{
+                padding: 'var(--space-3)',
+                textDecoration: 'none',
+              }}
             >
-              <p
-                className="text-black dark:text-white"
-                style={{ fontSize: 'var(--text-base)', lineHeight: 1.4 }}
+              <div
+                className="blog-list-title font-medium"
+                style={{
+                  fontSize: 'var(--text-base)',
+                  lineHeight: 1.4,
+                  marginBottom: 'var(--space-2)',
+                }}
               >
                 {post.title}
-              </p>
+              </div>
               <div
-                className="flex gap-2 text-black dark:text-white opacity-80"
+                className="blog-list-meta opacity-80"
                 style={{
+                  display: 'flex',
+                  gap: 'var(--space-2)',
                   fontSize: 'var(--text-xs)',
                   lineHeight: 1.4,
+                  fontFamily: 'var(--font-mono)',
                   fontVariantNumeric: 'tabular-nums',
                 }}
               >
@@ -41,6 +54,6 @@ export function BlogList({ posts }: BlogListProps) {
           </li>
         ))}
       </ul>
-    </section>
+    </Subsection>
   );
 }

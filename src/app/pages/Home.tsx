@@ -8,9 +8,7 @@ export function Home() {
 
   return (
     <main
-      className={`min-h-screen ${
-        hasPosts ? '' : 'flex items-center justify-center'
-      }`}
+      className={`min-h-screen ${hasPosts ? '' : 'flex items-center justify-center'}`}
       style={{
         padding: 'var(--space-4)',
         paddingTop: 'var(--space-6)',

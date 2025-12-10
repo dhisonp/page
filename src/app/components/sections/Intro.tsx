@@ -23,22 +23,22 @@ export function Intro() {
         className="text-left flex-col flex"
         style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}
       >
-        <p
-          className="fade-in delay-200"
-          style={{ fontSize: 'var(--text-base)', lineHeight: 1.5 }}
-        >
+        <p className="fade-in delay-200" style={{ fontSize: 'var(--text-base)', lineHeight: 1.5 }}>
           <span className="text-black dark:text-white italic">Simple complexity</span>. The
           foundational concept ingrained in all fields of my work. Ridding the spaces between
           aesthetics and function.
         </p>
-        <p
-          className="fade-in delay-200"
-          style={{ fontSize: 'var(--text-base)', lineHeight: 1.5 }}
-        >
+        <p className="fade-in delay-200" style={{ fontSize: 'var(--text-base)', lineHeight: 1.5 }}>
           <span className="text-black dark:text-white opacity-80">dhisonp@gmail.com</span>
         </p>
         <Subsection header="Software" className="fade-in delay-400">
-          <p style={{ marginBottom: 'var(--space-3)', fontSize: 'var(--text-base)', lineHeight: 1.5 }}>
+          <p
+            style={{
+              marginBottom: 'var(--space-3)',
+              fontSize: 'var(--text-base)',
+              lineHeight: 1.5,
+            }}
+          >
             Engineering beauty within solutions.
           </p>
           <ul
@@ -74,7 +74,13 @@ export function Intro() {
         </Subsection>
 
         <Subsection header="Music" className="fade-in delay-600">
-          <p style={{ marginBottom: 'var(--space-3)', fontSize: 'var(--text-base)', lineHeight: 1.5 }}>
+          <p
+            style={{
+              marginBottom: 'var(--space-3)',
+              fontSize: 'var(--text-base)',
+              lineHeight: 1.5,
+            }}
+          >
             A sound connection.
           </p>
           <ul
@@ -95,7 +101,13 @@ export function Intro() {
         </Subsection>
 
         <Subsection header="Photography" className="fade-in delay-800">
-          <p style={{ marginBottom: 'var(--space-3)', fontSize: 'var(--text-base)', lineHeight: 1.5 }}>
+          <p
+            style={{
+              marginBottom: 'var(--space-3)',
+              fontSize: 'var(--text-base)',
+              lineHeight: 1.5,
+            }}
+          >
             Articulating finest imagery for every moment.{' '}
           </p>
           <ul

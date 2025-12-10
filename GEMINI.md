@@ -81,4 +81,3 @@ src/app/
 - **TypeScript**: Strict mode enabled, path alias `@/*` maps to `./src/*`
 - **Import Paths**: Use `@/app/...` alias instead of relative imports
 - **React Patterns**: Use named exports, avoid `FC` type, use explicit prop typing
-
