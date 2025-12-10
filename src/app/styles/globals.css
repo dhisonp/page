@@ -125,22 +125,30 @@
   }
 
   .prose h1 {
-    @apply text-3xl font-semibold mb-6 mt-12 first:mt-0;
+    @apply font-semibold mb-6 mt-12 first:mt-0;
+    font-size: var(--text-2xl);
+    line-height: 1.4;
     color: var(--fg-light);
   }
 
   .prose h2 {
-    @apply text-2xl font-semibold mb-4 mt-10;
+    @apply font-semibold mb-4 mt-10;
+    font-size: var(--text-xl);
+    line-height: 1.4;
     color: var(--fg-light);
   }
 
   .prose h3 {
-    @apply text-xl font-semibold mb-3 mt-8;
+    @apply font-semibold mb-3 mt-8;
+    font-size: var(--text-lg);
+    line-height: 1.4;
     color: var(--fg-light);
   }
 
   .prose h4 {
-    @apply text-lg font-semibold mb-3 mt-8;
+    @apply font-semibold mb-3 mt-8;
+    font-size: var(--text-base);
+    line-height: 1.4;
     color: var(--fg-light);
   }
 

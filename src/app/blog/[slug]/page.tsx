@@ -55,25 +55,51 @@ export default async function BlogPost({ params }: PageProps) {
         </div>
       </div>
       <div className="mx-auto max-w-3xl px-4 pb-12" style={{ paddingTop: 'var(--space-6)' }}>
+        <h1
+          style={{
+            fontSize: 'var(--text-2xl)',
+            fontWeight: 600,
+            marginBottom: 'var(--space-4)',
+            lineHeight: 1.3,
+            letterSpacing: '-0.01em',
+            color: 'var(--fg-light)',
+          }}
+        >
+          {post.title}
+        </h1>
         <div
           className="blog-post-meta"
           style={{
-            display: 'grid',
-            gridTemplateColumns: '120px 1fr',
-            gap: 'var(--space-2)',
-            padding: 'var(--space-3)',
+            border: '1px solid var(--border-light)',
             marginBottom: 'var(--space-6)',
             fontSize: 'var(--text-sm)',
             fontFamily: 'var(--font-mono)',
             fontVariantNumeric: 'tabular-nums',
           }}
         >
-          <span style={{ color: 'var(--fg-light)', opacity: 0.8 }}>Category</span>
-          <span style={{ color: 'var(--fg-light)', fontWeight: 500 }}>{post.category}</span>
-          <span style={{ color: 'var(--fg-light)', opacity: 0.8 }}>Date</span>
-          <time dateTime={post.date} style={{ color: 'var(--fg-light)', fontWeight: 500 }}>
-            {post.date}
-          </time>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              padding: 'var(--space-2) var(--space-3)',
+              borderBottom: '1px solid var(--border-light)',
+            }}
+          >
+            <span style={{ color: 'var(--fg-light)', opacity: 0.8 }}>Category</span>
+            <span style={{ color: 'var(--fg-light)', fontWeight: 500 }}>{post.category}</span>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              padding: 'var(--space-2) var(--space-3)',
+            }}
+          >
+            <span style={{ color: 'var(--fg-light)', opacity: 0.8 }}>Date</span>
+            <time dateTime={post.date} style={{ color: 'var(--fg-light)', fontWeight: 500 }}>
+              {post.date}
+            </time>
+          </div>
         </div>
         <article className="prose">
           <ReactMarkdown>{post.content}</ReactMarkdown>

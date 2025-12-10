@@ -21,7 +21,7 @@ export function BlogList({ posts }: BlogListProps) {
               href={`/blog/${post.slug}`}
               className="blog-list-link block transition-colors duration-150"
               style={{
-                padding: 'var(--space-3)',
+                padding: 'var(--space-2)',
                 textDecoration: 'none',
               }}
             >
