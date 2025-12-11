@@ -4,11 +4,11 @@ import { LinkList } from '../LinkList';
 
 export function Intro() {
   return (
-    <article className="flex flex-col gap-6">
+    <article className="flex flex-col gap-4">
       {/* Philosophy quote */}
-      <p className="text-lg">
-        <span className="italic">&ldquo;Simple complexity.&rdquo;</span> The foundational concept
-        ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
+      <p>
+        Simple complexity. The foundational concept ingrained in all fields of my work. Ridding the
+        spaces between aesthetics and function.
       </p>
 
       <Subsection header="Software">
