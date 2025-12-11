@@ -1,6 +1,6 @@
 import './styles/globals.css';
 import type { Metadata } from 'next';
-import { Inter, Domine, IBM_Plex_Mono } from 'next/font/google';
+import { Inter, Source_Serif_4, IBM_Plex_Mono } from 'next/font/google';
 
 const sansFont = Inter({
   subsets: ['latin'],
@@ -8,11 +8,12 @@ const sansFont = Inter({
   display: 'swap',
 });
 
-const serifFont = Domine({
-  weight: ['400', '500', '600'],
+const serifFont = Source_Serif_4({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   variable: '--font-serif',
   display: 'swap',
+  style: ['normal', 'italic'],
 });
 
 const monoFont = IBM_Plex_Mono({
