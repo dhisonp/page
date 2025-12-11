@@ -1,8 +1,31 @@
 @import 'tailwindcss';
 
 @theme inline {
+  /* Font Families */
+  --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
+
+  /* Spacing Scale - mapping to Tailwind utilities */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 0.875rem;
+  --spacing-5: 1rem;
+  --spacing-6: 1.25rem;
+  --spacing-8: 1.75rem;
+  --spacing-12: 2.5rem;
+  --spacing-16: 3.5rem;
+
+  /* Typography Scale - mapping to Tailwind utilities */
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.75rem;
+  --font-size-base: 0.875rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.125rem;
+  --font-size-2xl: 1.25rem;
+  --font-size-3xl: 1.5rem;
+  --font-size-4xl: 1.875rem;
 }
 
 :root {
@@ -17,21 +40,62 @@
   --fg-dim-dark: #ffffff; /* Pure White (hierarchy via size/weight) */
   --border-dark: #ffffff; /* Pure White */
 
-  /* Functional Typography Scale */
-  --text-xs: 11px;
-  --text-sm: 13px;
-  --text-base: 15px;
-  --text-lg: 17px;
-  --text-xl: 20px;
-  --text-2xl: 24px;
+  /* Accent Colors - Ardent Palette */
+  --accent-emerald: #009148;
+  --accent-goldenrod: #fdb515;
+  --accent-ocean: #0060bf;
+  --accent-red: #dc2626;
 
-  /* Tight Spacing Scale */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-6: 24px;
-  --space-8: 32px;
+  /* Emerald Scale */
+  --emerald-50: #e6f6ec;
+  --emerald-500: #009148;
+  --emerald-600: #007038;
+  --emerald-700: #00562b;
+
+  /* Goldenrod Scale */
+  --goldenrod-50: #fffaeb;
+  --goldenrod-500: #fdb515;
+  --goldenrod-600: #c78d0a;
+  --goldenrod-700: #946805;
+
+  /* Ocean Scale */
+  --ocean-50: #e0f2f7;
+  --ocean-500: #0060bf;
+  --ocean-600: #004a94;
+
+  /* Red Scale */
+  --red-50: #fef2f2;
+  --red-500: #dc2626;
+  --red-600: #b91c1c;
+
+  /* Gray Scale */
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-600: #525252;
+  --gray-800: #262626;
+  --gray-900: #0a0a0a;
+
+  /* Ardent Typography Scale (from tokens.json) */
+  --text-xs: 0.625rem; /* 10px */
+  --text-sm: 0.75rem; /* 12px */
+  --text-base: 0.875rem; /* 14px */
+  --text-lg: 1rem; /* 16px */
+  --text-xl: 1.125rem; /* 18px */
+  --text-2xl: 1.25rem; /* 20px */
+  --text-3xl: 1.5rem; /* 24px */
+  --text-4xl: 1.875rem; /* 30px */
+
+  /* Ardent Spacing Scale (from tokens.json) */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 0.875rem; /* 14px */
+  --space-5: 1rem; /* 16px */
+  --space-6: 1.25rem; /* 20px */
+  --space-8: 1.75rem; /* 28px */
+  --space-12: 2.5rem; /* 40px */
+  --space-16: 3.5rem; /* 56px */
 }
 
 @layer base {
@@ -52,13 +116,13 @@
     @apply font-serif font-normal;
     background-color: var(--bg-light);
     color: var(--fg-light);
-    line-height: 1.5;
+    line-height: 1.4;
     font-size: var(--text-base);
   }
 
   p {
     font-size: var(--text-base);
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   h3 {
@@ -69,6 +133,75 @@
   p {
     @apply text-base;
     color: var(--fg-light);
+  }
+
+  /* Ardent Typography Utility Classes */
+  h1,
+  .h1 {
+    font-family: var(--font-sans);
+    font-size: var(--text-3xl);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  h2,
+  .h2 {
+    font-family: var(--font-sans);
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+
+  h3,
+  .h3 {
+    font-family: var(--font-sans);
+    font-size: var(--text-xl);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+
+  h4,
+  .h4 {
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .body {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .caption,
+  .metadata {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
+  }
+
+  .code {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    line-height: 1.4;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -101,8 +234,50 @@
 }
 
 @layer components {
+  /* Masthead Styles */
+  .masthead {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .masthead-name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+
+  /* Accent Elements */
+  .accent-bar {
+    height: 2px;
+    background-color: var(--accent-emerald);
+  }
+
+  .section-marker {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-emerald);
+    margin-right: var(--space-2);
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #525252;
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  /* Link Styles */
   .link-item {
-    @apply transition duration-200 italic underline decoration-1 underline-offset-4;
+    @apply transition duration-200 underline decoration-1 underline-offset-4;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
     color: var(--fg-light);
     text-decoration-color: var(--fg-light);
     opacity: 0.8;
@@ -130,35 +305,37 @@
   }
 
   .prose h1 {
-    @apply font-semibold mb-6 mt-12 first:mt-0;
-    font-size: var(--text-2xl);
-    line-height: 1.4;
-    color: var(--fg-light);
+    @apply text-lg uppercase font-mono mb-6 mt-12 first:mt-0 pb-3;
+    border-bottom: 1px solid var(--border-light);
+    line-height: 1.2;
+    color: #525252;
   }
 
   .prose h2 {
-    @apply font-semibold mb-4 mt-10;
-    font-size: var(--text-xl);
-    line-height: 1.4;
-    color: var(--fg-light);
+    @apply text-base uppercase font-mono font-normal mb-4 mt-10 pb-3;
+    border-bottom: 1px solid var(--border-light);
+    line-height: 1.3;
+    color: #525252;
   }
 
   .prose h3 {
-    @apply font-semibold mb-3 mt-8;
-    font-size: var(--text-lg);
-    line-height: 1.4;
-    color: var(--fg-light);
+    @apply text-lg uppercase font-mono mb-3 mt-8 pb-3;
+    border-bottom: 1px solid var(--border-light);
+    line-height: 1.3;
+    color: #525252;
   }
 
   .prose h4 {
-    @apply font-semibold mb-3 mt-8;
-    font-size: var(--text-base);
+    @apply text-lg uppercase font-mono mb-3 mt-8 pb-3;
+    border-bottom: 1px solid var(--border-light);
     line-height: 1.4;
-    color: var(--fg-light);
+    color: #525252;
   }
 
   .prose p {
     @apply mb-4;
+    font-family: var(--font-serif);
+    line-height: 1.4;
   }
 
   .prose a {
@@ -196,20 +373,22 @@
   }
 
   .prose code {
-    @apply text-sm px-1.5 py-0.5 rounded-sm;
+    @apply text-sm px-1.5 py-0.5;
     font-family: var(--font-mono);
     background-color: #f5f5f5; /* var(--gray-100) */
     color: var(--fg-light);
     border: none;
+    border-radius: 0;
     box-shadow: none;
   }
 
   .prose pre {
-    @apply p-4 mb-4 rounded;
+    @apply p-4 mb-4;
     font-family: var(--font-mono);
     background-color: #f5f5f5; /* var(--gray-100) */
     color: var(--fg-light);
     border: none;
+    border-radius: 0;
     box-shadow: none;
     overflow-x: auto;
   }
@@ -221,15 +400,15 @@
   }
 
   .prose blockquote {
-    @apply border-l-8 pl-4 mb-4;
-    border-color: var(--fg-light);
+    @apply pl-4 mb-4;
+    border-left: 2px solid var(--fg-light);
     color: var(--fg-light);
     font-style: normal;
   }
 
   .prose hr {
     @apply my-8 border-0;
-    height: 3px;
+    height: 1px;
     background-color: var(--fg-light);
   }
 
@@ -238,7 +417,8 @@
     .prose h2,
     .prose h3,
     .prose h4 {
-      color: var(--fg-dark);
+      color: #a3a3a3;
+      border-bottom-color: var(--border-dark);
     }
 
     .prose a {
@@ -275,6 +455,11 @@
     .prose pre {
       background-color: #171717; /* var(--gray-900) */
       color: #f5f5f5;
+    }
+
+    .section-title {
+      color: #a3a3a3;
+      border-bottom-color: var(--border-dark);
     }
   }
 
@@ -430,6 +615,19 @@
     border-top: 1px solid var(--border-light);
   }
 
+  /* Soft Border Utilities for Internal Separators */
+  .section-border-soft {
+    border: 1px solid var(--gray-200);
+  }
+
+  .section-border-bottom-soft {
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .section-border-top-soft {
+    border-top: 1px solid var(--gray-200);
+  }
+
   @media (prefers-color-scheme: dark) {
     .section-border {
       border-color: var(--border-dark);
@@ -442,11 +640,21 @@
     .section-border-top {
       border-top-color: var(--border-dark);
     }
+
+    .section-border-soft {
+      border-color: var(--gray-800);
+    }
+
+    .section-border-bottom-soft {
+      border-bottom-color: var(--gray-800);
+    }
+
+    .section-border-top-soft {
+      border-top-color: var(--gray-800);
+    }
   }
 }
 
 @utility gapped-paragraph {
   @apply mb-4;
 }
-
-
