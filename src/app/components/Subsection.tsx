@@ -8,10 +8,7 @@ interface SubsectionProps {
 export function Subsection({ children, className = '', header, style }: SubsectionProps) {
   return (
     <section className={`pt-4 ${className}`} style={style}>
-      <div className="mb-3 flex items-center">
-        <span className="section-marker" aria-hidden="true" />
-        <h2 className="section-title">{header}</h2>
-      </div>
+      <h2 className="section-title mb-3">{header}</h2>
       {children}
     </section>
   );

@@ -265,9 +265,12 @@
   .section-title {
     font-family: var(--font-mono);
     font-size: var(--text-sm);
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    color: #525252;
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid var(--border-light);
   }
 
   /* Link Styles */
@@ -282,8 +285,8 @@
 
   .link-item:hover {
     @apply decoration-2;
-    color: var(--gray-600);
-    text-decoration-color: var(--gray-600);
+    color: var(--fg-light);
+    text-decoration-color: var(--fg-light);
     opacity: 1;
   }
 
@@ -295,36 +298,36 @@
     }
 
     .link-item:hover {
-      color: var(--gray-600);
-      text-decoration-color: var(--gray-600);
+      color: var(--fg-dark);
+      text-decoration-color: var(--fg-dark);
       opacity: 1;
     }
   }
 
   .prose h1 {
     @apply text-lg uppercase font-mono mb-6 mt-12 first:mt-0 pb-3;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--border-light);
     line-height: 1.2;
     color: #525252;
   }
 
   .prose h2 {
     @apply text-base uppercase font-mono font-normal mb-4 mt-10 pb-3;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--border-light);
     line-height: 1.3;
     color: #525252;
   }
 
   .prose h3 {
     @apply text-lg uppercase font-mono mb-3 mt-8 pb-3;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--border-light);
     line-height: 1.3;
     color: #525252;
   }
 
   .prose h4 {
     @apply text-lg uppercase font-mono mb-3 mt-8 pb-3;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--border-light);
     line-height: 1.4;
     color: #525252;
   }
@@ -415,7 +418,7 @@
     .prose h3,
     .prose h4 {
       color: #a3a3a3;
-      border-bottom-color: #262626;
+      border-bottom-color: var(--border-dark);
     }
 
     .prose a {
@@ -452,6 +455,11 @@
     .prose pre {
       background-color: #171717; /* var(--gray-900) */
       color: #f5f5f5;
+    }
+
+    .section-title {
+      color: #a3a3a3;
+      border-bottom-color: var(--border-dark);
     }
   }
 
