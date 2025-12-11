@@ -43,30 +43,43 @@ export default async function BlogPost({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen pb-6">
-      <div className="sticky top-0 py-2 blog-back-row section-border-bottom">
-        <div className="mx-auto max-w-3xl px-4">
-          <Link href="/" className="inline-block link-item">
-            &#8637; Back
+    <main className="min-h-screen" style={{ padding: 'var(--space-6)' }}>
+      <div className="max-w-2xl mx-auto">
+        {/* Emerald accent bar */}
+        <div className="accent-bar mb-[var(--space-4)]" />
+
+        {/* Back navigation */}
+        <div className="section-border-bottom pb-[var(--space-4)] mb-[var(--space-6)]">
+          <Link href="/" className="link-item">
+            ← back
           </Link>
         </div>
-      </div>
-      <div className="mx-auto max-w-3xl px-4 pb-12" style={{ paddingTop: 'var(--space-6)' }}>
-        <h1 className="text-2xl font-semibold mb-4 leading-[1.3] tracking-[-0.01em] text-black dark:text-white">
-          {post.title}
-        </h1>
-        <div className="blog-post-meta mb-6">
-          <div className="flex justify-between px-3 py-2 section-border-bottom">
-            <span>Category</span>
-            <span className="font-medium">{post.category}</span>
+
+        {/* Article header */}
+        <header className="mb-[var(--space-6)]">
+          <h1
+            className="font-semibold mb-[var(--space-4)] leading-[1.2] tracking-[-0.01em]"
+            style={{ fontSize: 'var(--text-3xl)', fontFamily: 'var(--font-sans)' }}
+          >
+            {post.title}
+          </h1>
+
+          {/* Metadata table */}
+          <div className="blog-post-meta">
+            <div className="flex justify-between px-3 py-2 section-border-bottom">
+              <span className="metadata">CATEGORY</span>
+              <span className="metadata font-medium">{post.category}</span>
+            </div>
+            <div className="flex justify-between px-3 py-2">
+              <span className="metadata">DATE</span>
+              <time dateTime={post.date} className="metadata font-medium">
+                {post.date}
+              </time>
+            </div>
           </div>
-          <div className="flex justify-between px-3 py-2">
-            <span>Date</span>
-            <time dateTime={post.date} className="font-medium">
-              {post.date}
-            </time>
-          </div>
-        </div>
+        </header>
+
+        {/* Article content */}
         <article className="prose">
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </article>

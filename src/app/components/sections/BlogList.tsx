@@ -8,7 +8,7 @@ interface BlogListProps {
 
 export function BlogList({ posts }: BlogListProps) {
   return (
-    <Subsection header="Writings" className="max-w-xl" aria-label="Blog posts">
+    <Subsection header="Writings" aria-label="Blog posts">
       <ul style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
         {posts.map((post, index) => (
           <li
@@ -22,7 +22,10 @@ export function BlogList({ posts }: BlogListProps) {
               className="blog-list-link block transition-colors duration-150"
               style={{ padding: 'var(--space-2)' }}
             >
-              <div className="blog-list-title font-medium" style={{ marginBottom: 'var(--space-2)' }}>
+              <div
+                className="blog-list-title font-medium"
+                style={{ marginBottom: 'var(--space-2)' }}
+              >
                 {post.title}
               </div>
               <div

@@ -20,60 +20,60 @@
 
   /* Accent Colors - Ardent Palette */
   --accent-emerald: #009148;
-  --accent-goldenrod: #FDB515;
-  --accent-ocean: #0060BF;
-  --accent-red: #DC2626;
+  --accent-goldenrod: #fdb515;
+  --accent-ocean: #0060bf;
+  --accent-red: #dc2626;
 
   /* Emerald Scale */
-  --emerald-50: #E6F6EC;
+  --emerald-50: #e6f6ec;
   --emerald-500: #009148;
   --emerald-600: #007038;
-  --emerald-700: #00562B;
+  --emerald-700: #00562b;
 
   /* Goldenrod Scale */
-  --goldenrod-50: #FFFAEB;
-  --goldenrod-500: #FDB515;
-  --goldenrod-600: #C78D0A;
+  --goldenrod-50: #fffaeb;
+  --goldenrod-500: #fdb515;
+  --goldenrod-600: #c78d0a;
   --goldenrod-700: #946805;
 
   /* Ocean Scale */
-  --ocean-50: #E0F2F7;
-  --ocean-500: #0060BF;
-  --ocean-600: #004A94;
+  --ocean-50: #e0f2f7;
+  --ocean-500: #0060bf;
+  --ocean-600: #004a94;
 
   /* Red Scale */
-  --red-50: #FEF2F2;
-  --red-500: #DC2626;
-  --red-600: #B91C1C;
+  --red-50: #fef2f2;
+  --red-500: #dc2626;
+  --red-600: #b91c1c;
 
   /* Gray Scale */
-  --gray-50: #FAFAFA;
-  --gray-100: #F5F5F5;
-  --gray-200: #E5E5E5;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
   --gray-600: #525252;
   --gray-800: #262626;
-  --gray-900: #0A0A0A;
+  --gray-900: #0a0a0a;
 
   /* Ardent Typography Scale (from tokens.json) */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-sm: 0.875rem;   /* 14px */
-  --text-base: 1rem;     /* 16px */
-  --text-lg: 1.125rem;   /* 18px */
-  --text-xl: 1.25rem;    /* 20px */
-  --text-2xl: 1.5rem;    /* 24px */
-  --text-3xl: 1.875rem;  /* 30px */
-  --text-4xl: 2.25rem;   /* 36px */
+  --text-xs: 0.625rem; /* 10px */
+  --text-sm: 0.75rem; /* 12px */
+  --text-base: 0.875rem; /* 14px */
+  --text-lg: 1rem; /* 16px */
+  --text-xl: 1.125rem; /* 18px */
+  --text-2xl: 1.25rem; /* 20px */
+  --text-3xl: 1.5rem; /* 24px */
+  --text-4xl: 1.875rem; /* 30px */
 
   /* Ardent Spacing Scale (from tokens.json) */
-  --space-1: 0.25rem;    /* 4px */
-  --space-2: 0.5rem;     /* 8px */
-  --space-3: 0.75rem;    /* 12px */
-  --space-4: 0.875rem;   /* 14px */
-  --space-5: 1rem;       /* 16px */
-  --space-6: 1.25rem;    /* 20px */
-  --space-8: 1.75rem;    /* 28px */
-  --space-12: 2.5rem;    /* 40px */
-  --space-16: 3.5rem;    /* 56px */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 0.875rem; /* 14px */
+  --space-5: 1rem; /* 16px */
+  --space-6: 1.25rem; /* 20px */
+  --space-8: 1.75rem; /* 28px */
+  --space-12: 2.5rem; /* 40px */
+  --space-16: 3.5rem; /* 56px */
 }
 
 @layer base {
@@ -212,8 +212,47 @@
 }
 
 @layer components {
+  /* Masthead Styles */
+  .masthead {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .masthead-name {
+    font-size: var(--text-lg);
+    font-weight: 600;
+  }
+
+  /* Accent Elements */
+  .accent-bar {
+    height: 2px;
+    background-color: var(--accent-emerald);
+  }
+
+  .section-marker {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-emerald);
+    margin-right: var(--space-2);
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Link Styles */
   .link-item {
     @apply transition duration-200 underline decoration-1 underline-offset-4;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
     color: var(--fg-light);
     text-decoration-color: var(--fg-light);
     opacity: 0.8;
@@ -221,8 +260,8 @@
 
   .link-item:hover {
     @apply decoration-2;
-    color: var(--fg-light);
-    text-decoration-color: var(--fg-light);
+    color: var(--accent-emerald);
+    text-decoration-color: var(--accent-emerald);
     opacity: 1;
   }
 
@@ -234,8 +273,8 @@
     }
 
     .link-item:hover {
-      color: var(--fg-dark);
-      text-decoration-color: var(--fg-dark);
+      color: var(--accent-emerald);
+      text-decoration-color: var(--accent-emerald);
       opacity: 1;
     }
   }
@@ -592,5 +631,3 @@
 @utility gapped-paragraph {
   @apply mb-4;
 }
-
-

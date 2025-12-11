@@ -20,7 +20,7 @@ This document serves as the philosophical foundation for Ardent Design. It is in
 
 **Intentionality over style.**
 
-Ardent Design is neither minimalist nor maximalist. It is *intentional*. Sparse when focus is required. Dense when information rewards exploration. The context determines the approach; the sin is arbitrariness.
+Ardent Design is neither minimalist nor maximalist. It is _intentional_. Sparse when focus is required. Dense when information rewards exploration. The context determines the approach; the sin is arbitrariness.
 
 A portfolio landing page may be quiet and restrained—a doorway. A dashboard or technical documentation may be dense and layered—a workbench. Both are correct if the decision is conscious.
 
@@ -48,7 +48,7 @@ If a design would look wrong printed in 1978 or displayed in 2045, reconsider it
 
 Engineered, not decorated.
 
-Every element should feel *built*—considered, calibrated, placed with intention. This is the aesthetic of control panels, technical documentation, and datasheets. Functional beauty derived from rigor.
+Every element should feel _built_—considered, calibrated, placed with intention. This is the aesthetic of control panels, technical documentation, and datasheets. Functional beauty derived from rigor.
 
 ### 5. Functional Density
 
@@ -177,19 +177,19 @@ Used for labels, captions, metadata, timestamps, code, and system information. W
 
 ### Typography Tokens
 
-| Role        | Family    | Size   | Weight   | Line Height | Letter Spacing |
-|-------------|-----------|--------|----------|-------------|----------------|
-| Display     | Sans      | 4xl    | Bold     | 1.2         | Tight          |
-| Heading 1   | Sans      | 3xl    | Bold     | 1.2         | Tight          |
-| Heading 2   | Sans      | 2xl    | Semibold | 1.3         | Normal         |
-| Heading 3   | Sans      | xl     | Semibold | 1.3         | Normal         |
-| Heading 4   | Sans      | lg     | Medium   | 1.45        | Normal         |
-| Body        | Serif     | base   | Regular  | 1.4         | Normal         |
-| Body Small  | Serif     | sm     | Regular  | 1.4         | Normal         |
-| Label       | Mono      | xs     | Medium   | 1.45        | Wider          |
-| Code        | Mono      | sm     | Regular  | 1.45        | Normal         |
-| Caption     | Mono      | xs     | Regular  | 1.45        | Wide           |
-| Metadata    | Mono      | xs     | Regular  | 1.2         | Normal         |
+| Role       | Family | Size | Weight   | Line Height | Letter Spacing |
+| ---------- | ------ | ---- | -------- | ----------- | -------------- |
+| Display    | Sans   | 4xl  | Bold     | 1.2         | Tight          |
+| Heading 1  | Sans   | 3xl  | Bold     | 1.2         | Tight          |
+| Heading 2  | Sans   | 2xl  | Semibold | 1.3         | Normal         |
+| Heading 3  | Sans   | xl   | Semibold | 1.3         | Normal         |
+| Heading 4  | Sans   | lg   | Medium   | 1.45        | Normal         |
+| Body       | Serif  | base | Regular  | 1.4         | Normal         |
+| Body Small | Serif  | sm   | Regular  | 1.4         | Normal         |
+| Label      | Mono   | xs   | Medium   | 1.45        | Wider          |
+| Code       | Mono   | sm   | Regular  | 1.45        | Normal         |
+| Caption    | Mono   | xs   | Regular  | 1.45        | Wide           |
+| Metadata   | Mono   | xs   | Regular  | 1.2         | Normal         |
 
 ---
 
@@ -212,12 +212,12 @@ Harsh, punchy, high-contrast monochrome foundation with semantic accent colors. 
 
 **Accent Colors:**
 
-| Color | Hex | Usage |
-|-------|-----|-------|
-| Emerald | `#10A860` | Success, confirmation, positive actions |
-| Goldenrod | `#D4A012` | Warnings, cautions, attention-required states |
-| Ocean | `#1A7A9C` | Links, informational states, secondary actions |
-| Red | `#DC2626` | Errors, destructive actions, critical alerts |
+| Color     | Hex       | Usage                                          |
+| --------- | --------- | ---------------------------------------------- |
+| Emerald   | `#10A860` | Success, confirmation, positive actions        |
+| Goldenrod | `#D4A012` | Warnings, cautions, attention-required states  |
+| Ocean     | `#1A7A9C` | Links, informational states, secondary actions |
+| Red       | `#DC2626` | Errors, destructive actions, critical alerts   |
 
 Each color has a full scale (50–900) for subtle backgrounds and variations. Use the 500 value as the primary, darker values for text on light backgrounds, lighter values for text on dark backgrounds.
 
@@ -225,26 +225,26 @@ Each color has a full scale (50–900) for subtle backgrounds and variations. Us
 
 Light mode semantic mappings:
 
-| Token                  | Value           | Usage                        |
-|------------------------|-----------------|------------------------------|
-| bg.primary             | white           | Page background (harsh)      |
-| bg.secondary           | gray.50         | Card/surface background      |
-| bg.tertiary            | gray.100        | Hover states, subtle fills   |
-| bg.inverse             | black           | Inverted surfaces (harsh)    |
-| bg.accent              | emerald.500     | Success backgrounds          |
-| bg.warning             | goldenrod.50    | Warning backgrounds          |
-| bg.info                | ocean.50        | Informational backgrounds    |
-| bg.error               | red.50          | Error backgrounds            |
-| text.primary           | black           | Primary text (harsh)         |
-| text.secondary         | gray.600        | Secondary text               |
-| text.muted             | gray.400        | Disabled, placeholder        |
-| text.accent            | emerald.600     | Success text                 |
-| text.warning           | goldenrod.700   | Warning text                 |
-| text.info              | ocean.600       | Informational text           |
-| text.link              | ocean.600       | Link text                    |
-| text.error             | red.600         | Error text                   |
-| border.default         | black           | Standard borders (harsh)     |
-| border.strong          | black           | Emphasized borders (harsh)   |
+| Token          | Value         | Usage                      |
+| -------------- | ------------- | -------------------------- |
+| bg.primary     | white         | Page background (harsh)    |
+| bg.secondary   | gray.50       | Card/surface background    |
+| bg.tertiary    | gray.100      | Hover states, subtle fills |
+| bg.inverse     | black         | Inverted surfaces (harsh)  |
+| bg.accent      | emerald.500   | Success backgrounds        |
+| bg.warning     | goldenrod.50  | Warning backgrounds        |
+| bg.info        | ocean.50      | Informational backgrounds  |
+| bg.error       | red.50        | Error backgrounds          |
+| text.primary   | black         | Primary text (harsh)       |
+| text.secondary | gray.600      | Secondary text             |
+| text.muted     | gray.400      | Disabled, placeholder      |
+| text.accent    | emerald.600   | Success text               |
+| text.warning   | goldenrod.700 | Warning text               |
+| text.info      | ocean.600     | Informational text         |
+| text.link      | ocean.600     | Link text                  |
+| text.error     | red.600       | Error text                 |
+| border.default | black         | Standard borders (harsh)   |
+| border.strong  | black         | Emphasized borders (harsh) |
 
 Dark mode inverts appropriately—see `tokens.json` for full mappings.
 
@@ -272,15 +272,15 @@ Tight, consistent rhythm creates density without chaos. Ardent uses a 4px base u
 
 ### Semantic Spacing
 
-| Context       | Token                  | Value    |
-|---------------|------------------------|----------|
-| Page margin   | spacing.page.margin    | 1.25rem  |
-| Page margin (large) | spacing.page.marginLg | 3rem |
-| Section gap   | spacing.section.gap    | 3rem     |
-| Section gap (small) | spacing.section.gapSm | 1.5rem |
-| Card padding  | spacing.card.padding   | 1.25rem  |
-| Card internal gap | spacing.card.gap   | 0.75rem  |
-| Inline gap    | spacing.inline.gap     | 0.375rem |
+| Context             | Token                 | Value    |
+| ------------------- | --------------------- | -------- |
+| Page margin         | spacing.page.margin   | 1.25rem  |
+| Page margin (large) | spacing.page.marginLg | 3rem     |
+| Section gap         | spacing.section.gap   | 3rem     |
+| Section gap (small) | spacing.section.gapSm | 1.5rem   |
+| Card padding        | spacing.card.padding  | 1.25rem  |
+| Card internal gap   | spacing.card.gap      | 0.75rem  |
+| Inline gap          | spacing.inline.gap    | 0.375rem |
 
 ---
 
@@ -292,8 +292,8 @@ Flat surfaces. No shadows. Borders are structural—they delineate, they don't d
 
 ### Border Tokens
 
-| Token              | Value   |
-|--------------------|---------|
+| Token                | Value |
+| -------------------- | ----- |
 | borderWidth.hairline | 1px   |
 | borderWidth.default  | 2px   |
 | borderRadius.none    | 0     |
@@ -426,4 +426,4 @@ Build with these principles and the system will cohere.
 
 ---
 
-*Simple complexity. Ridding the spaces between aesthetics and function.*
+_Simple complexity. Ridding the spaces between aesthetics and function._

@@ -1,5 +1,3 @@
-import { Subheading } from './Subheading';
-
 interface SubsectionProps {
   children: React.ReactNode;
   className?: string;
@@ -9,11 +7,12 @@ interface SubsectionProps {
 
 export function Subsection({ children, className = '', header, style }: SubsectionProps) {
   return (
-    <div className={`section-border p-[var(--space-3)] gap-y-4 ${className}`} style={style}>
-      <Subheading className="mb-[var(--space-2)] section-border-bottom-soft pb-[var(--space-2)]">
-        {header}
-      </Subheading>
+    <section className={`pt-[var(--space-4)] ${className}`} style={style}>
+      <div className="mb-[var(--space-3)]" style={{ display: 'flex', alignItems: 'center' }}>
+        <span className="section-marker" aria-hidden="true" />
+        <h2 className="section-title">{header}</h2>
+      </div>
       {children}
-    </div>
+    </section>
   );
 }
