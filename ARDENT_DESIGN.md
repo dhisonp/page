@@ -243,8 +243,9 @@ Light mode semantic mappings:
 | text.info      | ocean.600     | Informational text         |
 | text.link      | ocean.600     | Link text                  |
 | text.error     | red.600       | Error text                 |
-| border.default | black         | Standard borders (harsh)   |
-| border.strong  | black         | Emphasized borders (harsh) |
+| border.harsh   | black         | Buttons, dividers, inputs  |
+| border.default | gray.400      | Containers, cards, tables  |
+| border.muted   | gray.200      | Internal list separators   |
 
 Dark mode inverts appropriately—see `tokens.json` for full mappings.
 
@@ -290,21 +291,45 @@ Tight, consistent rhythm creates density without chaos. Ardent uses a 4px base u
 
 Flat surfaces. No shadows. Borders are structural—they delineate, they don't decorate.
 
-### Border Tokens
+Border treatment has two dimensions:
 
-| Token                | Value |
-| -------------------- | ----- |
-| borderWidth.hairline | 1px   |
-| borderWidth.default  | 2px   |
-| borderRadius.none    | 0     |
-| borderRadius.sm      | 2px   |
+1. **Weight** (structural importance): Hairline (1px) for most borders, emphasis (2px) for major section dividers
+2. **Color** (contrast level): Harsh (black/white) for interactive elements and major divisions, subtle (gray) for containers and internal separators
 
-### Component Borders
+This follows the U.S. Graphics pattern: buttons and section rules are harsh black, while data containers and tables use lighter gray borders.
 
-- **Cards:** Hairline border, no radius, no shadow
-- **Buttons:** Hairline border, no radius
-- **Inputs:** Hairline border, no radius
-- **Dividers:** Hairline, full-width rules
+### Border Width Tokens
+
+| Token                 | Value | Usage                                           |
+| --------------------- | ----- | ----------------------------------------------- |
+| borderWidth.hairline  | 1px   | Default for all borders                         |
+| borderWidth.emphasis  | 2px   | Major section dividers, strong visual separation |
+
+### Border Color Tokens
+
+| Token              | Light Mode | Dark Mode | Usage                                      |
+| ------------------ | ---------- | --------- | ------------------------------------------ |
+| borderColor.harsh  | black      | white     | Buttons, section dividers, primary rules   |
+| borderColor.default| gray.400   | gray.600  | Containers, cards, data tables             |
+| borderColor.muted  | gray.200   | gray.800  | Internal separators, list item dividers    |
+
+### Border Radius Tokens
+
+| Token             | Value |
+| ----------------- | ----- |
+| borderRadius.none | 0     |
+| borderRadius.sm   | 2px   |
+
+### Component Border Rules
+
+| Component                      | Width    | Color   |
+| ------------------------------ | -------- | ------- |
+| Section dividers (`<hr>`)      | hairline or emphasis | harsh   |
+| Buttons                        | hairline | harsh   |
+| Cards/containers               | hairline | default |
+| Input fields                   | hairline | harsh   |
+| Tables                         | hairline | default |
+| Internal separators (list items) | hairline | muted   |
 
 ---
 
@@ -312,7 +337,7 @@ Flat surfaces. No shadows. Borders are structural—they delineate, they don't d
 
 ### Cards
 
-Cards are containers with harsh black hairline borders on gray.50 (light) or gray.950 (dark) backgrounds. No shadows. No rounded corners. Compact internal padding (1.25rem). Tight internal gap (0.75rem) between elements.
+Cards are containers with subtle gray hairline borders (`border.default`) on gray.50 (light) or gray.950 (dark) backgrounds. No shadows. No rounded corners. Compact internal padding (1.25rem). Tight internal gap (0.75rem) between elements.
 
 ### Buttons
 
@@ -333,7 +358,7 @@ Use arrow indicators for external links (↗) and navigation (→).
 
 ### Dividers
 
-Hairline rules. Default dividers use pure black (harsh, maximum contrast). Can be made thicker with the strong variant (black, 2px).
+Section dividers use `border.harsh` (black/white) for maximum contrast. Major structural breaks use the emphasis width (2px). Internal list separators use `border.muted` (light gray).
 
 ---
 
@@ -370,7 +395,10 @@ When assisting with Ardent Design projects, follow these directives:
 - Prefer serif (Charter/Domine) for body text.
 - Prefer monospace (IBM Plex Mono/Geist Mono) for labels, metadata, code.
 - Prefer sans-serif (FK Grotesk/Inter) for headings.
-- Use hairline (1px) borders.
+- Use hairline (1px) borders; reserve 2px for major section dividers only.
+- Use `border.harsh` (black/white) for buttons, dividers, and inputs.
+- Use `border.default` (gray.400/gray.600) for containers and cards.
+- Use `border.muted` (gray.200/gray.800) for internal list separators.
 - Use emerald (`#10A860`) for success and positive actions.
 - Use goldenrod (`#D4A012`) for warnings and cautions.
 - Use ocean (`#1A7A9C`) for links and informational states.
