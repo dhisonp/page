@@ -1,6 +1,12 @@
 import './styles/globals.css';
 import type { Metadata } from 'next';
-import { Domine, IBM_Plex_Mono } from 'next/font/google';
+import { Inter, Domine, IBM_Plex_Mono } from 'next/font/google';
+
+const sansFont = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+});
 
 const serifFont = Domine({
   weight: ['400', '500', '600'],
@@ -20,14 +26,14 @@ export const metadata: Metadata = {
   title: 'Dhison P.',
   description: 'Excellence in tandem.',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#f4f2e8' },
-    { media: '(prefers-color-scheme: dark)', color: '#1f1f28' },
+    { media: '(prefers-color-scheme: light)', color: '#FFFFFF' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
   ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serifFont.variable} ${monoFont.variable} antialiased`}>
+    <html lang="en" className={`${sansFont.variable} ${serifFont.variable} ${monoFont.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );
