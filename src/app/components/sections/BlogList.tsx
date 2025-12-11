@@ -14,7 +14,7 @@ export function BlogList({ posts }: BlogListProps) {
           <li
             key={post.slug}
             className={`blog-list-item ${
-              index !== posts.length - 1 ? 'section-border-bottom' : ''
+              index !== posts.length - 1 ? 'section-border-bottom-soft' : ''
             }`}
           >
             <Link

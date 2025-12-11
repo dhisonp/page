@@ -549,6 +549,19 @@
     border-top: 1px solid var(--border-light);
   }
 
+  /* Soft Border Utilities for Internal Separators */
+  .section-border-soft {
+    border: 1px solid var(--gray-200);
+  }
+
+  .section-border-bottom-soft {
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .section-border-top-soft {
+    border-top: 1px solid var(--gray-200);
+  }
+
   @media (prefers-color-scheme: dark) {
     .section-border {
       border-color: var(--border-dark);
@@ -560,6 +573,18 @@
 
     .section-border-top {
       border-top-color: var(--border-dark);
+    }
+
+    .section-border-soft {
+      border-color: var(--gray-800);
+    }
+
+    .section-border-bottom-soft {
+      border-bottom-color: var(--gray-800);
+    }
+
+    .section-border-top-soft {
+      border-top-color: var(--gray-800);
     }
   }
 }
