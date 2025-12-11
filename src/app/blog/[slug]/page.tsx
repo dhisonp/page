@@ -43,8 +43,8 @@ export default async function BlogPost({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-gray-100 dark:bg-gray-900 p-6">
-      <div className="max-w-2xl mx-auto sm:border border-gray-300 dark:border-gray-700 bg-white dark:bg-black p-6">
+    <main className="min-h-screen bg-gray-100 dark:bg-gray-900 sm:p-4">
+      <div className="max-w-2xl mx-auto sm:border border-gray-300 dark:border-gray-700 bg-white dark:bg-black p-4">
         {/* Emerald accent bar */}
         <div className="accent-bar mb-6" />
 
@@ -56,7 +56,7 @@ export default async function BlogPost({ params }: PageProps) {
         </div>
 
         {/* Article header */}
-        <div className="border border-gray-500 dark:border-gray-500 p-6 mb-6">
+        <div className="border border-gray-500 dark:border-gray-500 p-4 mb-6">
           <header>
             <h1 className="font-semibold mb-4 leading-[1.2] tracking-[-0.01em] text-3xl font-sans">
               {post.title}
@@ -79,7 +79,7 @@ export default async function BlogPost({ params }: PageProps) {
         </div>
 
         {/* Article content */}
-        <div className="border border-gray-500 dark:border-gray-500 p-6">
+        <div className="border border-gray-500 dark:border-gray-500 p-4">
           <article className="prose">
             <ReactMarkdown>{post.content}</ReactMarkdown>
           </article>
