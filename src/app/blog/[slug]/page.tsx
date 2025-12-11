@@ -43,24 +43,21 @@ export default async function BlogPost({ params }: PageProps) {
   }
 
   return (
-    <main className="min-h-screen" style={{ padding: 'var(--space-6)' }}>
+    <main className="min-h-screen p-6">
       <div className="max-w-2xl mx-auto">
         {/* Emerald accent bar */}
-        <div className="accent-bar mb-[var(--space-4)]" />
+        <div className="accent-bar mb-4" />
 
         {/* Back navigation */}
-        <div className="section-border-bottom pb-[var(--space-4)] mb-[var(--space-6)]">
+        <div className="section-border-bottom pb-4 mb-6">
           <Link href="/" className="link-item">
             ← back
           </Link>
         </div>
 
         {/* Article header */}
-        <header className="mb-[var(--space-6)]">
-          <h1
-            className="font-semibold mb-[var(--space-4)] leading-[1.2] tracking-[-0.01em]"
-            style={{ fontSize: 'var(--text-3xl)', fontFamily: 'var(--font-sans)' }}
-          >
+        <header className="mb-6">
+          <h1 className="font-semibold mb-4 leading-[1.2] tracking-[-0.01em] text-3xl font-sans">
             {post.title}
           </h1>
 

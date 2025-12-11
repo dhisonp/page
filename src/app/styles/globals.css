@@ -1,9 +1,31 @@
 @import 'tailwindcss';
 
 @theme inline {
+  /* Font Families */
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
   --font-mono: var(--font-mono);
+
+  /* Spacing Scale - mapping to Tailwind utilities */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 0.875rem;
+  --spacing-5: 1rem;
+  --spacing-6: 1.25rem;
+  --spacing-8: 1.75rem;
+  --spacing-12: 2.5rem;
+  --spacing-16: 3.5rem;
+
+  /* Typography Scale - mapping to Tailwind utilities */
+  --font-size-xs: 0.625rem;
+  --font-size-sm: 0.75rem;
+  --font-size-base: 0.875rem;
+  --font-size-lg: 1rem;
+  --font-size-xl: 1.125rem;
+  --font-size-2xl: 1.25rem;
+  --font-size-3xl: 1.5rem;
+  --font-size-4xl: 1.875rem;
 }
 
 :root {

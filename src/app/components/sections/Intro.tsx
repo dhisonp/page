@@ -4,15 +4,15 @@ import { LinkList } from '../LinkList';
 
 export function Intro() {
   return (
-    <article style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
+    <article className="flex flex-col gap-6">
       {/* Philosophy quote */}
       <p className="text-lg">
-        <span className="italic">"Simple complexity."</span> The foundational concept ingrained in
-        all fields of my work. Ridding the spaces between aesthetics and function.
+        <span className="italic">&ldquo;Simple complexity.&rdquo;</span> The foundational concept
+        ingrained in all fields of my work. Ridding the spaces between aesthetics and function.
       </p>
 
       <Subsection header="Software">
-        <p style={{ marginBottom: 'var(--space-3)' }}>Engineering beauty within solutions.</p>
+        <p className="mb-3">Engineering beauty within solutions.</p>
         <LinkList
           links={[
             { label: 'linkedin', href: links.linkedin },
@@ -22,9 +22,9 @@ export function Intro() {
           ]}
         />
       </Subsection>
-      
+
       <Subsection header="Music">
-        <p style={{ marginBottom: 'var(--space-3)' }}>A sound connection.</p>
+        <p className="mb-3">A sound connection.</p>
         <LinkList
           links={[
             { label: 'youtube', href: links.youtube },
@@ -34,9 +34,7 @@ export function Intro() {
       </Subsection>
 
       <Subsection header="Photography">
-        <p style={{ marginBottom: 'var(--space-3)' }}>
-          Articulating finest imagery for every moment.
-        </p>
+        <p className="mb-3">Articulating finest imagery for every moment.</p>
         <LinkList
           links={[
             { label: 'portfolio', href: links.dhisvnco },
