@@ -1,5 +1,5 @@
 ---
-title: 'Brutalist, AI Ski Trip Planner Under 5 Hours'
+title: 'Antigravity: Ski Trip Planer in 5 hours'
 date: '2025/12/10'
 category: 'Engineering'
 slug: 'snow-bunnies'
