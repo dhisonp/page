@@ -47,7 +47,7 @@ export function Intro() {
         <p>
           I enjoy the process of creation in general– be it music, design, engineering, and even
           human connections. And surfing. And snowboarding. And too many other things, to be honest.
-          I sound very hippie but trust me I sound normal in real life. It's for the aesthetics. :)
+          I sound very hippie but trust me I sound normal in real life. Just for the aesthetics. :)
         </p>
       </Subsection>
     </article>
