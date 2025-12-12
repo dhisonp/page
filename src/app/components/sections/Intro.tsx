@@ -5,14 +5,10 @@ import { LinkList } from '../LinkList';
 export function Intro() {
   return (
     <article className="flex flex-col gap-4">
-      {/* Philosophy quote */}
-      <p>
-        Simple complexity. The foundational concept ingrained in all fields of my work. Ridding the
-        spaces between aesthetics and function.
-      </p>
+      <p>Design is engineering. Performance is design.</p>
 
       <Subsection header="Software">
-        <p className="mb-3">Engineering beauty within solutions.</p>
+        <p className="mb-3">Art within solutions.</p>
         <LinkList
           links={[
             { label: 'linkedin', href: links.linkedin },
@@ -49,8 +45,9 @@ export function Intro() {
 
       <Subsection header="About">
         <p>
-          I enjoy the process of creation, however form it may be. And surfing. And snowboarding.
-          And too many other things, to be honest.
+          I enjoy the process of creation in general– be it music, design, engineering, and even
+          human connections. And surfing. And snowboarding. And too many other things, to be honest.
+          I sound very hippie but trust me I sound normal in real life. It's for the aesthetics. :)
         </p>
       </Subsection>
     </article>
