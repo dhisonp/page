@@ -11,6 +11,8 @@ const links = {
   linkedin: 'https://www.linkedin.com/in/dhisonp/',
   twitter: 'https://x.com/DhisonPadma',
   snowbunnies: 'https://snow-bunnies.vercel.app',
+  dynamic_pricing: 'https://dynamic-pricing-two.vercel.app/',
+  ardent_design: 'https://ardent-design.vercel.app/',
 };
 
 export default links;
