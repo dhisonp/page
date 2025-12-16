@@ -15,10 +15,15 @@ A little more about what I do and what I have done.
 
 - Co-lead the engineering team while serving as a key individual contributor, fostering healthy team
   dynamics and sustainable engineering practices.
-- Architect secure, maintainable integrations with various B2B vendors and lead the development of
-  underwriting, ledgering, and commercial reporting solutions.
-- Ensure system scalability and maintainability, utilizing a stack including Laravel/Vue, Python
-  (FastAPI), TypeScript (Next.js), DigitalOcean, AWS, and Docker.
+- Promoted and leveraged progressive use of LLMs upwards of the modern industry standards of the
+  matter.
+- Architect secure, maintainable integrations with various B2B partners while lead the development
+  of various financial (underwriting, ledgering, etc.) and commercial reporting solutions.
+- Lead the development of crucial user-facing features as well as critical system optimizations.
+- Technologies include but not limited to Laravel/Vue, Python (FastAPI), TypeScript (Next.js),
+  DigitalOcean, AWS, and Docker.
+- Worked simultaneously with C-suite and the engineering team to ensure effective, reliable and
+  lucrative deliverable signatures.
 
 **Software Engineer | Freelance** _Remote | Apr 2021 - Aug 2023_
 
@@ -59,18 +64,17 @@ A little more about what I do and what I have done.
 
 Links to projects can be found on the home page.
 
-**Ardent Design** | *https://ardent-design.vercel.app* | A design system built for precision,
-intention, and timelessness.
+**Ardent Design** - A design system built for precision, intention, and timelessness.
 
-**Snow Bunnies** | *https://snow-bunnies.vercel.app* | Ski trip planning application combining
-real-time weather data, crowd predictions, and AI-powered resort insights.
+**Snow Bunnies** - Ski trip planning application combining real-time weather data, crowd
+predictions, and AI-powered resort insights.
 
-**Swell** | *https://github.com/dhisonp/swell* | A minimalist iOS journaling app that captures your
-thoughts effortlessly and resurfaces them through AI-powered summaries and reflections.
+**Swell** - A minimalist iOS journaling app that captures your thoughts effortlessly and resurfaces
+them through AI-powered summaries and reflections.
 
-## Technical Skills
+## Technicals
 
 - **Languages:** JavaScript/TypeScript, Python, PHP, Rust, Swift, C#, C++, Java, Ruby, SQL
 - **Frameworks:** Next.js, Laravel, Vue, FastAPI, Flask, Django, Nest.js, Tauri
 - **Tools & Infra:** Docker, AWS, Kubernetes, Linux, NGINX, MongoDB, DynamoDB, Figma
-- **Strengths:** System Design, Scalability, Risk Management, UI/UX (Design Systems)
+- **Strengths:** System Design, Scalability, Risk Management, UI/UX & Design Systems
