@@ -15,12 +15,12 @@ A little more about what I do and what I have done.
 
 - Co-lead the engineering team while serving as a key individual contributor, fostering healthy team
   dynamics and sustainable engineering practices.
-- Promoted and leveraged progressive use of LLMs upwards of the modern industry standards of the
-  matter.
-- Architect secure, maintainable integrations with various B2B partners while lead the development
-  of various financial (underwriting, ledgering, etc.) and commercial reporting solutions.
+- Promoted and leveraged progressive use of LLMs, exceeding modern industry standards.
+- Architect secure, maintainable integrations with various B2B partners while leading the
+  development of various financial (underwriting, ledgering, etc.) and commercial reporting
+  solutions.
 - Lead the development of crucial user-facing features as well as critical system optimizations.
-- Technologies include but not limited to Laravel/Vue, Python (FastAPI), TypeScript (Next.js),
+- Technologies include, but are not limited to: Laravel/Vue, Python (FastAPI), TypeScript (Next.js),
   DigitalOcean, AWS, and Docker.
 - Worked simultaneously with C-suite and the engineering team to ensure effective, reliable and
   lucrative deliverable signatures.
