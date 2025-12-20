@@ -5,25 +5,25 @@ category: 'engineering'
 slug: 'repertoire'
 ---
 
-# Repertoire
-
-A little more about what I do and what I have done.
-
 ## Experience
 
 **Lead Engineer | FairFigure** _New York, NY | Aug 2023 - Present_
 
-- Co-lead the engineering team while serving as a key individual contributor, fostering healthy team
-  dynamics and sustainable engineering practices.
-- Promoted and leveraged progressive use of LLMs, exceeding modern industry standards.
-- Architect secure, maintainable integrations with various B2B partners while leading the
-  development of various financial (underwriting, ledgering, etc.) and commercial reporting
-  solutions.
-- Lead the development of crucial user-facing features as well as critical system optimizations.
-- Technologies include, but are not limited to: Laravel/Vue, Python (FastAPI), TypeScript (Next.js),
-  DigitalOcean, AWS, and Docker.
-- Worked simultaneously with C-suite and the engineering team to ensure effective, reliable and
-  lucrative deliverable signatures.
+- Scaled platform from early stage to 70k users while owning full-stack development across payment
+  infrastructure, credit bureau integrations, and customer-facing features; achieved production
+  stability in 3 months.
+- Own production payment infrastructure processing 100-200+ monthly card fundings with PCI-compliant
+  ACH and Apple Pay integrations; maintain back-office admin systems handling sensitive PII with
+  99.9% uptime.
+- Optimized critical endpoints 75-90% (400ms → 30-50ms) via caching and query optimization; reduced
+  batch processing CPU from 100% to 60-70%.
+- Built secure integrations with Equifax, D&B, Creditsafe, Experian, and Plaid supporting 20-50k
+  monthly reports and tradelines; designed consolidated Foundation Report aggregating multiple
+  sources.
+- Co-lead 4-person full-stack team (Laravel, FastAPI, Next.js) on AWS and DigitalOcean; conduct
+  1:1s, mentoring, and hiring while collaborating on technical roadmap with C-suite.
+- Led UI/UX overhaul of customer dashboard and marketing pages; championed LLM-assisted development
+  workflows across team.
 
 **Software Engineer | Freelance** _Remote | Apr 2021 - Aug 2023_
 
