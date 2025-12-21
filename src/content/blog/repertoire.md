@@ -9,7 +9,7 @@ slug: 'repertoire'
 
 **Lead Engineer | FairFigure** _New York, NY | Aug 2023 - Present_
 
-- Scaled platform from early stage to 70k users while owning full-stack development across payment
+- Scaliing from early stage to the current 70k+ users, owning full-stack development across payment
   infrastructure, credit bureau integrations, and customer-facing features; achieved production
   stability in 3 months.
 - Own production payment infrastructure processing 100-200+ monthly card fundings with PCI-compliant
@@ -20,10 +20,10 @@ slug: 'repertoire'
 - Built secure integrations with Equifax, D&B, Creditsafe, Experian, and Plaid supporting 20-50k
   monthly reports and tradelines; designed consolidated Foundation Report aggregating multiple
   sources.
-- Co-lead 4-person full-stack team (Laravel, FastAPI, Next.js) on AWS and DigitalOcean; conduct
-  1:1s, mentoring, and hiring while collaborating on technical roadmap with C-suite.
+- Co-lead 4-person full-stack team (Laravel, FastAPI, Nest.js); conduct 1:1s, mentoring, and hiring
+  while collaborating on technical roadmap with C-suite.
 - Led UI/UX overhaul of customer dashboard and marketing pages; championed LLM-assisted development
-  workflows across team.
+  and efficient workflows across team.
 
 **Software Engineer | Freelance** _Remote | Apr 2021 - Aug 2023_
 
