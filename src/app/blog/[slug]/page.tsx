@@ -81,7 +81,7 @@ export default async function BlogPost({ params }: PageProps) {
             remarkPlugins={[remarkGfm]}
             components={{
               table: ({ children }) => (
-                <div style={{ overflowX: 'auto' }}>
+                <div className="overflow-x-auto">
                   <table>{children}</table>
                 </div>
               ),
