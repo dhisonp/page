@@ -163,8 +163,6 @@ def search_maze(
 | **Speed**             | Fast         | Fast        | Fast         | Slow (lag) |
 | **Memory fit (16GB)** | Comfortable  | Comfortable | Comfortable  | Tight      |
 
----
-
 ## Key Insights
 
 ### 1. Small models hallucinate confidently
@@ -226,7 +224,3 @@ occasional deep sessions, and use cloud models for complex reasoning tasks that 
 
 The Qwen failure is instructive: small models can sound authoritative while being completely wrong.
 Trust but verify—especially with 4B parameters.
-
-```
-
-```
