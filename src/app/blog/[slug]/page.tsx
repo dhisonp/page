@@ -77,7 +77,18 @@ export default async function BlogPost({ params }: PageProps) {
 
         {/* Article content */}
         <article className="prose">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            components={{
+              table: ({ children }) => (
+                <div className="overflow-x-auto">
+                  <table>{children}</table>
+                </div>
+              ),
+            }}
+          >
+            {post.content}
+          </ReactMarkdown>
         </article>
       </div>
       <ScrollToTop />
