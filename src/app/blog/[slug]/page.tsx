@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { getAllPosts, getPostBySlug } from '@/app/lib/blog';
 import { ScrollToTop } from '@/app/components/ScrollToTop';
 
@@ -76,7 +77,7 @@ export default async function BlogPost({ params }: PageProps) {
 
         {/* Article content */}
         <article className="prose">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
         </article>
       </div>
       <ScrollToTop />
