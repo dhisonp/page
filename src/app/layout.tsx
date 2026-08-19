@@ -1,26 +1,30 @@
 import './styles/globals.css';
 import type { Metadata } from 'next';
-import { Inter, Source_Serif_4, IBM_Plex_Mono } from 'next/font/google';
+import { Atkinson_Hyperlegible_Next } from 'next/font/google';
+import localFont from 'next/font/local';
 
-const sansFont = Inter({
+// Variable weight axis (200-800). Drives both --font-sans and --font-serif;
+// globals.css aliases the serif slot to this same face.
+const sansFont = Atkinson_Hyperlegible_Next({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-});
-
-const serifFont = Source_Serif_4({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-serif',
-  display: 'swap',
   style: ['normal', 'italic'],
+  fallback: ['system-ui', '-apple-system', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
 });
 
-const monoFont = IBM_Plex_Mono({
-  weight: ['400', '500', '600'],
-  subsets: ['latin'],
+// Go Mono ships only 400 and 700. Mono rules in globals.css are pinned to
+// those two weights so nothing falls back to synthetic bolding.
+const monoFont = localFont({
+  src: [
+    { path: '../../public/fonts/Go-Mono.woff2', weight: '400', style: 'normal' },
+    { path: '../../public/fonts/Go-Mono-Italic.woff2', weight: '400', style: 'italic' },
+    { path: '../../public/fonts/Go-Mono-Bold.woff2', weight: '700', style: 'normal' },
+    { path: '../../public/fonts/Go-Mono-Bold-Italic.woff2', weight: '700', style: 'italic' },
+  ],
   variable: '--font-mono',
   display: 'swap',
+  fallback: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
 });
 
 export const metadata: Metadata = {
@@ -34,10 +38,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${sansFont.variable} ${serifFont.variable} ${monoFont.variable} antialiased`}
-    >
+    <html lang="en" className={`${sansFont.variable} ${monoFont.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );

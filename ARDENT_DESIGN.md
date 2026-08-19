@@ -155,41 +155,41 @@ Don't abstract away the system to "protect" users. Expose controls. Show options
 
 ## Typography
 
-Ardent Design uses a three-family type system, each with distinct roles:
+Ardent Design uses a two-family type system, each with distinct roles:
 
-### Sans-Serif: Display and Headings
+### Atkinson Hyperlegible Next: Display, Headings, and Body
 
-**Stack:** FK Grotesk → Untitled Sans → Inter → Helvetica Neue → Helvetica → Arial → sans-serif
+**Stack:** Atkinson Hyperlegible Next → system-ui → -apple-system → Segoe UI → Helvetica Neue → Arial → sans-serif
 
-Used for display type, headings (H1–H4), and UI elements requiring strong presence. Tight letter-spacing at large sizes. Clean, rational, engineered.
+A humanist sans commissioned by the Braille Institute and drawn specifically for legibility: letterforms are differentiated at the character level so that easily-confused pairs (I/l/1, O/0, b/d) stay distinct at small sizes and low contrast. It carries both display type and extended reading.
 
-### Serif: Body Text
+Choosing legibility over the earlier serif body face is deliberate. The editorial, Bell-Labs-paper quality that a serif provided is now carried by structure — the ruled dividers, the monospace labels, the density — rather than by the letterforms themselves. Accessibility is the higher-order constraint.
 
-**Stack:** Charter → Domine → Palatino → Georgia → serif
+It is a variable font (weight axis 200–800, roman and italic), so the full weight ramp is genuine rather than synthesised. Tight letter-spacing at large sizes; tight line-height (1.4) for dense, compact reading.
 
-Used for body copy, paragraphs, and extended reading. Serif body text provides a timeless, editorial quality—like reading a Bell Labs technical paper or a Whole Earth Catalog article. Tight line-height (1.4) for dense, compact reading.
+### Go Mono: Labels, Code, Metadata
 
-### Monospace: Labels, Code, Metadata
+**Stack:** Go Mono → ui-monospace → SFMono-Regular → Menlo → Consolas → monospace
 
-**Stack:** IBM Plex Mono → Geist Mono → CommitMono → Berkeley Mono → monospace
+Drawn by Bigelow & Holmes for the Go project. Used for labels, captions, metadata, timestamps, code, and system information. Wider letter-spacing on labels. The monospace family signals "data" and "system" — it distinguishes functional text from prose.
 
-Used for labels, captions, metadata, timestamps, code, and system information. Wider letter-spacing on labels. The monospace family signals "data" and "system"—it distinguishes functional text from prose.
+**Go Mono ships only two weights: 400 and 700.** Every monospace rule must resolve to one of those. Do not reach for `font-medium` or `font-semibold` on a monospace element — the browser will synthesise the weight and the result is muddy. Hierarchy in mono comes from size, case, and letter-spacing, with 700 reserved for genuine emphasis.
 
 ### Typography Tokens
 
-| Role       | Family | Size | Weight   | Line Height | Letter Spacing |
-| ---------- | ------ | ---- | -------- | ----------- | -------------- |
-| Display    | Sans   | 4xl  | Bold     | 1.2         | Tight          |
-| Heading 1  | Sans   | 3xl  | Bold     | 1.2         | Tight          |
-| Heading 2  | Sans   | 2xl  | Semibold | 1.3         | Normal         |
-| Heading 3  | Sans   | xl   | Semibold | 1.3         | Normal         |
-| Heading 4  | Sans   | lg   | Medium   | 1.45        | Normal         |
-| Body       | Serif  | base | Regular  | 1.4         | Normal         |
-| Body Small | Serif  | sm   | Regular  | 1.4         | Normal         |
-| Label      | Mono   | xs   | Medium   | 1.45        | Wider          |
-| Code       | Mono   | sm   | Regular  | 1.45        | Normal         |
-| Caption    | Mono   | xs   | Regular  | 1.45        | Wide           |
-| Metadata   | Mono   | xs   | Regular  | 1.2         | Normal         |
+| Role       | Family   | Size | Weight   | Line Height | Letter Spacing |
+| ---------- | -------- | ---- | -------- | ----------- | -------------- |
+| Display    | Atkinson | 4xl  | Bold     | 1.2         | Tight          |
+| Heading 1  | Atkinson | 3xl  | Bold     | 1.2         | Tight          |
+| Heading 2  | Atkinson | 2xl  | Semibold | 1.3         | Normal         |
+| Heading 3  | Atkinson | xl   | Semibold | 1.3         | Normal         |
+| Heading 4  | Atkinson | lg   | Medium   | 1.4         | Normal         |
+| Body       | Atkinson | base | Regular  | 1.4         | Normal         |
+| Body Small | Atkinson | sm   | Regular  | 1.4         | Normal         |
+| Label      | Go Mono  | xs   | Regular  | 1.4         | Wider          |
+| Code       | Go Mono  | sm   | Regular  | 1.4         | Normal         |
+| Caption    | Go Mono  | xs   | Regular  | 1.2         | Wide           |
+| Metadata   | Go Mono  | xs   | Regular  | 1.2         | Normal         |
 
 ---
 

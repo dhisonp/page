@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal portfolio website built with Next.js 15.5 (App Router), React 19.2, TypeScript 5.9, and Tailwind CSS v4. It's a single-page application showcasing software engineering, music, and photography work. The site uses npm for package management and runs with Turbopack in development.
+This is a personal portfolio website built with Next.js 16.3 (App Router), React 19.2, TypeScript 5.9, and Tailwind CSS v4. It's a single-page application showcasing software engineering, music, and photography work. The site uses npm for package management and runs with Turbopack in development.
 
 ## Development Commands
 
@@ -26,7 +26,7 @@ Development server runs on http://localhost:3000
 
 ## Future Considerations
 
-- **ESLint Migration**: Next.js 15.5 deprecates `next lint` in favor of direct ESLint CLI usage. Consider migrating the lint script before Next.js 16. The project already uses modern ESLint flat config (`eslint.config.mjs`), making migration straightforward.
+- **`themeColor` metadata**: `themeColor` still sits in the `metadata` export in `layout.tsx` and `blog/[slug]/page.tsx`; Next 16 wants it in a `viewport` export and warns on every build.
 
 ## Architecture
 
@@ -65,12 +65,17 @@ src/app/
 
 **Font Configuration**:
 
-- Centralized in `layout.tsx` using Next.js `next/font/local` optimization
-- Local font files stored in `public/fonts/` directory
-- Uses generic CSS variable `--font-primary` mapped to both `--font-sans` and `--font-mono`
-- Current font: IosevkaFira with full weight range (300, 400, 500, 700) and italic variants
-- To change fonts: Only modify the font loader in `layout.tsx`
-- CSS references remain unchanged using `var(--font-primary)`
+- Centralized in `layout.tsx`. Two families, two loaders.
+- **Atkinson Hyperlegible Next** via `next/font/google` — variable weight axis 200–800, roman and italic. Exposed as `--font-sans`.
+- **Go Mono** via `next/font/local` — vendored woff2 in `public/fonts/` (BSD-3, see `GO-MONO-LICENSE.txt`). Exposed as `--font-mono`. **Only weights 400 and 700 exist**; never apply `font-medium`/`font-semibold` to a monospace element or the browser will synthesise the weight.
+- `--font-serif` is not a separate face. `globals.css` aliases it to `--font-sans` in the `@theme inline` block, so `body { @apply font-serif }` and every `var(--font-serif)` reference resolve to Atkinson.
+- To change fonts: modify the loader in `layout.tsx`; CSS references stay as `var(--font-sans)` / `var(--font-mono)`.
+
+**Typography & Spacing Tokens**:
+
+- The scale lives in `:root` in `styles/globals.css` as `--text-xs` … `--text-4xl` (standard ramp, 1rem base) and mirrors `tokens.json`. Roughly 19 CSS rules read these via `var()`, and only two font-size utilities exist in all of `src/**/*.tsx` — so changing a token propagates site-wide.
+- Tailwind v4's font-size namespace is `--text-*`, **not** `--font-size-*`. The `@theme inline` block re-exports the `:root` values (`--text-base: var(--text-base)`) plus `--text-*--line-height: 1.4` companions, so `@apply text-*` does not pull in Tailwind's default 1.5 leading.
+- `--spacing-*` and the parallel `--space-*` vars follow the stock Tailwind ramp and must be kept in sync with each other.
 
 **Data Management**: External links centralized in `collections/links.ts` for easy maintenance.
 
@@ -81,3 +86,13 @@ src/app/
 - **TypeScript**: Strict mode enabled, path alias `@/*` maps to `./src/*`
 - **Import Paths**: Use `@/app/...` alias instead of relative imports
 - **React Patterns**: Use named exports, avoid `FC` type, use explicit prop typing
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
