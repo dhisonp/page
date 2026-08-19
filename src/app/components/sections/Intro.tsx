@@ -15,7 +15,6 @@ export function Intro() {
             { label: 'github', href: links.github },
             { label: 'twitter', href: links.twitter },
             { label: 'snowbunnies', href: links.snowbunnies },
-            { label: 'dynamic pricing', href: links.dynamic_pricing },
             { label: 'ardent design', href: links.ardent_design },
           ]}
         />
